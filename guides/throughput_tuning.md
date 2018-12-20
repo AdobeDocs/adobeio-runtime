@@ -8,7 +8,7 @@ If you change the value to `100`, then the system will reuse a single container 
 
 There is a second benefit for using a higher number: you get around of the cold-start issue. When the system doesn't have any containers left, it has to create new ones. This cold-start can add lot of latency to your application.
 
-You can set any value between 1 and 10.000. In the example below, the limit is set to `200`:
+You can set any value between `1` and `10.000`. In the example below, the limit is set to `200`:
 ```
 wsk action create actionName fileName.js -c 200
 ```
