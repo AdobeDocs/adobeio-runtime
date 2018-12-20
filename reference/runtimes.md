@@ -8,4 +8,9 @@ Adobe I/O Runtime supports Node.js version 10. The following npm modules are pre
 5. `request` version 2.88.0
 6. `request-promise` version 4.2.2
 
+This is how you can specify explicitly this kind:
+```
+wsk action create actionName fromFile.js --kind nodejs:10 asap
+```
+
 We will publish this image on GitHub and Docker Hub.
