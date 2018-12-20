@@ -20,6 +20,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 [Guides](guides.md)
 
 * [Creating Actions](guides/creating_actions.md): actions, web actions, invoking and managing, setting params
+* [Throughput Tuning](guides/throughput_tuning.md): how to maximize the number of action invocations
 * [Securing Web Actions](guides/securing_web_actions.md): learn how to control the access to web actions
 * [Creating REST APIs](guides/creating_rest_apis.md): learn to create REST APIs from web actions
 * [Using Packages](guides/using_packages.md): Working with packages
