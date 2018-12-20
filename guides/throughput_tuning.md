@@ -16,5 +16,5 @@ wsk action create actionName fileName.js -c 200
 Some considerations to keep in mind when you change the default value:
 1. Depending on how much memory/resources your action consumes, you can use a smaller or a higher value. A good average number to start with is `500`. You should experiment to make sure the value you choose is working 
 2. Make sure that your code is working when being executed in parallel. Using global variables to store values that are different between invocations is a recipe for disaster
-3. If your Action works on some large data that is not different between invocations, then storring that data in a global variable can maximize the chances that the next execution can reuse it
+3. If your Action works on some large data that is not different between invocations, then using a global variable can maximize the chances that the next execution can reuse it
  
