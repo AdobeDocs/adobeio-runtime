@@ -10,7 +10,7 @@ Adobe I/O Runtime supports Node.js version 10. The following npm modules are pre
 
 This is how you can specify explicitly this kind:
 ```
-wsk action create actionName fromFile.js --kind nodejs:10 asap
+wsk action create actionName fromFile.js --kind nodejs:10 
 ```
 
 We will publish this image on GitHub and Docker Hub.
