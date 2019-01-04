@@ -3,16 +3,19 @@
 Every time an action is executed, an activation record is created. The activation record contains information that helps you understand what happened: activation ID (the unique indentifier), namespace and action name, logs (if any), response (a dictionary that contains the status, success, and result).
 
 Assuming that you&rsquo;ve invoked an action called `hello`, this is how you retrieve the latest activations:
-```
-wsk activation list
-```
+
+`wsk activation list`
+
 The result will be a list of activation IDs (if any) and the action invoked for each:
+
 ```
 e9932762894d4ccf932762894d6ccff4 hello            
 c76dbe66e9b04ad5adbe66e9b06ad541 hello            
 []...]
 ```
+
 You can retrieve the whole activation record by running `wsk activation get <activation id>`:
+
 ```
 wsk activation get e9932762894d4ccf932762894d6ccff4
 ok: got activation e9932762894d4ccf932762894d6ccff4
@@ -70,6 +73,7 @@ ok: got activation e9932762894d4ccf932762894d6ccff4
 ```
 
 Or you can extract a specific part from the activation record:
+
 ```
 // just the result
 wsk activation result <activation ID>
@@ -78,4 +82,4 @@ wsk activation result <activation ID>
 wsk activation logs <activation ID>
 ```
 
-This should give you enough tools to debug your first actions. If you want to read more, take a look at the [Logging and Monitoring](../guides/logging_monitoring.md) page.
+This should give you enough tools to debug your first actions. If you want to read more, take a look at the [Logging and Monitoring](../guides/logging_monitoring.md 'Logging and Monitoring') page.
