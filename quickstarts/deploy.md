@@ -8,7 +8,7 @@ function main(params) {
 }
 ```
 
-> Note: This is similar to the function used as an example in [How Adobe I/O Runtime Works](../about/howitworks.md 'How it works'), but takes a name as a parameter.
+> Note: This is similar to the function used as an example in [How Adobe I/O Runtime Works](../overview/howitworks.md 'How it works'), but takes a name as a parameter.
 
 Next, open a command-line window and navigate to the folder where you saved the function. Type the following command to create an action from this function:
 
@@ -30,4 +30,4 @@ You should get this output:
 }
 ```
 
-That&rsquo;s it! You&rsquo;re ready to begin developing on Adobe I/O Runtime. For ideas on what to next, see [Adobe I/O Runtime Quickstarts](quickstarts.md 'Quickstarts').
+That&rsquo;s it! You&rsquo;re ready to begin developing on Adobe I/O Runtime. For ideas on what to next, see [Using Adobe I/O Runtime](../guides.md 'Guides').
