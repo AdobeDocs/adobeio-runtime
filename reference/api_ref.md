@@ -1,21 +1,20 @@
 # Adobe I/O Runtime API Reference
 
 ## On this page
-- GET /runtime/admin/namespaces/{orgId}/{intId}
-- POST /runtime/admin/namespaces/{orgId}/{intId}
-- DELETE /runtime/admin/namespaces/{orgId}/{intId}
-- GET /runtime/namespaces/{orgId}/{intId}/actions
-- POST /runtime/namespaces/{orgId}/{intId}/actions
-- GET /runtime/namespaces/{orgId}/{intId}/actions/{name}
-- POST /runtime/namespaces/{orgId}/{intId}/actions/{name}
-- PUT /runtime/namespaces/{orgId}/{intId}/actions/{name}
-- DELETE /runtime/namespaces/{orgId}/{intId}/actions/{name}
-- GET /runtime/system/actions
-- POST /runtime/namespaces/{orgId}/{intId}/handleEventRegistration
-- DELETE /runtime/namespaces/{orgId}/{intId}/handleEventDeletion/{clientId}/{registrationId}
-- PUT /runtime/namespaces/{orgId}/{intId}/handleEventUpdate/{clientId}/{registrationId}
-- POST /runtime/namespaces/{orgId}/{intId}/handleEventStatus/{clientId}/{registrationId}/{status}
-
+- [GET /runtime/admin/namespaces/{orgId}/{intId}](getruntimeadminnamespacesorgidintid)
+- [POST /runtime/admin/namespaces/{orgId}/{intId}](postruntimeadminnamespacesorgidintid)
+- [DELETE /runtime/admin/namespaces/{orgId}/{intId}](deleteruntimeadminnamespacesorgidintid)
+- [GET /runtime/namespaces/{orgId}/{intId}/actions](getruntimenamespacesorgidintidactions)
+- [POST /runtime/namespaces/{orgId}/{intId}/actions](postruntimenamespacesorgidintidactions)
+- [GET /runtime/namespaces/{orgId}/{intId}/actions/{name}](getruntimenamespacesorgidintidactionsname)
+- [POST /runtime/namespaces/{orgId}/{intId}/actions/{name}](postruntimenamespacesorgidintidactionsname)
+- [PUT /runtime/namespaces/{orgId}/{intId}/actions/{name}](putruntimenamespacesorgidintidactionsname)
+- [DELETE /runtime/namespaces/{orgId}/{intId}/actions/{name}](deleteruntimenamespacesorgidintidactionsname)
+- [GET /runtime/system/actions](getruntimesystemactions)
+- [POST /runtime/namespaces/{orgId}/{intId}/handleEventRegistration](postruntimenamespacesorgidintidhandleeventregistration)
+- [DELETE /runtime/namespaces/{orgId}/{intId}/handleEventDeletion/{clientId}/{registrationId}](deleteruntimenamespacesorgidintidhandleeventdeletionclientidregistrationid)
+- [PUT /runtime/namespaces/{orgId}/{intId}/handleEventUpdate/{clientId}/{registrationId}](putruntimenamespacesorgidintidhandleeventupdateclientidregistrationid)
+- [POST /runtime/namespaces/{orgId}/{intId}/handleEventStatus/{clientId}/{registrationId}/{status}](postruntimenamespacesorgidintidhandleeventstatusclientidregistrationidstatus)
 
 ## API Endpoints
 
