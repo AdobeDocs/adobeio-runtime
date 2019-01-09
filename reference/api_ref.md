@@ -16,7 +16,7 @@
 - [PUT /runtime/namespaces/{orgId}/{intId}/handleEventUpdate/{clientId}/{registrationId}](putruntimenamespacesorgidintidhandleeventupdateclientidregistrationid)
 - [POST /runtime/namespaces/{orgId}/{intId}/handleEventStatus/{clientId}/{registrationId}/{status}](postruntimenamespacesorgidintidhandleeventstatusclientidregistrationidstatus)
 
-## API Endpoints
+## API endpoints
 
 Adobe I/O Runtime supports the following API endpoints for interacting programmatically with the service. 
 
@@ -39,23 +39,31 @@ Returns the details of the namespace associated with the specified organization 
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em><br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em><br />Example value:
 <pre><code>{
-"name": "string",
-"auth": "string"
+    "name": "string",
+    "auth": "string"
+}</code></pre>
+Model:
+<pre><code>NamespaceDTO {
+description: Namespace Details
+    name    string
+            Namespace name
+    auth    string
+            Auth associated with Namespace
 }</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### POST /runtime/admin/namespaces/{orgId}/{intId}
@@ -72,23 +80,31 @@ Creates a new namespace and returns the details of the newly created namespace. 
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>{
 "name": "string",
 "auth": "string"
 }</code></pre>
+Model:
+<pre><code>NamespaceDTO {
+description: Namespace Details
+    name    string
+            Namespace name
+    auth    string
+            Auth associated with Namespace
+}</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### DELETE /runtime/admin/namespaces/{orgId}/{intId}
@@ -122,16 +138,16 @@ Returns the list of actions associated with the specified organization and integ
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>[
   {
     "name": "string",
@@ -165,9 +181,76 @@ Response content type: `application/json`
     "url": "string"
   }
 ]</code></pre>
+Model: 
+<pre><code>[ActionDTO {
+<em>description: OpenWhisk Action</em>
+
+name        string
+            Action name
+code        string
+            Action code
+namespace   string
+            Action namespace
+version     string
+            Action version
+params      [Action params
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+annotations [Action annotations
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+limits      LimitsDTO {
+            <em>description: OpenWhisk Action Limits</em>
+            
+            timeout     string
+                        Action timeout
+            
+            memory      string
+                        Action memory limit
+
+            logs        string
+                        Action logs
+            }
+
+exec        ExecDTO {
+            <em>description: OpenWhisk Action exec details</em>
+            
+            kind    string
+            Action kind
+
+            binary  boolean
+                    <em>default: false
+                    Is action binary
+
+            components  [
+                        Action components in case of sequence
+                        string]
+            }
+url         string
+            Action url
+}]
+</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### POST /runtime/namespaces/{orgId}/{intId}/actions
@@ -175,14 +258,14 @@ Creates a new action.
 
 #### _Parameters:_
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
         <td><code>orgId</code> (<code>string</code>: <em>path</em>)</td>
         <td>Organization ID</td>
         </tr>
@@ -225,7 +308,7 @@ Creates a new action.
   "url": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
             </td>
-		</tr>
+        </tr>
         <tr>
         <td><code>Authorization</code> (<code>string</code>: <em>header</em>)</td>
         <td>Authorization token in format: <code>Bearer {token}</code></td>
@@ -234,7 +317,7 @@ Creates a new action.
         <td><code>X-Api-Key</code> (<code>string</code>: <em>header</em>)</td>
         <td>Api key</td>
         </tr>
-	</tbody>
+    </tbody>
 </table>
 
 #### _Responses:_
@@ -258,16 +341,16 @@ Returns the details of an action.
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>{
   "name": "string",
   "namespace": "string",
@@ -283,8 +366,8 @@ Response content type: `application/json`
   "response": {}
 }</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### POST /runtime/namespaces/{orgId}/{intId}/actions/{name}
@@ -302,16 +385,16 @@ Executes an action.
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>{
   "name": "string",
   "code": "string",
@@ -344,8 +427,8 @@ Response content type: `application/json`
   "url": "string"
 }</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### PUT /runtime/namespaces/{orgId}/{intId}/actions/{name}
@@ -353,14 +436,14 @@ Updates an action.
 
 #### _Parameters:_
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
         <td><code>orgId</code> (<code>string</code>: <em>path</em>)</td>
         <td>Organization ID</td>
         </tr>
@@ -407,7 +490,7 @@ Updates an action.
   "url": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
             </td>
-		</tr>
+        </tr>
         <tr>
         <td><code>Authorization</code> (<code>string</code>: <em>header</em>)</td>
         <td>Authorization token in format: <code>Bearer {token}</code></td>
@@ -416,7 +499,7 @@ Updates an action.
         <td><code>X-Api-Key</code> (<code>string</code>: <em>header</em>)</td>
         <td>Api key</td>
         </tr>
-	</tbody>
+    </tbody>
 </table>
 
 #### _Responses:_
@@ -455,16 +538,16 @@ Returns a list of built-in actions.
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em><br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em><br />Example value:
 <pre><code>[
   {
     "name": "string",
@@ -499,8 +582,8 @@ Response content type: `application/json`
   }
 ]</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### POST /runtime/namespaces/{orgId}/{intId}/handleEventRegistration
@@ -508,14 +591,14 @@ Registers an event registration and assigns a given action to the event.
 
 #### _Parameters:_
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
         <td><code>orgId</code> (<code>string</code>: <em>path</em>)</td>
         <td>Organization ID</td>
         </tr>
@@ -545,7 +628,7 @@ Registers an event registration and assigns a given action to the event.
   "registration_id": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
             </td>
-		</tr>
+        </tr>
         <tr>
         <td><code>Authorization</code> (<code>string</code>: <em>header</em>)</td>
         <td>Authorization token in format: <code>Bearer {token}</code></td>
@@ -562,22 +645,22 @@ Registers an event registration and assigns a given action to the event.
         <td><code>X-Api-Key</code> (<code>string</code>: <em>header</em>)</td>
         <td>Api key</td>
         </tr>
-	</tbody>
+    </tbody>
 </table>
 
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>{
   "id": "string",
   "name": "string",
@@ -597,8 +680,8 @@ Response content type: `application/json`
   "registration_id": "string"
 }</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### DELETE /runtime/namespaces/{orgId}/{intId}/handleEventDeletion/{clientId}/{registrationId}
@@ -627,14 +710,14 @@ Updates an event registration.
 
 #### _Parameters:_
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
         <td><code>orgId</code> (<code>string</code>: <em>path</em>)</td>
         <td>Organization ID</td>
         </tr>
@@ -680,7 +763,7 @@ Updates an event registration.
   "registration_id": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
             </td>
-		</tr>
+        </tr>
         <tr>
         <td><code>Authorization</code> (<code>string</code>: <em>header</em>)</td>
         <td>Authorization token in format: <code>Bearer {token}</code></td>
@@ -689,22 +772,22 @@ Updates an event registration.
         <td><code>X-Api-Key</code> (<code>string</code>: <em>header</em>)</td>
         <td>Api key</td>
         </tr>
-	</tbody>
+    </tbody>
 </table>
 
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>{
   "id": "string",
   "name": "string",
@@ -724,8 +807,8 @@ Response content type: `application/json`
   "registration_id": "string"
 }</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
 
 ### POST /runtime/namespaces/{orgId}/{intId}/handleEventStatus/{clientId}/{registrationId}/{status}
@@ -747,16 +830,16 @@ Updates the status of an event registration.
 #### _Responses:_
 Response content type: `application/json`
 <table>
-	<thead>
-		<tr>
-			<th>Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="vertical-align:top">200</td>
-			<td><em>Successful operation</em> <br />Example value:
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="vertical-align:top">200</td>
+            <td><em>Successful operation</em> <br />Example value:
 <pre><code>{
   "id": "string",
   "name": "string",
@@ -776,6 +859,6 @@ Response content type: `application/json`
   "registration_id": "string"
 }</code></pre>
             </td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
