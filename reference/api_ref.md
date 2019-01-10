@@ -237,7 +237,7 @@ exec        ExecDTO {
             Action kind
 
             binary  boolean
-                    <em>default: false
+                    <em>default: false</em>
                     Is action binary
 
             components  [
@@ -307,6 +307,73 @@ Creates a new action.
   },
   "url": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
+Model: 
+<pre><code>[ActionDTO {
+<em>description: OpenWhisk Action</em>
+
+name        string
+            Action name
+code        string
+            Action code
+namespace   string
+            Action namespace
+version     string
+            Action version
+params      [Action params
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+annotations [Action annotations
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+limits      LimitsDTO {
+            <em>description: OpenWhisk Action Limits</em>
+            
+            timeout     string
+                        Action timeout
+            
+            memory      string
+                        Action memory limit
+
+            logs        string
+                        Action logs
+            }
+
+exec        ExecDTO {
+            <em>description: OpenWhisk Action exec details</em>
+            
+            kind    string
+            Action kind
+
+            binary  boolean
+                    <em>default: false</em>
+                    Is action binary
+
+            components  [
+                        Action components in case of sequence
+                        string]
+            }
+url         string
+            Action url
+}]
+</code></pre>
             </td>
         </tr>
         <tr>
@@ -365,6 +432,73 @@ Response content type: `application/json`
   "version": "string",
   "response": {}
 }</code></pre>
+Model: 
+<pre><code>[ActionDTO {
+<em>description: OpenWhisk Action</em>
+
+name        string
+            Action name
+code        string
+            Action code
+namespace   string
+            Action namespace
+version     string
+            Action version
+params      [Action params
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+annotations [Action annotations
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+limits      LimitsDTO {
+            <em>description: OpenWhisk Action Limits</em>
+            
+            timeout     string
+                        Action timeout
+            
+            memory      string
+                        Action memory limit
+
+            logs        string
+                        Action logs
+            }
+
+exec        ExecDTO {
+            <em>description: OpenWhisk Action exec details</em>
+            
+            kind    string
+            Action kind
+
+            binary  boolean
+                    <em>default: false</em>
+                    Is action binary
+
+            components  [
+                        Action components in case of sequence
+                        string]
+            }
+url         string
+            Action url
+}]
+</code></pre>
             </td>
         </tr>
     </tbody>
@@ -426,6 +560,41 @@ Response content type: `application/json`
   },
   "url": "string"
 }</code></pre>
+Model: 
+<pre><code>[ActionResultDTO {
+<em>description: OpenWhisk Action invocation result</em>
+
+name        string
+            Action name
+code        string
+            Action code
+namespace   string
+            Action namespace
+version     string
+            Action version
+
+annotations [Action annotations
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+duration    integer($int32)
+            Duration
+
+version     string
+            Action Version
+
+response    {
+            description:    
+            Action invocation response
+}
+</code></pre>
             </td>
         </tr>
     </tbody>
@@ -489,6 +658,73 @@ Updates an action.
   },
   "url": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
+Model: 
+<pre><code>[ActionDTO {
+<em>description: OpenWhisk Action</em>
+
+name        string
+            Action name
+code        string
+            Action code
+namespace   string
+            Action namespace
+version     string
+            Action version
+params      [Action params
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+annotations [Action annotations
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+limits      LimitsDTO {
+            <em>description: OpenWhisk Action Limits</em>
+            
+            timeout     string
+                        Action timeout
+            
+            memory      string
+                        Action memory limit
+
+            logs        string
+                        Action logs
+            }
+
+exec        ExecDTO {
+            <em>description: OpenWhisk Action exec details</em>
+            
+            kind    string
+            Action kind
+
+            binary  boolean
+                    <em>default: false</em>
+                    Is action binary
+
+            components  [
+                        Action components in case of sequence
+                        string]
+            }
+url         string
+            Action url
+}]
+</code></pre>
             </td>
         </tr>
         <tr>
@@ -581,6 +817,73 @@ Response content type: `application/json`
     "url": "string"
   }
 ]</code></pre>
+Model: 
+<pre><code>[ActionDTO {
+<em>description: OpenWhisk Action</em>
+
+name        string
+            Action name
+code        string
+            Action code
+namespace   string
+            Action namespace
+version     string
+            Action version
+params      [Action params
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+annotations [Action annotations
+            KeyValuePairDTO {
+            <em>description: OpenWhisk Action param</em>
+            
+            key     string
+                    Param Name
+
+            value   {
+                        <em>description: Param value</em>
+                    }
+            }]
+
+limits      LimitsDTO {
+            <em>description: OpenWhisk Action Limits</em>
+            
+            timeout     string
+                        Action timeout
+            
+            memory      string
+                        Action memory limit
+
+            logs        string
+                        Action logs
+            }
+
+exec        ExecDTO {
+            <em>description: OpenWhisk Action exec details</em>
+            
+            kind    string
+            Action kind
+
+            binary  boolean
+                    <em>default: false</em>
+                    Is action binary
+
+            components  [
+                        Action components in case of sequence
+                        string]
+            }
+url         string
+            Action url
+}]
+</code></pre>
             </td>
         </tr>
     </tbody>
@@ -627,6 +930,49 @@ Registers an event registration and assigns a given action to the event.
   "runtime_action": "string",
   "registration_id": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
+Model: 
+<pre><code>EventDTO {
+<em>description: Adobe I/O Event Details</em>
+
+id                  string
+                    Event id
+name                string
+                    Event name
+description         string
+                    Event code
+Client id           string
+                    Event namespace
+type                string
+                    Event type
+
+integration_status  string
+                    Event integration status
+
+delivery_type       string
+                    Event delivery type
+
+webhook_url         string
+                    Webhook url
+
+events_of_interest  [
+                    Events of interest to listen to
+
+                    EventsOfInterestDTO{
+                    <em>description: Events of interest</em>
+
+                        event_code  string
+                                    Event code
+
+                        provider    string
+                                    Event provider
+                    }]
+runtime_action      string
+                    Action to handle event
+
+registration_id     string
+                    Event registration id
+}
+</code></pre>
             </td>
         </tr>
         <tr>
@@ -679,6 +1025,49 @@ Response content type: `application/json`
   "runtime_action": "string",
   "registration_id": "string"
 }</code></pre>
+Model: 
+<pre><code>EventDTO {
+<em>description: Adobe I/O Event Details</em>
+
+id                  string
+                    Event id
+name                string
+                    Event name
+description         string
+                    Event code
+Client id           string
+                    Event namespace
+type                string
+                    Event type
+
+integration_status  string
+                    Event integration status
+
+delivery_type       string
+                    Event delivery type
+
+webhook_url         string
+                    Webhook url
+
+events_of_interest  [
+                    Events of interest to listen to
+
+                    EventsOfInterestDTO{
+                    <em>description: Events of interest</em>
+
+                        event_code  string
+                                    Event code
+
+                        provider    string
+                                    Event provider
+                    }]
+runtime_action      string
+                    Action to handle event
+
+registration_id     string
+                    Event registration id
+}
+</code></pre>
             </td>
         </tr>
     </tbody>
@@ -762,6 +1151,49 @@ Updates an event registration.
   "runtime_action": "string",
   "registration_id": "string"
 }</code></pre>Parameter content type: <code>application/json</code>
+Model: 
+<pre><code>EventDTO {
+<em>description: Adobe I/O Event Details</em>
+
+id                  string
+                    Event id
+name                string
+                    Event name
+description         string
+                    Event code
+Client id           string
+                    Event namespace
+type                string
+                    Event type
+
+integration_status  string
+                    Event integration status
+
+delivery_type       string
+                    Event delivery type
+
+webhook_url         string
+                    Webhook url
+
+events_of_interest  [
+                    Events of interest to listen to
+
+                    EventsOfInterestDTO{
+                    <em>description: Events of interest</em>
+
+                        event_code  string
+                                    Event code
+
+                        provider    string
+                                    Event provider
+                    }]
+runtime_action      string
+                    Action to handle event
+
+registration_id     string
+                    Event registration id
+}
+</code></pre>
             </td>
         </tr>
         <tr>
@@ -806,6 +1238,49 @@ Response content type: `application/json`
   "runtime_action": "string",
   "registration_id": "string"
 }</code></pre>
+Model: 
+<pre><code>EventDTO {
+<em>description: Adobe I/O Event Details</em>
+
+id                  string
+                    Event id
+name                string
+                    Event name
+description         string
+                    Event code
+Client id           string
+                    Event namespace
+type                string
+                    Event type
+
+integration_status  string
+                    Event integration status
+
+delivery_type       string
+                    Event delivery type
+
+webhook_url         string
+                    Webhook url
+
+events_of_interest  [
+                    Events of interest to listen to
+
+                    EventsOfInterestDTO{
+                    <em>description: Events of interest</em>
+
+                        event_code  string
+                                    Event code
+
+                        provider    string
+                                    Event provider
+                    }]
+runtime_action      string
+                    Action to handle event
+
+registration_id     string
+                    Event registration id
+}
+</code></pre>
             </td>
         </tr>
     </tbody>
@@ -858,6 +1333,49 @@ Response content type: `application/json`
   "runtime_action": "string",
   "registration_id": "string"
 }</code></pre>
+Model: 
+<pre><code>EventDTO {
+<em>description: Adobe I/O Event Details</em>
+
+id                  string
+                    Event id
+name                string
+                    Event name
+description         string
+                    Event code
+Client id           string
+                    Event namespace
+type                string
+                    Event type
+
+integration_status  string
+                    Event integration status
+
+delivery_type       string
+                    Event delivery type
+
+webhook_url         string
+                    Webhook url
+
+events_of_interest  [
+                    Events of interest to listen to
+
+                    EventsOfInterestDTO{
+                    <em>description: Events of interest</em>
+
+                        event_code  string
+                                    Event code
+
+                        provider    string
+                                    Event provider
+                    }]
+runtime_action      string
+                    Action to handle event
+
+registration_id     string
+                    Event registration id
+}
+</code></pre>
             </td>
         </tr>
     </tbody>
