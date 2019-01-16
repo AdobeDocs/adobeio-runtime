@@ -195,50 +195,37 @@ version     string
 params      [Action params
             KeyValuePairDTO {
             <em>description: OpenWhisk Action param</em>
-            
             key     string
                     Param Name
-                    
             value   {
                         <em>description: Param value</em>
                     }
             }]
-            
 annotations [Action annotations
             KeyValuePairDTO {
             <em>description: OpenWhisk Action param</em>
-            
             key     string
                     Param Name
-            
             value   {
                         <em>description: Param value</em>
                     }
             }]
-
 limits      LimitsDTO {
             <em>description: OpenWhisk Action Limits</em>
-            
             timeout     string
                         Action timeout
-            
             memory      string
                         Action memory limit
-            
             logs        string
                         Action logs
             }
-            
 exec        ExecDTO {
             <em>description: OpenWhisk Action exec details</em>
-            
             kind    string
             Action kind
-            
             binary  boolean
                     <em>default: false</em>
                     Is action binary
-            
             components  [
                         Action components in case of sequence
                         string]
