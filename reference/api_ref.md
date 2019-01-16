@@ -292,7 +292,7 @@ Creates a new action.
     ]
   },
   "url": "string"
-}</code></pre>Parameter content type: <code>application/json</code>
+}</code></pre>Parameter content type: <code>application/json</code><br>
 Model: 
 <pre><code>[ActionDTO {
 <em>description: OpenWhisk Action</em>
@@ -390,7 +390,7 @@ Response content type: `application/json`
     <tbody>
         <tr>
             <td style="vertical-align:top">200</td>
-            <td><em>Successful operation</em> <br />Example value:
+            <td><em>Successful operation</em> <br>Example value:
 <pre><code>{
   "name": "string",
   "namespace": "string",
@@ -610,7 +610,7 @@ Updates an action.
     ]
   },
   "url": "string"
-}</code></pre>Parameter content type: <code>application/json</code>
+}</code></pre>Parameter content type: <code>application/json</code><br>
 Model: 
 <pre><code>[ActionDTO {
 <em>description: OpenWhisk Action</em>
@@ -854,7 +854,7 @@ Registers an event registration and assigns a given action to the event.
   ],
   "runtime_action": "string",
   "registration_id": "string"
-}</code></pre>Parameter content type: <code>application/json</code>
+}</code></pre>Parameter content type: <code>application/json</code><br>
 Model: 
 <pre><code>EventDTO {
 <em>description: Adobe I/O Event Details</em>
@@ -1057,7 +1057,7 @@ Updates an event registration.
   ],
   "runtime_action": "string",
   "registration_id": "string"
-}</code></pre>Parameter content type: <code>application/json</code>
+}</code></pre>Parameter content type: <code>application/json</code><br>
 Model: 
 <pre><code>EventDTO {
 <em>description: Adobe I/O Event Details</em>
