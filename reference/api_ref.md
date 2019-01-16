@@ -55,7 +55,7 @@ Response content type: `application/json`
 }</code></pre>
 Model:
 <pre><code>NamespaceDTO {
-description: Namespace Details
+<em>description: Namespace Details</em>
     name    string
             Namespace name
     auth    string
@@ -184,7 +184,6 @@ Response content type: `application/json`
 Model: 
 <pre><code>[ActionDTO {
 <em>description: OpenWhisk Action</em>
-
 name        string
             Action name
 code        string
@@ -199,19 +198,19 @@ params      [Action params
             
             key     string
                     Param Name
-
+                    
             value   {
                         <em>description: Param value</em>
                     }
             }]
-
+            
 annotations [Action annotations
             KeyValuePairDTO {
             <em>description: OpenWhisk Action param</em>
             
             key     string
                     Param Name
-
+            
             value   {
                         <em>description: Param value</em>
                     }
@@ -225,21 +224,21 @@ limits      LimitsDTO {
             
             memory      string
                         Action memory limit
-
+            
             logs        string
                         Action logs
             }
-
+            
 exec        ExecDTO {
             <em>description: OpenWhisk Action exec details</em>
             
             kind    string
             Action kind
-
+            
             binary  boolean
                     <em>default: false</em>
                     Is action binary
-
+            
             components  [
                         Action components in case of sequence
                         string]
