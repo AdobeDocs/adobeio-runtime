@@ -51,8 +51,8 @@ To list the available integrations, run:
 ```
 aio console:list-integrations
 Success: Page 1 of 1, Showing 2 results of 2 results.
-<NUMBER_NUMBER> : <Integration Name 1>
-<NUMBER_NUMBER> : <Integration Name 2>
+NUMBER_NUMBER : Integration Name 1
+NUMBER_NUMBER : Integration Name 2
 ```
 
 If you want to select an integration as the current namespace, run this command and pass as the argument the <NUMBER_NUMBER> you see listed when running `aio console:list-integrations`:
@@ -62,3 +62,11 @@ aio console:select-integration <NUMBER_NUMBER>
 ```
 
 This command will generate the `.wskprops` file in your user directory (or overwrite if the file already exists) for accessing that given namespace. Now, you can use the `wsk` CLI to manage this namespace: create/invoke actions and so forth.
+
+### Reseting the auth credentials for a namespace
+
+If you want to change the credentials used to manage a namespace (the hash stored in the `.wskprops` file), you can run this command:
+```
+aio console:reset-integration INTEGRATION_ID
+```
+You can retrieve the 'INTEGRATION_ID` from I/O Console or by listing all the integrations and look for the one you need (`aio console:list-integrations`) - the second number on each row represents is the `INTEGRATION_ID`.
