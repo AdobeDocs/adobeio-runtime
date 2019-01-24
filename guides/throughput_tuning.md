@@ -2,7 +2,7 @@
 
 The main instrument you can use for tuning how a given action is executed and enable a faster number of executions, is the value you set for the `action/container concurrency`. This value is not related to the concurrent value per namespace or minuteRate value, though these two enforce the upper limit for actions executed per minute your namespace can reach.
 
-The default value is `100` and it means that upt o 100 invocations can happen in the same container for the that action. Suppose that you want to execute 100 times a `HelloWorld` action at the same time or in short period of time (minutes). With the default value (`100`) it means that the system will use the same container instead of using 100 different containers.
+The default value is `1` and it means that 1 invocation can happen in the same container for the that action. Suppose that you want to execute 100 times a `HelloWorld` action at the same time or in short period of time (minutes). With the default value (`1`) it means that the system will use 100 different containers instead of using the same container.
 
 This enables you to avoid cold-start issues. When the system doesn't have any containers left, it has to create new ones. This cold-start adds a lot of latency to your application.
 
