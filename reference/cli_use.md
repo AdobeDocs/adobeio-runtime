@@ -69,4 +69,4 @@ If you want to change the credentials used to manage a namespace (the hash store
 ```
 aio console:reset-integration INTEGRATION_ID
 ```
-You can retrieve the 'INTEGRATION_ID` from I/O Console or by listing all the integrations and look for the one you need (`aio console:list-integrations`) - the second number on each row represents is the `INTEGRATION_ID`.
+You can retrieve the `INTEGRATION_ID` from I/O Console or by listing all the integrations and look for the one you need (`aio console:list-integrations`) - the second number on each row represents is the `INTEGRATION_ID`.
