@@ -1,0 +1,243 @@
+{
+"name": "Adobe I/O Runtime Developer Guide",
+"version": "1.0.0",
+"description": "Adobe I/O Runtime Developer Guide",
+"author": "Michal Wielinski",
+"view_type": "mdbook",
+"meta_keywords": "adobe i/o, adobe runtime developer guide, adobe runtime",
+"meta_description": "Adobe I/O Runtime Developer Guide",
+"publish_date": "18/01/2019",
+"show_edit_github_banner": false,
+"base_path": "https://raw.githubusercontent.com",
+"pages":
+  [
+    {
+        "importedFileName": "readme",
+        "pages": [],
+        "path": "adobedocs/adobeio-runtime/stage/README.md",
+        "title": "Adobe I/O Runtime Developer Guide"
+    },
+    {
+        "importedFileName": "overview",
+        "pages": [
+              {
+                "importedFileName": "entities",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/overview/entities.md",
+                "title": "Adobe I/O Runtime Entities"
+              },
+              {
+                "importedFileName": "howitworks",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/overview/howitworks.md",
+                "title": "How Adobe I/O Runtime Works"
+              },
+              {
+                "importedFileName": "usecases",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/overview/usecases.md",
+                "title": "Use cases"
+              },
+              {
+                "importedFileName": "what_is_runtime",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/overview/what_is_runtime.md",
+                "title": "What is Adobe I/O Runtime"
+              }
+        ],
+        "path": "AdobeDocs/adobeio-runtime/stage/overview.md",
+        "title": "Overview"
+    },
+    {
+        "importedFileName": "quickstarts",
+        "pages": [
+              {
+                "importedFileName": "debug",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/quickstarts/debug.md",
+                "title": "Debug Your Actions"
+              },
+              {
+                "importedFileName": "deploy",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/quickstarts/deploy.md",
+                "title": "Deploying your First Adobe I/O Runtime Function"
+              },
+              {
+                "importedFileName": "setup",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/quickstarts/setup.md",
+                "title": "Setting up Your Environment"
+              }
+        ],
+        "path": "AdobeDocs/adobeio-runtime/stage/quickstarts.md",
+        "title": "Getting Started with Adobe I/O Runtime"
+    },
+    {
+        "importedFileName": "guides",
+        "pages": [
+              {
+                "importedFileName": "actions_events",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/guides/actions_events.md",
+                "title": "Events"
+              },
+              {
+                "importedFileName": "ci-cd_pipeline",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/guides/ci-cd_pipeline.md",
+                "title": "CI/CD Pipeline"
+              },
+              {
+                "importedFileName": "creating_actions",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/guides/creating_actions.md",
+                "title": "Creating Actions"
+              },
+              {
+                "importedFileName": "creating_rest_apis",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/guides/creating_rest_apis.md",
+                "title": "Creating REST APIs"
+              },
+              {
+                "importedFileName": "logging_monitoring.md",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/guides/logging_monitoring.md",
+                "title": "Logging and Monitoring"
+              },
+              {
+                "importedFileName": "securing_web_actions",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/guides/securing_web_actions.md",
+                "title": "Securing Web Actions"
+              },
+              {
+                "importedFileName": "system_settings",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/guides/system_settings.md",
+                "title": "System Settings"
+              },
+              {
+                "importedFileName": "throughput_tuning",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/guides/throughput_tuning.md",
+                "title": "Throughput Tuning"
+              },
+              {
+                "importedFileName": "using_packages",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/guides/using_packages.md",
+                "title": "Using Packages with Adobe I/O Runtime"
+              }
+        ],
+        "path": "AdobeDocs/adobeio-runtime/stage/guides.md",
+        "title": "Using Adobe I/O Runtime"
+    },
+    {
+        "importedFileName": "reference",
+        "pages": [
+              {
+                "importedFileName": "api_ref",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/api_ref.md",
+                "title": "Adobe I/O Runtime API Reference"
+              },
+              {
+                "importedFileName": "cli_use",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/cli_use.md",
+                "title": "Using aio CLI"
+              },
+              {
+                "importedFileName": "feeds",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/feeds.md",
+                "title": "Using Feeds"
+              },
+              {
+                "importedFileName": "namespaces",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/namespaces.md",
+                "title": "Namespaces"
+              },
+              {
+                "importedFileName": "packages",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/reference/packages.md",
+                "title": "Packages"
+              },
+              {
+                "importedFileName": "prepackages",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/prepackages.md",
+                "title": "Pre-installed packages"
+              },
+              {
+                "importedFileName": "runtimes",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/runtimes.md",
+                "title": "Runtimes"
+              },
+              {
+                "importedFileName": "sequences_compositions",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/sequences_compositions.md",
+                "title": "Sequences and Compositions"
+              },
+              {
+                "importedFileName": "triggersrules",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/triggersrules.md",
+                "title": "Using Triggers and Rules"
+              },
+          {
+                "importedFileName": "wsk_use",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/wsk_use.md",
+                "title": "Using the wsk CLI"
+              }
+        ],
+        "path": "AdobeDocs/adobeio-runtime/stage/reference.md",
+        "title": "Adobe I/O Runtime reference documentation"
+    },
+    {
+        "importedFileName": "tools",
+        "pages": [
+              {
+                "importedFileName": "cli_install",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/tools/cli_install.md",
+                "title": "Setting up the `aio` CLI"
+              },
+              {
+                "importedFileName": "wsk_install",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/tools/wsk_install.md",
+                "title": "Setting up the wsk CLI"
+              },
+              {
+                "importedFileName": "wskdeploy_install",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/tools/wskdeploy_install.md",
+                "title": "Setting up the wskdeploy CLI"
+              }
+        ],
+        "path": "AdobeDocs/adobeio-runtime/stage/tools.md",
+        "title": "Overview"
+    },
+    {
+        "importedFileName": "resources",
+        "pages": [
+              {
+                "importedFileName": "faq",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/resources/faq.md",
+                "title": "FAQ"
+              }
+        ],
+        "path": "AdobeDocs/adobeio-runtime/stage/resources.md",
+        "title": "Resources and support"
+    }
+  ]
+}
