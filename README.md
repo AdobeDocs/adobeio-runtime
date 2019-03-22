@@ -19,8 +19,9 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 
 [Guides](guides.md)
 
-* [Creating Actions](guides/creating_actions.md): actions, web actions, invoking and managing, setting params
+* [Creating Actions](guides/creating_actions.md): actions, web actions, invoking and managing, setting parameters
 * [Throughput Tuning](guides/throughput_tuning.md): how to maximize the number of action invocations
+* [Security Guide](guides/security_general): discover potential security issues and how to address them
 * [Securing Web Actions](guides/securing_web_actions.md): learn how to control the access to web actions
 * [Creating REST APIs](guides/creating_rest_apis.md): learn to create REST APIs from web actions
 * [Using Packages](guides/using_packages.md): Working with packages
@@ -32,7 +33,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 
 * [aio CLI](reference/cli_use.md): how to use aio CLI
 * [wsk CLI](reference/wsk_use.md): how to use wsk CLI
-* [Pre-installed Packages](reference/prepackages.md): what are the pre-installed packages
+* [Pre-installed Packages](reference/prepackages.md): what packages are pre-installed 
 * [Runtimes](reference/runtimes.md): details about the available runtimes
 * [API Reference](reference/api_ref.md): I/O Management API
 * [Triggers & Rules](reference/triggersrules.md): working with triggers and rules
@@ -42,7 +43,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 [Tools](tools.md)
 
 * [`aio` CLI](./tools/cli_install.md) - this tool helps you manage your namespaces and the authentication for the `wsk` CLI
-* [`wsk` CLI](./tools/wsk_install.md) - this tool is the main interface for managing your actions/packages/rules/triggers and get access to activation results/errors/logs
+* [`wsk` CLI](./tools/wsk_install.md) - this tool is the main interface for managing your actions/packages/rules/triggers and getting access to activation results/errors/logs
 * [`wskdeploy` CLI](./tools/wskdeploy_install.md) - this tool helps you deploy multiple actions and packages
 
 [Resources and Support](resources.md)
