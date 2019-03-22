@@ -2,7 +2,7 @@
 
 This guide attempts to lay out security concerns you have to think about when working with Runtime functions. Depending on your exact use case, only a subset of these may matter to you: for example, if you aren't using web actions, the section about cookies isn't relevant. This guide will assist you in keeping your functions secure and steer you away from practices that are likely to cause security headaches in the serverless environment.
 
-**On this page:**
+On this page:
 
 - [Sandboxing](#sandboxing)
 - [XSS](#cross-site-scripting-XSS)
