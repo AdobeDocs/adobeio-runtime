@@ -4,7 +4,7 @@ Adobe I/O Runtime supports Node.js version 10. The following npm modules are pre
 1. `express` version 4.16.4
 2. `openwhisk` version 3.18.0
 3. `body-parser` version 1.18.3
-4. `continuation-local-storage` version 3.2.1
+4. `cls-hooked` version 4.2.2
 5. `request` version 2.88.0
 6. `request-promise` version 4.2.2
 
