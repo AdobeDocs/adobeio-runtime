@@ -10,7 +10,7 @@
 "show_edit_github_banner": false,
 "base_path": "https://raw.githubusercontent.com",
 "pages":
-  [
+  [ 
     {
         "importedFileName": "readme",
         "pages": [],
@@ -105,6 +105,12 @@
                 "pages": [],
                 "path": "adobedocs/adobeio-runtime/blob/stage/guides/logging_monitoring.md",
                 "title": "Logging and Monitoring"
+              },
+              {
+                "importedFileName": "security_general",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/blob/stage/guides/security_general.md",
+                "title": "Security Guide"
               },
               {
                 "importedFileName": "securing_web_actions",
