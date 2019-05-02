@@ -1,12 +1,12 @@
 # Adobe I/O Runtime: Frequently Asked Questions
 
 On this page: 
-- [Getting Access ](#gettingaccess)
-- [Supported Programming Languages](#supportedprogramminglanguages)
+- [Getting Access ](#getting-access)
+- [Supported Programming Languages](#supported-programming-languages)
 - [Price](#price)
-- [Usage Quota](#usagequota)
-- [Where we execute your actions](#multipleregionsupport)
-- [System Limits](#systemlimits)
+- [Usage Quota](#usage-quota)
+- [Where we execute your actions](#multiple-region-support)
+- [System Limits](#system-limits)
 
 ## Getting Access 
 **How can I get access to I/O Runtime?**  
