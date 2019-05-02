@@ -33,6 +33,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 
 * [aio CLI](reference/cli_use.md): how to use aio CLI
 * [wsk CLI](reference/wsk_use.md): how to use wsk CLI
+* [Multiple Regions](reference/mulpiple-regions.md): where we run your actions
 * [Pre-installed Packages](reference/prepackages.md): what packages are pre-installed 
 * [Runtimes](reference/runtimes.md): details about the available runtimes
 * [API Reference](reference/api_ref.md): I/O Management API

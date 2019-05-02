@@ -5,7 +5,8 @@ On this page:
 - [Supported Programming Languages](#supportedprogramminglanguages)
 - [Price](#price)
 - [Usage Quota](#usagequota)
-- [Support (Zendesk)](#supportzendesk)
+- [Where we execute your actions](#multipleregionsupport)
+- [System Limits](#systemlimits)
 
 ## Getting Access 
 **How can I get access to I/O Runtime?**  
@@ -17,20 +18,16 @@ For now, Adobe I/O Runtime only supports Node.js. We will add support for other 
 
 ## Price 
 **What does it cost to use Adobe I/O Runtime?**  
-Presently, Adobe I/O Runtime is free to use for Adobe enterprise customers and partners.
+Presently (private beta), Adobe I/O Runtime is free to use for Adobe enterprise customers and partners.
 
 ## Usage Quotas 
 **What usage quotas are in place for Adobe I/O Runtime?**  
 There are presently no usage quotas on Adobe I/O Runtime.
 
+## Multiple Region Support
+**Where we execute your actions**
+I/O Runtime runs in AWS US-East and Euriope-West. We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing).
+
+## System Limits
 **Which limits are imposed onto actions?**  
-All available limits (and the default values) are given in the [OpenWhisk documentation](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md). Notable limits are the timeout for functions and the maximum payload that can get posted to a function.
-
-Runtime exceptions to the OpenWhisk limits are as follows:
-
-- Invocations per minute: **600**
-- Triggers per minute: **600**
-- Action size (including NPMs): **20MB**
-
-## Support (Zendesk)
-You can submit support request through our [Zendesk chanel](https://adobeio.zendesk.com).
+All available limits (and the default values) are listed here: [System Settings](guides/system_settings.md). Notable limits are the timeout for functions and the maximum payload that can get posted to a function.
