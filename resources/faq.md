@@ -30,4 +30,4 @@ I/O Runtime runs in AWS US-East and Euriope-West. We deploy your code in all reg
 
 ## System Limits
 **Which limits are imposed onto actions?**  
-All available limits (and the default values) are listed here: [System Settings](guides/system_settings.md). Notable limits are the timeout for functions and the maximum payload that can get posted to a function.
+All available limits (and the default values) are listed here: [System Settings](../guides/system_settings.md). Notable limits are the timeout for functions and the maximum payload that can get posted to a function.
