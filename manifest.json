@@ -29,7 +29,7 @@
               {
                 "importedFileName": "howitworks",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/overview/howitworks.md",
+                "path": "adobedocs/adobeio-runtime/stage/overview/howitworks.md",
                 "title": "How Adobe I/O Runtime Works"
               },
               {
@@ -45,7 +45,7 @@
                 "title": "What is Adobe I/O Runtime"
               }
         ],
-        "path": "AdobeDocs/adobeio-runtime/stage/overview.md",
+        "path": "adobedocs/adobeio-runtime/stage/overview.md",
         "title": "Overview"
     },
     {
@@ -70,7 +70,7 @@
                 "title": "Setting up Your Environment"
               }
         ],
-        "path": "AdobeDocs/adobeio-runtime/stage/quickstarts.md",
+        "path": "adobedocs/adobeio-runtime/stage/quickstarts.md",
         "title": "Getting Started with Adobe I/O Runtime"
     },
     {
@@ -79,13 +79,13 @@
               {
                 "importedFileName": "actions_events",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/guides/actions_events.md",
+                "path": "adobedocs/adobeio-runtime/stage/guides/actions_events.md",
                 "title": "Events"
               },
               {
                 "importedFileName": "ci-cd_pipeline",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/guides/ci-cd_pipeline.md",
+                "path": "adobedocs/adobeio-runtime/stage/guides/ci-cd_pipeline.md",
                 "title": "CI/CD Pipeline"
               },
               {
@@ -97,25 +97,25 @@
               {
                 "importedFileName": "creating_rest_apis",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/guides/creating_rest_apis.md",
+                "path": "adobedocs/adobeio-runtime/stage/guides/creating_rest_apis.md",
                 "title": "Creating REST APIs"
               },
               {
                 "importedFileName": "logging_monitoring.md",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/guides/logging_monitoring.md",
+                "path": "adobedocs/adobeio-runtime/stage/guides/logging_monitoring.md",
                 "title": "Logging and Monitoring"
               },
               {
                 "importedFileName": "security_general",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/guides/security_general.md",
+                "path": "adobedocs/adobeio-runtime/stage/guides/security_general.md",
                 "title": "Security Guide"
               },
               {
                 "importedFileName": "securing_web_actions",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/guides/securing_web_actions.md",
+                "path": "adobedocs/adobeio-runtime/stage/guides/securing_web_actions.md",
                 "title": "Securing Web Actions"
               },
               {
@@ -137,7 +137,7 @@
                 "title": "Using Packages with Adobe I/O Runtime"
               }
         ],
-        "path": "AdobeDocs/adobeio-runtime/stage/guides.md",
+        "path": "adobedocs/adobeio-runtime/stage/guides.md",
         "title": "Using Adobe I/O Runtime"
     },
     {
@@ -170,7 +170,7 @@
               {
                 "importedFileName": "packages",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/reference/packages.md",
+                "path": "adobedocs/adobeio-runtime/stage/reference/packages.md",
                 "title": "Packages"
               },
               {
@@ -204,7 +204,7 @@
                 "title": "Using the wsk CLI"
               }
         ],
-        "path": "AdobeDocs/adobeio-runtime/stage/reference.md",
+        "path": "adobedocs/adobeio-runtime/stage/reference.md",
         "title": "Adobe I/O Runtime reference documentation"
     },
     {
@@ -219,7 +219,7 @@
               {
                 "importedFileName": "wsk_install",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/blob/stage/tools/wsk_install.md",
+                "path": "adobedocs/adobeio-runtime/stage/tools/wsk_install.md",
                 "title": "Setting up the wsk CLI"
               },
               {
@@ -229,7 +229,7 @@
                 "title": "Setting up the wskdeploy CLI"
               }
         ],
-        "path": "AdobeDocs/adobeio-runtime/stage/tools.md",
+        "path": "adobedocs/adobeio-runtime/stage/tools.md",
         "title": "Overview"
     },
     {
@@ -242,7 +242,7 @@
                 "title": "FAQ"
               }
         ],
-        "path": "AdobeDocs/adobeio-runtime/stage/resources.md",
+        "path": "adobedocs/adobeio-runtime/stage/resources.md",
         "title": "Resources and support"
     }
   ]
