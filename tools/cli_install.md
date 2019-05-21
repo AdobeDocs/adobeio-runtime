@@ -25,7 +25,7 @@ aio plugins:update
 ```
 aio console:reset-integration INTEGRATION_ID
 ``
-`
+
 You can retrieve the 'INTEGRATION_ID` from I/O Console or by listing all the integrations and look for the one you need (`aio console:list-integrations`) - the second number on each row represents is the `INTEGRATION_ID`.
 
 For more information about the `aio` CLI check the [package home page](https://www.npmjs.com/package/@adobe/aio-cli).
