@@ -19,7 +19,7 @@ Here we&rsquo;ll trace the entire process, beginning with an event and finishing
 
 Before you can trace the process, you need an action against which to trigger an event. Actions are functions, so a simple JavaScript function will do.
 
-> If you want to follow along with these steps, you&rsquo;ll need to get access to Runtime, then install and configure the Runtime (OpenWhisk) CLI. To do so, see [Getting Started with Adobe I/O Runtime](../gettingstarted.md 'Getting Started').
+> If you want to follow along with these steps, you&rsquo;ll need to get access to Runtime, then install and configure the Runtime (OpenWhisk) CLI. To do so, see [Creating Actions](../guides/creating_actions.md 'Creating Actions').
 
 Create the following function in any editor:
 
