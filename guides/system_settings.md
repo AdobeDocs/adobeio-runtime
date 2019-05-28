@@ -9,7 +9,7 @@ When creating actions or debugging issues, it is important to know the system se
 | minuteRate (ations)| no more than N actions may be invoked per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
 | logs | A container is not allowed to write more than N MB to stdout | per action | 10MB | 0MB - 10MB |
 | concurrent | No more than N activations may be submitted per namespace either executing or queued for execution. If exceded, the error is `429: TOO MANY REQUESTS` | Not configurable, per namespace | 100 | 100 |
-| action/container concurrency  | The number of action invocations send to the same container in parallel | per action | 100 |1 - 10.000 |
+| action/container concurrency  | The number of action invocations send to the same container in parallel | per action | 200 |1 - 500 |
 | codeSize | The maximum size of the action including dependencies, archived | not configurable, per action | 22MB | 0MB - 22MB |
 | parameters | The maximum size of the parameters that can be attached | not configurable, per action/package/trigger | 1MB | 0 - 1MB |
 | payload | The maximum POST content size plus any carried parameters for an action invocation or trigger firing | not configurable, per action/trigger | 1MB | 0 - 1MB |
