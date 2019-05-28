@@ -32,7 +32,7 @@ For more information, see this topic:
 - [Triggers and Rules](../reference/triggersrules.md)
 
 ## Packages
-In OpenWhisk, you can use packages to bundle together a set of related actions, and share them with others. A package can include actions and feeds.
+In OpenWhisk, you can use packages to bundle together a set of related actions and share them with others. A package can include actions and feeds.
 
 - [Pre-installed Packages](../reference/prepackages.md)
 - [Using Packages](../guides/using_packages.md)
