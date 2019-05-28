@@ -77,12 +77,6 @@
         "importedFileName": "guides",
         "pages": [
               {
-                "importedFileName": "actions_events",
-                "pages": [],
-                "path": "adobedocs/adobeio-runtime/stage/guides/actions_events.md",
-                "title": "Events"
-              },
-              {
                 "importedFileName": "ci-cd_pipeline",
                 "pages": [],
                 "path": "adobedocs/adobeio-runtime/stage/guides/ci-cd_pipeline.md",
@@ -154,18 +148,18 @@
                 "pages": [],
                 "path": "adobedocs/adobeio-runtime/stage/reference/cli_use.md",
                 "title": "Using aio CLI"
-              },
+              },,
+              {
+                "importedFileName": "wsk_use",
+                "pages": [],
+                "path": "adobedocs/adobeio-runtime/stage/reference/wsk_use.md",
+                "title": "Using the wsk CLI"
+              }
               {
                 "importedFileName": "feeds",
                 "pages": [],
                 "path": "adobedocs/adobeio-runtime/stage/reference/feeds.md",
                 "title": "Using Feeds"
-              },
-              {
-                "importedFileName": "packages",
-                "pages": [],
-                "path": "adobedocs/adobeio-runtime/stage/reference/packages.md",
-                "title": "Packages"
               },
               {
                 "importedFileName": "prepackages",
@@ -185,11 +179,11 @@
                 "path": "adobedocs/adobeio-runtime/stage/reference/triggersrules.md",
                 "title": "Using Triggers and Rules"
               },
-          {
-                "importedFileName": "wsk_use",
+              {
+                "importedFileName": "multiple-regions",
                 "pages": [],
-                "path": "adobedocs/adobeio-runtime/stage/reference/wsk_use.md",
-                "title": "Using the wsk CLI"
+                "path": "adobedocs/adobeio-runtime/stage/reference/multiple-regions.md",
+                "title": "Multiple Regions"
               }
         ],
         "path": "adobedocs/adobeio-runtime/stage/reference.md",
