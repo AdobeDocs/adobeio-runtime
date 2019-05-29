@@ -148,13 +148,13 @@
                 "pages": [],
                 "path": "adobedocs/adobeio-runtime/stage/reference/cli_use.md",
                 "title": "Using aio CLI"
-              },,
+              },
               {
                 "importedFileName": "wsk_use",
                 "pages": [],
                 "path": "adobedocs/adobeio-runtime/stage/reference/wsk_use.md",
                 "title": "Using the wsk CLI"
-              }
+              },
               {
                 "importedFileName": "feeds",
                 "pages": [],
