@@ -13,7 +13,7 @@ or
 wsk action update my-secure-web-action main.js --web true --web-secure this-is-the-secret-hash
 ```
 
-Once you&rsquo;ve enabled Basic Authorization, you&rsquo;ll have to pass *X-Require-Wishk-Auth* header, and the secret you set, when invoking the web action. Assuming that your web action is created in the default package, this is how you&rsquo;ll invoke it:
+Once you&rsquo;ve enabled Basic Authorization, you&rsquo;ll have to pass *X-Require-Wisk-Auth* header, and the secret you set, when invoking the web action. Assuming that your web action is created in the default package, this is how you&rsquo;ll invoke it:
 ```
 curl https://adobeioruntime.net/api/v1/web/[your-namespaces]]/default/my-secure-web-action -X GET -H "X-Require-Whisk-Auth: this-is-the-secret-hash"
 ```
