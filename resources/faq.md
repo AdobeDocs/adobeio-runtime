@@ -7,6 +7,7 @@ On this page:
 - [Usage Quota](#usage-quota)
 - [Where we execute your actions](#multiple-region-support)
 - [System Limits](#system-limits)
+- [Developer Support](#developer-support)
 
 ## Getting Access 
 **How can I get access to I/O Runtime?**  
@@ -14,7 +15,7 @@ I/O Runtime is in private beta. You can sign up [here](https://adobeio.typeform.
 
 ## Supported Programming Languages 
 **Which languages are supported in I/O Runtime?**  
-For now, Adobe I/O Runtime only supports Node.js. We will add support for other languages as the platform matures.
+For now, Adobe I/O Runtime only supports Node.js version 10. We might add support for other languages in the future.
 
 ## Price 
 **What does it cost to use Adobe I/O Runtime?**  
@@ -31,3 +32,7 @@ I/O Runtime runs in AWS US-East and Euriope-West. We deploy your code in all reg
 ## System Limits
 **Which limits are imposed onto actions?**  
 All available limits (and the default values) are listed here: [System Settings](../guides/system_settings.md). Notable limits are the timeout for functions and the maximum payload that can get posted to a function.
+
+## Developer Support
+You can use the [Adobe I/O Forums](https://forums.adobe.com/community/adobe-io/adobe-io-runtime) for developer support related questions. 
+
