@@ -34,5 +34,5 @@ I/O Runtime runs in AWS US-East and Euriope-West. We deploy your code in all reg
 All available limits (and the default values) are listed here: [System Settings](../guides/system_settings.md). Notable limits are the timeout for functions and the maximum payload that can get posted to a function.
 
 ## Developer Support
-You can use the [Adobe I/O Forums](https://forums.adobe.com/community/adobe-io/adobe-io-runtime) for developer support related questions. 
+You can use the [Adobe I/O Runtime Forums](https://forums.adobe.com/community/adobe-io/adobe-io-runtime) for developer support related questions. 
 
