@@ -9,4 +9,6 @@ In this section you&rsquo;ll find references for APIs, command line tools, and e
 * [Runtimes](reference/runtimes.md): details about the available runtimes
 * [Triggers & Rules](reference/triggersrules.md): working with triggers and rules
 * [Feeds](reference/feeds.md): working with feeds
+* [Sequences & Compositions](reference/sequences_compositions.md): orchestrating actions
 * [Multiple Regions](reference/multiple-regions.md): Multi-region deployment of actions
+

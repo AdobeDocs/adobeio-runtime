@@ -38,6 +38,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 * [Runtimes](reference/runtimes.md): details about the available runtimes
 * [API Reference](reference/api_ref.md): I/O Management API
 * [Triggers & Rules](reference/triggersrules.md): working with triggers and rules
+* [Sequences & Compositions](reference/sequences_compositions.md): orchestrating actions
 * [Packages](reference/packages.md): working with packages
 * [Feeds](reference/feeds.md): working with feeds
 
