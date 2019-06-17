@@ -153,8 +153,13 @@ In the URL above, the `default` in the path stands for the `default` package: if
 
 You can invoke the action like this:
 ```
-curl https://adobeioruntime.net/api/v1/web/[your namespace]/default/test -x GET
+curl -L https://adobeioruntime.net/api/v1/web/[your namespace]/default/test -x GET
 ```
+or
+```
+curl https://[your namespace].adobeioruntime.net/api/v1/web/default/test -x GET
+```
+**Note** the change in the URL here in comparison to what the `wsk` returns. This is due some additional protections Runtime provides to segregate namespaces from each other when invoking web actions. The `wsk` generated link will still work but it will return a 308 redirect to your namespace's subdomain on Runtime. For a further discussion of this please see the [Securing Web Actions](securing_web_actions.md) page.
 
 When creating actions to be used as web actions, you might want to send the response that follows the HTTP response structure (status code, headers, body). For example, our sample function could be rewritten:
 ```javascript

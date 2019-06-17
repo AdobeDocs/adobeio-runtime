@@ -15,7 +15,7 @@ wsk action update my-secure-web-action main.js --web true --web-secure this-is-t
 
 Once you&rsquo;ve enabled Basic Authorization, you&rsquo;ll have to pass *X-Require-Wisk-Auth* header, and the secret you set, when invoking the web action. Assuming that your web action is created in the default package, this is how you&rsquo;ll invoke it:
 ```
-curl https://adobeioruntime.net/api/v1/web/[your-namespaces]]/default/my-secure-web-action -X GET -H "X-Require-Whisk-Auth: this-is-the-secret-hash"
+curl https://[your-namespaces].adobeioruntime.net/api/v1/web/default/my-secure-web-action -X GET -H "X-Require-Whisk-Auth: this-is-the-secret-hash"
 ```
 
 If you fail in adding the authorization header or the secret is wrong, you will get an error:
@@ -30,6 +30,6 @@ If you fail in adding the authorization header or the secret is wrong, you will 
 
 The use of cookies directly from web actions on Runtime is discouraged. The reason for this is that, due to the shared nature of the infrastructure, it is not possible to completely segregate cookies between namespaces. It is okay to use the runtime domain for testing, but any cookie set directly by the runtime domain must be considered compromised.
 
-To allevate this, you can set up a forwarding proxy with a correct and valid second-level domain and send those requests along to the actual runtime domain. Inside your function, you can then implement a whitelist or some shared secret to ensure that people attempting to access the functions directly are denied. Adobe also provides Container Native Applications, which can do much of this work for you.
+To alleviate this, you can set up a forwarding proxy with a correct and valid second-level domain and send those requests along to the actual runtime domain. Inside your function, you can then implement a whitelist or some shared secret to ensure that people attempting to access the functions directly are denied. Adobe also provides Container Native Applications, which can do much of this work for you.
 
 For a fuller discussion of this topic you can read [Heroku&rsquo;s discussion of their cookie policy](https://devcenter.heroku.com/articles/cookies-and-herokuapp-com).
