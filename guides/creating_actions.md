@@ -4,7 +4,7 @@ On this page:
 - [Invoking actions](#invoking-actions)
 - [Working with parameters](#working-with-parameters)
 - [Setting default parameters](#setting-default-parameters)
-- [Invoking web actions](#invoking-webactions)
+- [Invoking web actions](#invoking-web-actions)
 - [Deploying ZIP actions](#deploying-zip-actions)
 
 For your code to execute as an *action* on Adobe I/O Runtime, your code has to comply with two rules:
