@@ -1,11 +1,11 @@
 # Creating Actions
 
 On this page:
-- [Invoking actions](#invokingactions)
-- [Working with parameters](#workingwithparameters)
-- [Setting default parameters](#settingdefaultparameters)
-- [Invoking web actions](#invokingwebactions)
-- [Deploying ZIP actions](#deployingzipactions)
+- [Invoking actions](#invoking-actions)
+- [Working with parameters](#working-with-parameters)
+- [Setting default parameters](#setting-default-parameters)
+- [Invoking web actions](#invoking-webactions)
+- [Deploying ZIP actions](#deploying-zip-actions)
 
 For your code to execute as an *action* on Adobe I/O Runtime, your code has to comply with two rules:
 - You either call your function *main* or you export the entry point as *main*. This is the function that will be executed when it is invoked.
