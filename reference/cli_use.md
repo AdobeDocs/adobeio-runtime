@@ -25,14 +25,16 @@ The last bit you need to have at hand is the private certificate you&rsquo;ve us
 First, configure the credentials:
 
 ```
-aio config:set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --mime-type=application/json
+aio config:set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --json
 ```
 
 Then, configure the private certificate:
 
 ```
-aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file --mime-type=application/x-pem-file
+aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE
 ```
+
+Note that this just stores the path to your private key in the CLI configuration.
 
 To test that aio CLI can actually authenticate against Adobe I/O, run this command to list all the integrations that your organization has:
 
@@ -49,11 +51,14 @@ You can't manage multiple namespaces at the same time. You can only have one nam
 To list the available integrations, run:
 
 ```
-aio console:list-integrations
-Success: Page 1 of 1, Showing 2 results of 2 results.
-NUMBER_NUMBER : Integration Name 1
-NUMBER_NUMBER : Integration Name 2
+$ aio console:list-integrations
+Namespace     Name                  Status
+NUMBER_NUMBER Integration Name 1    ENABLED
+NUMBER_NUMBER Integration Name 2    ENABLED (currently selected)
+NUMBER_NUMBER Integration Name 3    ENABLED
 ```
+
+This command will list all available integrations in your org. Pipe the command to [`less`](https://en.wikipedia.org/wiki/Less_(Unix)) or [`more`](https://en.wikipedia.org/wiki/More_(command)) to page the results. 
 
 If you want to select an integration as the current namespace, run this command and pass as the argument the <NUMBER_NUMBER> you see listed when running `aio console:list-integrations`:
 
