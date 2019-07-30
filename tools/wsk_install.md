@@ -13,7 +13,7 @@ If you&rsquo;re using the `aio` CLI, the `.wskprops` file will be configured aut
 
 ```
 AUTH=<Your UUID>
-APIHOST=runtime.adobe.io
+APIHOST=adobeioruntime.net 
 NAMESPACE=<Your namespace>
 ```
 
