@@ -6,8 +6,6 @@ Packages bundle related actions together. More than that, packages can contain b
 
 Everything you access in Runtime exists within a namespace. Your namespace is given to you when you sign up for Runtime access (see [Getting Started with Adobe I/O Runtime](../gettingstarted.md 'Getting started')). So, actions you create in Runtime, and packages as well, are stored in your namespace. Other users of Runtime get their own namespaces, and **Runtime includes a system namespace in which certain packages are stored available to all users.**
 
-**_{TBD: check on availability of default packages}_**
-
 ## Creating packages
 
 Packages not only bundle actions and feeds; they provide the means to share a common set of parameters across all entities in the package. Creating a package is simple. You can create a package in the Runtime CLI in one step:
