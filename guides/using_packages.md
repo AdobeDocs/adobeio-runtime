@@ -181,9 +181,11 @@ Each package binding is used as if it were a package itself. To call an action i
 
 ```json
 {
-  "payload": "Hello <your name>"
+  "payload": "Hello Christine"
 }
 ```
+
+> Note: The output above reads `Hello Christine` because we've defined a default value at the action level. This takes precedence over values set at the package level or invocation time. When you share a package, this ensures that your params can't be overwritten at execution time. However if you intend to let the user define its own values, then you shouldn't define a default value.
 
 You can also substitute the name of the binding for the package name in other package commands:
 
