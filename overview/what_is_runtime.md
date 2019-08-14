@@ -18,4 +18,4 @@ The Runtime programming model makes use of the following entities:
 - Compositions
 - Packages
 
-See [Adobe I/O Runtime Entities](entities.md) for more infortion.
+See [Adobe I/O Runtime Entities](entities.md) for more information.
