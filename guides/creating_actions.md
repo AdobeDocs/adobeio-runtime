@@ -209,7 +209,7 @@ You need to do three things to deploy a ZIP action: create a manifest file, crea
 
 ### wskdeploy
 
- If you need to install `wskdeploy`, check the page [Setting up the wskdeploy CLI](../tools/wskdeploy_insall.md).
+ If you need to install `wskdeploy`, check the page [Setting up the wskdeploy CLI](../tools/wskdeploy_install.md).
 
 ### Package.json file
 
