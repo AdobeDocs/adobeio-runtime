@@ -248,7 +248,7 @@ packages:
 Now you are ready to deploy by running the `wskdeploy` command from the same folder where `manifest.yaml` is:
 
 ```
-wskdeploy --apihost controller-a-rtbeta-ue1-b.adobe-runtime.com
+wskdeploy
 ```
 
 This should deploy an action called *test-zip* under a package called *test*. You can invoke it like this:
@@ -259,7 +259,7 @@ wsk action invoke test/test-zip --result
 
 If you want to remove this action, you run `wskdeploy` with the *undeploy* flag:
 ```
-wskdeploy --apihost controller-a-rtbeta-ue1-b.adobe-runtime.com undeploy
+wskdeploy undeploy
 ```
 
 >**Note:** There is another way of deploying a ZIP action using the wsk command. You miss the manifest.yaml file flexibility with this mode; you can&rsquo;t define multiple actions/packages at the same time. The ZIP file has to have in the root the package.json file.  
