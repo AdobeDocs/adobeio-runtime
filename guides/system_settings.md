@@ -17,3 +17,11 @@ When creating actions or debugging issues, it is important to know the system se
 | minuteRate (triggers) | No more than N triggers may be fired per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
     
     
+## Timeout
+
+This is how you increase the timeout to 5 minutes:
+`wsk action create action-name source.js -t 300000`
+
+When you plan on increasing the timeout to more than one minute, you should be aware of:
+1. Blocking calls (web actions for example) will timeout in one minute regardless of the timeout set and return an error to the caller. However, the action execution continues until it finishes or the timeout value is exceeded (at this point you get a developer error as the result). You will retrieve the result by polling for activationId and use the right activationId to get the result
+2. Async calls respond immediately with an activationId. The execution continues, until the work is done or the timeout value is reached
