@@ -65,7 +65,7 @@ curl https://adobeioruntime.net/api/v1/web/YOUR-NAMESPACE-HERE/default/test.json
 }
 ```
 
-## Option 2: Using Triggers and Rules
+## Option 2: using triggers and rules
 
 The second option is to create a trigger and a rule that calls the worker action. This will work as long as you can make the call using a POST method. If you need a GET, then you have to use Option 1.
 
