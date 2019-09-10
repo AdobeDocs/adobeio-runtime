@@ -24,4 +24,43 @@ You can read more about sequences on the [OpenWhisk documentation page](https://
 
 ## Compositions
 
-For the time being, compositions are not supported by I/O Runtime. We will enable this feature soon.
+When you want to orchestrate a more complex flow without having to jam all the code in one action, Apache OpenWhisk Composer is your best friend. Composer lets you assemble actions, even other compositions together and control the executions by using control-flow structure (if, while, repeat). The result of a composition gives you a single entry point and it behaves like an action, in that it supports default params, can be placed into a package, or used as web action.
+
+### Install Composer
+
+You’ll need to install the Composer Node.js package in order to use this feature:
+```
+npm install -g openwhisk-composer
+```
+
+Using this package you can create the JSON file needed for deploying a composition. The flow for creating a composition looks like:
+1.	You define the compositions using JavaScript
+2.	You run `compose` command to generate the JSON file out of this JavaScript file
+3.	You run `deploy` command to deploy the composition using the JSON file you generated at the previous step
+
+For, example let’s assume you have three actions deployed called `a`, `b`, and `c` and you want to create a composition that executes `a` and in case of success, executes `b`, if not it executes `c`. You use the composer package to define this composition in a JavaScript file (`myComp.js'): 
+```
+const composer = require('openwhisk-composer')
+
+module.exports = composer.if(‘a’, ‘b’, ‘c’)
+```
+
+Now, that you have the composition defined you can generate the JSON definition needed for deployment:
+```
+compose myComp.js > myComp.json
+```
+
+Time to deploy:
+```
+deploy myComp.json compositionA 
+```
+
+This creates a composition called `compositionA`. You can invoke this, as any other action - `wsk action invoke compositionA`. When you do this, first action `a` is invoked. Then, if `a` was successful, then action `b` is invoked; if not, action `c` is invoked.
+
+More information:
+* Apache OpenWhisk Composer [home page]( https://github.com/apache/incubator-openwhisk-composer)
+* For a complete list of the control-flow structure check this page: [Combinators](https://github.com/apache/incubator-openwhisk-composer/blob/master/docs/COMBINATORS.md).
+
+### Parallel Compositions
+
+Parallel compositions are not supported by I/O Runtime.
