@@ -1,4 +1,4 @@
-# Debug Your Actions
+# Retrieve Action Invocation Results
 
 Every time an action is executed, an activation record is created. The activation record contains information that helps you understand what happened: activation ID (the unique indentifier), namespace and action name, logs (if any), response (a dictionary that contains the status, success, and result).
 

@@ -9,4 +9,4 @@ Once you have an authorization key and an integration with a namespace created, 
 
 * [Setting up your environment](quickstarts/setup.md)
 * [Deploy and invoke your first action](quickstarts/deploy.md)
-* [Debug your actions](quickstarts/debug.md) 
+* [Retrieve Action Invocation Results](quickstarts/activations.md) 

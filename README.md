@@ -15,7 +15,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 
 * [Setting up Your Environment](quickstarts/setup.md)
 * [Deploying your First Adobe I/O Runtime Function](quickstarts/deploy.md)
-* [Debug Your Actions](quickstarts/debug.md)
+* [Retrieve Action Invocation Results](quickstarts/activations.md)
 
 [Guides](guides.md)
 
@@ -27,6 +27,7 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 * [Creating REST APIs](guides/creating_rest_apis.md): learn to create REST APIs from web actions
 * [Using Packages](guides/using_packages.md): Working with packages
 * [Logging and Monitoring](guides/logging_monitoring.md): learn how to troubleshoot your actions
+* [Debugging](guides/debugging.md): advanced debugging for Node.js actions
 * [System Settings](guides/system_settings.md): see the system settings and constraints 
 * [CI/CD Pipeline](guides/ci-cd_pipeline.md): understand the tools you have to create a CI/CD Pipeline
 
