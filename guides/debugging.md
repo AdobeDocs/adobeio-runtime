@@ -29,7 +29,7 @@ Before you can debug your action code, open the source file for your action and 
             "request": "launch",
             "name": "wskdebug <ACTION NAME>",
             "runtimeExecutable": "wskdebug",
-            "args": [ "MYACTION", "${workspaceFolder}/<ACTION SOURCE FILE>", "-l" ],
+            "args": [ "<ACTION NAME>", "${workspaceFolder}/<ACTION SOURCE FILE>", "-l" ],
             "localRoot": "${workspaceFolder}",
             "remoteRoot": "/code",
             "outputCapture": "std"
