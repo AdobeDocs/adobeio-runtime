@@ -2,6 +2,14 @@
 
 Every time an action is executed, an activation record is created. The activation record contains information that helps you understand what happened: activation ID (the unique indentifier), namespace and action name, logs (if any), response (a dictionary that contains the status, success, and result).
 
+## Activations TTL
+
+The activation TTL (Time To Live) is seven days. This is a system setting, not a user setting (it can't be changed by developers).
+
+Thus, if you don't see any activations or not seeing an activation you know that has happened, it could be that they happend more than 7 days ago.
+
+## Example
+
 Assuming that you&rsquo;ve invoked an action called `hello`, this is how you retrieve the latest activations:
 
 `wsk activation list`

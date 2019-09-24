@@ -25,3 +25,9 @@ This is how you increase the timeout to 5 minutes:
 When you plan on increasing the timeout to more than one minute, you should be aware of:
 1. Blocking calls (web actions for example) will timeout in one minute regardless of the timeout set and return an error to the caller. However, the action execution continues until it finishes or the timeout value is exceeded (at this point you get a developer error as the result). You will retrieve the result by polling for activationId and use the right activationId to get the result
 2. Async calls respond immediately with an activationId. The execution continues, until the work is done or the timeout value is reached
+
+## Activations TTL
+
+The activation TTL (Time To Live) is seven days. This is a system setting, not a user setting (it can't be changed by developers).
+
+Thus, if you don't see any activations or not seeing an activation you know that has happened, it could be that they happend more than 7 days ago.
