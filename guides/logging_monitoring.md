@@ -23,7 +23,7 @@ I/O Runtime doesn’t offer a configuration to send activations and logs to an e
 
 Although there is no out-of-the-box integration, there are still ways you can push data from I/O Runtime to an external tool in order to monitor and debug your actions. 
 
-One tool that made it easy to do this is [Epsagon]( https://epsagon.com/). Epsagon built an integration for OpenWhisk based systems (I/O Runtime is built on top of the open source project OpenWhisk) that makes super easy to see your activations, errors, latency information and logs in their system. Check this [guide]( https://docs.epsagon.com/docs/openwhisk-setup) if you want to give it a try. 
+One tool that made it easy to do this is [Epsagon](https://epsagon.com/?utm_source=adobe.io&utm_medium=referral&utm_campaign=adobe_io_docs). Epsagon built an integration for OpenWhisk based systems (I/O Runtime is built on top of the open source project OpenWhisk) that makes super easy to see your activations, errors, latency information and logs in their system. Check this [guide](https://docs.epsagon.com/docs/openwhisk-setup/?utm_source=adobe.io&utm_medium=referral&utm_campaign=adobe_io_docs) if you want to give it a try. 
 
 ## Debugging Locally
 
