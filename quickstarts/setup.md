@@ -1,5 +1,8 @@
 # Setting up Your Environment
 
+> Note: these instructions assume that you have already aquired a namespace and have a valid namespace/authorization stored at ~/.wskprops
+> If you have not already, please [Request a Trial](../overview/request_a_trial.md)
+
 Before you can create and run actions, you have to install and configure a couple of tools on your machine. 
 
 ## Step 1: Install aio CLI
@@ -16,12 +19,7 @@ Try this command to check that `aio` was properly installed:
 
 `aio plugins add @adobe/aio-cli-plugin-runtime`
 
-## Step 3: Get a wskprops file
-
-[TODO ... elaborate how]
-... generate the `.wskprops` file in your user directory (or overwrite the file if it already exists) for accessing that given namespace. Now, you can use the `aio` CLI to manage this namespace: create/invoke actions and so forth.
-
-## Step 4: Test wsk CLI
+## Step 3: Test aio cli
 
 Once you&rsquo;ve configured the CLI, you should test it:
 
