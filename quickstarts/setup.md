@@ -19,12 +19,16 @@ Try this command to check that `aio` was properly installed:
 
 `aio plugins add @adobe/aio-cli-plugin-runtime`
 
-## Step 3: Test aio cli
+## Step 3: Run a `aio runtime` command 
 
 Once you&rsquo;ve configured the CLI, you should test it:
 
 `aio runtime list`
 
 If successful, you should see a list of the entities defined in your namespace.
+
+For a full list of `aio runtime` commands, run:
+
+`aio runtime --help`
 
 You&rsquo;re ready to [deploy your first function](deploy.md).
