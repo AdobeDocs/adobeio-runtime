@@ -29,9 +29,11 @@ and:
 
 Once you&rsquo;ve configured the CLI, you should test it:
 
-`aio runtime list`  
+`aio runtime list` 
 
-and: 
+> `aio` also provides an alias `rt` for runtime, so you can use `aio rt list` or even `aio rt ls`
+
+and:
 
 `wsk list`
 
@@ -49,4 +51,4 @@ and:
 
 `wsk action --help`
 
-You&rsquo;re ready to [deploy your first function](deploy.md).
+Great! You&rsquo;re ready to [deploy your first function](deploy.md).
