@@ -1,8 +1,10 @@
 # Adobe I/O Runtime Developer Guide
 
-This guide will give you an overview of Adobe I/O Runtime, explain how it works, and get you started with developing your own integrations. 
+This documentation provides an overview of Adobe I/O Runtime as well as guides, reference documentation, and tools to help you begin developing your own integrations. 
 
 ## Contents
+
+[Quickstart guide:](quickstart.md) A one-page guide to help you quickly get started with Adobe I/O Runtime.
 
 [Overview](overview.md)
 
@@ -12,11 +14,11 @@ This guide will give you an overview of Adobe I/O Runtime, explain how it works,
 * [Adobe I/O Runtime Entities](overview/entities.md)
 * [Request a Trial](overview/request_a_trial.md)
 
-[Quickstarts](quickstarts.md)
+[Getting Started](getting-started.md)
 
-* [Setting up Your Environment](quickstarts/setup.md)
-* [Deploying your First Adobe I/O Runtime Function](quickstarts/deploy.md)
-* [Retrieve Action Invocation Results](quickstarts/activations.md)
+* [Setting up Your Environment](getting_started/setup.md)
+* [Deploying your First Adobe I/O Runtime Function](getting_started/deploy.md)
+* [Retrieve Action Invocation Results](getting_started/activations.md)
 
 [Guides](guides.md)
 
