@@ -34,16 +34,20 @@ Actions can be invoked anonymously (no auth required) or with authentication. Ou
 
 ## The Big Picture – Understanding I/O Runtime components
 
-Understanding I/O Runtime means understanding the OpenWhisk, the open source project we build on top of. The diagram below shows the high-level architecture:
+Adobe I/O Runtime is built on top of an open source project called Apache OpenWhisk. Because of this, many of the resources written for Apache OpenWhisk also apply to Adobe I/O Runtime, making the [Apache OpenWhisk repository](https://github.com/apache/incubator-openwhisk/tree/master/docs) another useful resource for you to reference.
+
+The diagram below shows the high-level architecture of I/O Runtime built on top of OpenWhisk:
 
 ![](img/quickstart-components.png)
  
 The whole purpose of the system is to execute the code the user has created. Let’s see what all these big components do when an action is executed:
+
 1.	First, the nginx will receive the call that a specific action is invoked. Its role is mainly to perform SSL termination and forward the call to the Controller
 2.	Controller performs tasks that disambiguates what the user is trying to do (invoke action X from namespace Y) and authenticate/authorize (verifies who is the caller and that is has the permissions to execute the code). AuthN/AuthZ is done against the Cosmos DB where information about users and namespaces are persisted.
 3.	If all checks have passed, the Controller will load the action code and action settings (memory, default parameters) from the Cosmos DB/S3 and will schedule the execution with one of the available Invokers.
 4.	This scheduling happens through Kafka: Controllers and Invokers communicate through Kafka messages. When an invocation request is persisted in Kafka, an ActivationId is issued to the client. This ID can be used to retrieve the result of the execution.
-5.	The Invoker will take the action code and inject into a Docker container and then invoke the action. The result of the invocation is persisted in Cosmos DB under the same ActivationId
+5.	The Invoker will take the action code and inject into a Docker container and then invoke the action. The result of the invocation is persisted in Cosmos DB under the same ActivationId.
+
 The flow above describes what is happening inside of a cluster but we have multiple clusters, deployed in different regions. I/O Runtime is running in multiple Amazon regions today.  We plan on adding Azure clusters in the future. We route a call to one of the clusters using latency-based routing – the cluster closest to the caller gets the request. Behind the scene, customer’s code is pushed transparently to all clusters.
 
 ## Zoom In – What's Happening When Actions Are Invoked
@@ -52,7 +56,7 @@ Let’s zoom in on what exactly happens when an action invocation request is acc
 
 Activation lifecycle:
 * For async invocation (non-blocking) system returns 202 immediately with an ActivationId. Client will be using the ActivationId to pull the result
-*For blocking invocations system returns either:
+* For blocking invocations system returns either:
   * 200 and the result
   * 202 if the activation took longer than 60 seconds. Client will be using the ActivationId to poll for the result
 * In the case of invoking too many actions per minute, the requests are throttled and the system returns 429. It is the client responsibility to scale back and retry later, because the system is not buffering the request for later processing. See more about these limits in the next sections
@@ -75,9 +79,9 @@ Some of these are worth to be highlighted:
 4.	Payload/Result size – you can’t send inline data more than 1MB or return more than 1MB. If you need more, you should consider reading/writing from something like a S3 bucket
 5.	Memory – the amount of RAM requested by your action
 
-Please note, that we can raise the limits for minuteRate and concurrent settings for customers who need more and can’t be served by the default values.
+> **Note:** If your organization cannot be served by the default values, the limits for minuteRate and concurrent settings can be raised. Please visit the [Adobe I/O Runtime Forums](https://forums.adobe.com/community/adobe-io/adobe-io-runtime) for developer support.
 
-I/O Events Integration
+## I/O Events Integration
 
 I/O Events exposes a number of Adobe events to 3rd-parties (the list is growing) – Analytics, Experience, Cloud Manager, GDPR, AEM, Data Ingestion and Real-Time customer profile events. An application can subscribe to these events (push model, consuming them via webhooks) or use journaling to retrieve the events (pull model).
 
@@ -86,6 +90,7 @@ Another option would be an action that reads the events using the Journaling API
 
 ## Strategies for High Availability Applications
 While I/O Runtime is highly available (99.99% uptime and multiple regions) and scalable compute platform, there are some application design considerations that any developer using I/O Runtime should take into consideration.
+
 *	Favor async calls. If your application can do with an async design, you should go for it. This gives a higher chance to execute the code instead of running in timeouts
 *	Responding to 429 status code. When your application is hitting the upper limit for throttling, you will get 429s. If you don’t scale back, you’d keep getting this answer
 *	Responding to 5xx status code. There are situations when your invocation will not come though (if this wasn’t the case, we would offer 100% uptime). If you can’t afford to lose an invocation, you should build a retry mechanism (at this time we don’t offer a retry mechanism). This can be built outside our platform, or you could use Runtime triggers feature to create an action that is executed every 40 minutes and performs the retry or does some logging in your system, so you can try again
@@ -94,7 +99,7 @@ While I/O Runtime is highly available (99.99% uptime and multiple regions) and s
     * Use the default RAM setting for your action. We keep a pool of prewarm containers that use the default RAM setting. Using a prewarm container is the next best thing after reusing a container
 *	Fan out. I/O Runtime is built to run lots of tasks in parallel. If you have a large task that can be split in multiple small tasks, you should do it. Otherwise you end up with an action that needs long time to execute and maybe lots of memory (this is bad, see the minimizing cold starts point). 
 
-We are working on providing persistence. This will greatly enhance a developer’s ability to build a retry mechanism or fan out/fan in.
+> **Note:** Work is in progress for providing persistence. This will greatly enhance a developer’s ability to build a retry mechanism or fan out/fan in.
 
 ## CI/CD Pipeline – What Is Available
 
@@ -128,5 +133,18 @@ While we will unleash the full power of this new platform early next year, there
 
 ## Next Steps
 
-I/O Runtime fully delivers on the serverless promise. Developers should be aware of serverless best practices - don’t use monolithic app design patterns.
-At the same time, we are aware that this is just the beginning of the trip. We hope to work with you to enhance our platform and increase customer satisfaction.
+I/O Runtime fully delivers on the serverless promise, but success requires developers to be aware of, and employ, serverless best practices.
+
+At the same time, this is just the beginning for Adobe I/O Runtime and you are encouraged to help enhance the platform and help to guide its future. The following sections provide multiple ways for you to engage with the Adobe I/O Runtime team and suggest improvements to the platform and its documentation.
+
+### Social media
+
+You can follow the Adobe I/O team on [Twitter](https://twitter.com/adobeio), [Medium](https://medium.com/@AdobeIO), and [Youtube](https://www.youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ).
+
+### Support
+
+If you have issues with Adobe I/O Runtime, you can use the [Adobe I/O Runtime Forum](https://forums.adobe.com/community/adobe-io/adobe-io-runtime).
+
+If you have issues with the documentation, you can submit a pull request through the [Adobe I/O Runtime GitHub repository](https://github.com/AdobeDocs/adobeio-runtime).
+
+You can also check the [FAQ](resources/faq.md) for answers to some of the most common questions.
