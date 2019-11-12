@@ -22,6 +22,14 @@ and:
 
 `aio -h`
 
+### Configuring the CLI with a .wskprops file
+
+If you have a `.wskprops` file, then you can use it to configure the CLI, so you'll be creating actions in the namespace that is defined in that file.
+
+For Mac, you just need to copy the `.wskprops` in the user home folder.
+
+For Windows, you'll place the `.wskprops` in `C:\Users\<user>`.
+
 
 ## Step 2: Create an integration for I/O Management API
 
