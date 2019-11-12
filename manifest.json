@@ -12,6 +12,12 @@
   "pages":
     [ 
       {
+          "importedFileName": "quickstart",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/quickstart.md
+          "title": "Adobe I/O Runtime Quickstart Guide"
+      }
+      {
           "importedFileName": "readme",
           "pages": [],
           "path": "adobedocs/adobeio-runtime/master/README.md",
@@ -49,28 +55,28 @@
           "title": "Overview"
       },
       {
-          "importedFileName": "quickstarts",
+          "importedFileName": "getting-started",
           "pages": [
                 {
                   "importedFileName": "debug",
                   "pages": [],
-                  "path": "adobedocs/adobeio-runtime/master/quickstarts/debug.md",
+                  "path": "adobedocs/adobeio-runtime/master/getting-started/debug.md",
                   "title": "Debug Your Actions"
                 },
                 {
                   "importedFileName": "deploy",
                   "pages": [],
-                  "path": "adobedocs/adobeio-runtime/master/quickstarts/deploy.md",
+                  "path": "adobedocs/adobeio-runtime/master/getting-started/deploy.md",
                   "title": "Deploying your First Adobe I/O Runtime Function"
                 },
                 {
                   "importedFileName": "setup",
                   "pages": [],
-                  "path": "adobedocs/adobeio-runtime/master/quickstarts/setup.md",
+                  "path": "adobedocs/adobeio-runtime/master/getting-started/setup.md",
                   "title": "Setting up Your Environment"
                 }
           ],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts.md",
+          "path": "adobedocs/adobeio-runtime/master/getting-started.md",
           "title": "Getting Started with Adobe I/O Runtime"
       },
       {
