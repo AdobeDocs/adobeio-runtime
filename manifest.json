@@ -9,223 +9,230 @@
   "publish_date": "18/01/2019",
   "show_edit_github_banner": false,
   "base_path": "https://raw.githubusercontent.com",
-  "pages": [
-    {
-      "importedFileName": "readme",
-      "pages": [],
-      "path": "adobedocs/adobeio-runtime/master/README.md",
-      "title": "Adobe I/O Runtime Developer Guide"
-    },
-    {
-      "importedFileName": "overview",
-      "pages": [
-        {
-          "importedFileName": "entities",
+  "pages":
+    [ 
+      {
+          "importedFileName": "quickstart",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/entities.md",
-          "title": "Adobe I/O Runtime Entities"
-        },
-        {
-          "importedFileName": "howitworks",
+          "path": "adobedocs/adobeio-runtime/master/quickstart.md",
+          "title": "Adobe I/O Runtime Quickstart Guide"
+      },
+      {
+          "importedFileName": "readme",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/howitworks.md",
-          "title": "How Adobe I/O Runtime Works"
-        },
-        {
-          "importedFileName": "usecases",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/usecases.md",
-          "title": "Use cases"
-        },
-        {
-          "importedFileName": "what_is_runtime",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/what_is_runtime.md",
-          "title": "What is Adobe I/O Runtime"
-        }
-      ],
-      "path": "adobedocs/adobeio-runtime/master/overview.md",
-      "title": "Overview"
-    },
-    {
-      "importedFileName": "quickstarts",
-      "pages": [
-        {
-          "importedFileName": "debug",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts/debug.md",
-          "title": "Debug Your Actions"
-        },
-        {
-          "importedFileName": "deploy",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts/deploy.md",
-          "title": "Deploying your First Adobe I/O Runtime Function"
-        },
-        {
-          "importedFileName": "setup",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts/setup.md",
-          "title": "Setting up Your Environment"
-        }
-      ],
-      "path": "adobedocs/adobeio-runtime/master/quickstarts.md",
-      "title": "Getting Started with Adobe I/O Runtime"
-    },
-    {
-      "importedFileName": "guides",
-      "pages": [
-        {
-          "importedFileName": "ci-cd_pipeline",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/ci-cd_pipeline.md",
-          "title": "CI/CD Pipeline"
-        },
-        {
-          "importedFileName": "creating_actions",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/creating_actions.md",
-          "title": "Creating Actions"
-        },
-        {
-          "importedFileName": "creating_rest_apis",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/creating_rest_apis.md",
-          "title": "Creating REST APIs"
-        },
-        {
-          "importedFileName": "logging_monitoring.md",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/logging_monitoring.md",
-          "title": "Logging and Monitoring"
-        },
-        {
-          "importedFileName": "security_general",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/security_general.md",
-          "title": "Security Guide"
-        },
-        {
-          "importedFileName": "securing_web_actions",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/securing_web_actions.md",
-          "title": "Securing Web Actions"
-        },
-        {
-          "importedFileName": "system_settings",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/system_settings.md",
-          "title": "System Settings"
-        },
-        {
-          "importedFileName": "throughput_tuning",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/throughput_tuning.md",
-          "title": "Throughput Tuning"
-        },
-        {
-          "importedFileName": "using_packages",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/using_packages.md",
-          "title": "Using Packages with Adobe I/O Runtime"
-        }
-      ],
-      "path": "adobedocs/adobeio-runtime/master/guides.md",
-      "title": "Using Adobe I/O Runtime"
-    },
-    {
-      "importedFileName": "reference",
-      "pages": [
-        {
-          "importedFileName": "api_ref",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/api_ref.md",
-          "title": "Adobe I/O Runtime API Reference"
-        },
-        {
-          "importedFileName": "cli_use",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/cli_use.md",
-          "title": "Using aio CLI"
-        },
-        {
-          "importedFileName": "wsk_use",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/wsk_use.md",
-          "title": "Using the wsk CLI"
-        },
-        {
-          "importedFileName": "feeds",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/feeds.md",
-          "title": "Using Feeds"
-        },
-        {
-          "importedFileName": "prepackages",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/prepackages.md",
-          "title": "Pre-installed packages"
-        },
-        {
-          "importedFileName": "runtimes",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/runtimes.md",
-          "title": "Runtimes"
-        },
-        {
-          "importedFileName": "triggersrules",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/triggersrules.md",
-          "title": "Using Triggers and Rules"
-        },
-        {
-          "importedFileName": "multiple-regions",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/multiple-regions.md",
-          "title": "Multiple Regions"
-        }
-      ],
-      "path": "adobedocs/adobeio-runtime/master/reference.md",
-      "title": "Adobe I/O Runtime reference documentation"
-    },
-    {
-      "importedFileName": "tools",
-      "pages": [
-        {
-          "importedFileName": "cli_install",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/tools/cli_install.md",
-          "title": "Setting up the aio CLI"
-        },
-        {
-          "importedFileName": "wsk_install",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/tools/wsk_install.md",
-          "title": "Setting up the wsk CLI"
-        },
-        {
-          "importedFileName": "wskdeploy_install",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/tools/wskdeploy_install.md",
-          "title": "Setting up the wskdeploy CLI"
-        }
-      ],
-      "path": "adobedocs/adobeio-runtime/master/tools.md",
-      "title": "Overview"
-    },
-    {
-      "importedFileName": "resources",
-      "pages": [
-        {
-          "importedFileName": "faq",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/resources/faq.md",
-          "title": "FAQ"
-        }
-      ],
-
-      "path": "adobedocs/adobeio-runtime/master/resources.md",
-      "title": "Resources and support"
-    }
-  ]
-}
+          "path": "adobedocs/adobeio-runtime/master/README.md",
+          "title": "Adobe I/O Runtime Developer Guide"
+      },
+      {
+          "importedFileName": "overview",
+          "pages": [
+                {
+                  "importedFileName": "entities",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/overview/entities.md",
+                  "title": "Adobe I/O Runtime Entities"
+                },
+                {
+                  "importedFileName": "howitworks",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/overview/howitworks.md",
+                  "title": "How Adobe I/O Runtime Works"
+                },
+                {
+                  "importedFileName": "usecases",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/overview/usecases.md",
+                  "title": "Use cases"
+                },
+                {
+                  "importedFileName": "what_is_runtime",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/overview/what_is_runtime.md",
+                  "title": "What is Adobe I/O Runtime"
+                }
+          ],
+          "path": "adobedocs/adobeio-runtime/master/overview.md",
+          "title": "Overview"
+      },
+      {
+          "importedFileName": "getting-started",
+          "pages": [
+                {
+                  "importedFileName": "debug",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/getting-started/debug.md",
+                  "title": "Debug Your Actions"
+                },
+                {
+                  "importedFileName": "deploy",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/getting-started/deploy.md",
+                  "title": "Deploying your First Adobe I/O Runtime Function"
+                },
+                {
+                  "importedFileName": "setup",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/getting-started/setup.md",
+                  "title": "Setting up Your Environment"
+                }
+          ],
+          "path": "adobedocs/adobeio-runtime/master/getting-started.md",
+          "title": "Getting Started with Adobe I/O Runtime"
+      },
+      {
+          "importedFileName": "guides",
+          "pages": [
+                {
+                  "importedFileName": "ci-cd_pipeline",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/ci-cd_pipeline.md",
+                  "title": "CI/CD Pipeline"
+                },
+                {
+                  "importedFileName": "creating_actions",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/creating_actions.md",
+                  "title": "Creating Actions"
+                },
+                {
+                  "importedFileName": "creating_rest_apis",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/creating_rest_apis.md",
+                  "title": "Creating REST APIs"
+                },
+                {
+                  "importedFileName": "logging_monitoring.md",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/logging_monitoring.md",
+                  "title": "Logging and Monitoring"
+                },
+                {
+                  "importedFileName": "security_general",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/security_general.md",
+                  "title": "Security Guide"
+                },
+                {
+                  "importedFileName": "securing_web_actions",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/securing_web_actions.md",
+                  "title": "Securing Web Actions"
+                },
+                {
+                  "importedFileName": "system_settings",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/system_settings.md",
+                  "title": "System Settings"
+                },
+                {
+                  "importedFileName": "throughput_tuning",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/throughput_tuning.md",
+                  "title": "Throughput Tuning"
+                },
+                {
+                  "importedFileName": "using_packages",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/guides/using_packages.md",
+                  "title": "Using Packages with Adobe I/O Runtime"
+                }
+          ],
+          "path": "adobedocs/adobeio-runtime/master/guides.md",
+          "title": "Using Adobe I/O Runtime"
+      },
+      {
+          "importedFileName": "reference",
+          "pages": [
+                {
+                  "importedFileName": "api_ref",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/api_ref.md",
+                  "title": "Adobe I/O Runtime API Reference"
+                },
+                {
+                  "importedFileName": "cli_use",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/cli_use.md",
+                  "title": "Using aio CLI"
+                },,
+                {
+                  "importedFileName": "wsk_use",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/wsk_use.md",
+                  "title": "Using the wsk CLI"
+                }
+                {
+                  "importedFileName": "feeds",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/feeds.md",
+                  "title": "Using Feeds"
+                },
+                {
+                  "importedFileName": "prepackages",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/prepackages.md",
+                  "title": "Pre-installed packages"
+                },
+                {
+                  "importedFileName": "runtimes",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/runtimes.md",
+                  "title": "Runtimes"
+                },
+                {
+                  "importedFileName": "triggersrules",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/triggersrules.md",
+                  "title": "Using Triggers and Rules"
+                },
+                {
+                  "importedFileName": "multiple-regions",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/reference/multiple-regions.md",
+                  "title": "Multiple Regions"
+                }
+          ],
+          "path": "adobedocs/adobeio-runtime/master/reference.md",
+          "title": "Adobe I/O Runtime reference documentation"
+      },
+      {
+          "importedFileName": "tools",
+          "pages": [
+                {
+                  "importedFileName": "cli_install",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/tools/cli_install.md",
+                  "title": "Setting up the aio CLI"
+                },
+                {
+                  "importedFileName": "wsk_install",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/tools/wsk_install.md",
+                  "title": "Setting up the wsk CLI"
+                },
+                {
+                  "importedFileName": "wskdeploy_install",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/tools/wskdeploy_install.md",
+                  "title": "Setting up the wskdeploy CLI"
+                }
+          ],
+          "path": "adobedocs/adobeio-runtime/master/tools.md",
+          "title": "Overview"
+      },
+      {
+          "importedFileName": "resources",
+          "pages": [
+                {
+                  "importedFileName": "faq",
+                  "pages": [],
+                  "path": "adobedocs/adobeio-runtime/master/resources/faq.md",
+                  "title": "FAQ"
+                }
+          ],
+  
+          "path": "adobedocs/adobeio-runtime/master/resources.md",
+          "title": "Resources and support"
+      }
+    ]
+  }
