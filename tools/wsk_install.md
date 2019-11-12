@@ -13,7 +13,7 @@ If you&rsquo;re using the `aio` CLI, the `.wskprops` file will be configured aut
 
 ```
 AUTH=<Your UUID>
-APIHOST=runtime.adobe.io
+APIHOST=adobeioruntime.net 
 NAMESPACE=<Your namespace>
 ```
 
@@ -22,7 +22,7 @@ You place this file in your user folder, where the CLI can access it to set thos
 An alternative method to configure your instance of the CLI is to do it through a CLI command. Open a command-line window and type the following command:
 
 ```
-wsk property set --apihost runtime.adobe.io --auth  <Your auth code from the Runtime team>  --namespace  <Your namespace from the Runtime team>
+wsk property set --apihost adobeioruntime.net  --auth  <Your auth code from the Runtime team>  --namespace  <Your namespace from the Runtime team>
 ```
 
 Once you&rsquo;ve configured the CLI, you should test it:

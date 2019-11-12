@@ -1,11 +1,11 @@
 # Creating Actions
 
 On this page:
-- [Invoking actions](#invokingactions)
-- [Working with parameters](#workingwithparameters)
-- [Setting default parameters](#settingdefaultparameters)
-- [Invoking web actions](#invokingwebactions)
-- [Deploying ZIP actions](#deployingzipactions)
+- [Invoking actions](#invoking-actions)
+- [Working with parameters](#working-with-parameters)
+- [Setting default parameters](#setting-default-parameters)
+- [Invoking web actions](#invoking-web-actions)
+- [Deploying ZIP actions](#deploying-zip-actions)
 
 For your code to execute as an *action* on Adobe I/O Runtime, your code has to comply with two rules:
 - You either call your function *main* or you export the entry point as *main*. This is the function that will be executed when it is invoked.
@@ -153,8 +153,13 @@ In the URL above, the `default` in the path stands for the `default` package: if
 
 You can invoke the action like this:
 ```
-curl https://adobeioruntime.net/api/v1/web/[your namespace]/default/test -x GET
+curl -L https://adobeioruntime.net/api/v1/web/[your namespace]/default/test -x GET
 ```
+or
+```
+curl https://[your namespace].adobeioruntime.net/api/v1/web/default/test -x GET
+```
+**Note** the change in the URL here in comparison to what the `wsk` returns. This is due some additional protections Runtime provides to segregate namespaces from each other when invoking web actions. The `wsk` generated link will still work but it will return a 308 redirect to your namespace's subdomain on Runtime. For a further discussion of this please see the [Securing Web Actions](securing_web_actions.md) page.
 
 When creating actions to be used as web actions, you might want to send the response that follows the HTTP response structure (status code, headers, body). For example, our sample function could be rewritten:
 ```javascript
@@ -204,7 +209,7 @@ You need to do three things to deploy a ZIP action: create a manifest file, crea
 
 ### wskdeploy
 
- If you need to install `wskdeploy`, check the page [Setting up the wskdeploy CLI](../tools/wskdeploy_insall.md).
+ If you need to install `wskdeploy`, check the page [Setting up the wskdeploy CLI](../tools/wskdeploy_install.md).
 
 ### Package.json file
 
@@ -243,7 +248,7 @@ packages:
 Now you are ready to deploy by running the `wskdeploy` command from the same folder where `manifest.yaml` is:
 
 ```
-wskdeploy --apihost controller-a-rtbeta-ue1-b.adobe-runtime.com
+wskdeploy
 ```
 
 This should deploy an action called *test-zip* under a package called *test*. You can invoke it like this:
@@ -254,7 +259,7 @@ wsk action invoke test/test-zip --result
 
 If you want to remove this action, you run `wskdeploy` with the *undeploy* flag:
 ```
-wskdeploy --apihost controller-a-rtbeta-ue1-b.adobe-runtime.com undeploy
+wskdeploy undeploy
 ```
 
 >**Note:** There is another way of deploying a ZIP action using the wsk command. You miss the manifest.yaml file flexibility with this mode; you can&rsquo;t define multiple actions/packages at the same time. The ZIP file has to have in the root the package.json file.  

@@ -6,8 +6,6 @@ Packages bundle related actions together. More than that, packages can contain b
 
 Everything you access in Runtime exists within a namespace. Your namespace is given to you when you sign up for Runtime access (see [Getting Started with Adobe I/O Runtime](../gettingstarted.md 'Getting started')). So, actions you create in Runtime, and packages as well, are stored in your namespace. Other users of Runtime get their own namespaces, and **Runtime includes a system namespace in which certain packages are stored available to all users.**
 
-**_{TBD: check on availability of default packages}_**
-
 ## Creating packages
 
 Packages not only bundle actions and feeds; they provide the means to share a common set of parameters across all entities in the package. Creating a package is simple. You can create a package in the Runtime CLI in one step:
@@ -183,9 +181,11 @@ Each package binding is used as if it were a package itself. To call an action i
 
 ```json
 {
-  "payload": "Hello <your name>"
+  "payload": "Hello Christine"
 }
 ```
+
+> Note: The output above reads `Hello Christine` because we've defined a default value at the action level. This takes precedence over values set at the package level or invocation time. When you share a package, this ensures that your params can't be overwritten at execution time. However if you intend to let the user define its own values, then you shouldn't define a default value.
 
 You can also substitute the name of the binding for the package name in other package commands:
 

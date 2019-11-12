@@ -6,12 +6,10 @@ You can retrieve the latest activations in a namespace by running:
 ```
 wsk activation list
 ```
-You can also poll for activations:
+Having an activation ID, you can retrieve the actication result running:
 ```
-wsk activation poll
+wsk activation get <activation ID>
 ```
-As soon as an action is executed, you'll see an entry in the activation poll window.
-
 If you send data to logs from your actions (using `console.log()` in your code), you&rsquo;ll get this information as part of the activation record, inside the `logs` field. The shortcut command to get the logs is:
 ```
 wsk activation logs <activation ID>
@@ -19,4 +17,14 @@ wsk activation logs <activation ID>
 2018-11-14T22:23:00.002Z       stdout: 1542234180001: param = John Doe
 ```
 
-If you want to debug locally, you can always run your action code using Node.js. If you prefer to run the action as close as possible to how it is executed by AdobeI/O Runtime, then James Thomas of IBM has a good [tutorial](https://medium.com/openwhisk/debugging-node-js-openwhisk-actions-3da3303e6741). Just remember to use the same Node.js version as the Adobe I/O Runtime uses.
+## 3rd-Party Tools
+
+I/O Runtime doesn’t offer a configuration to send activations and logs to an external system, something like Splunk, Datadog or New Relic. This is something we are considering to offer in the future. 
+
+Although there is no out-of-the-box integration, there are still ways you can push data from I/O Runtime to an external tool in order to monitor and debug your actions. 
+
+One tool that made it easy to do this is [Epsagon](https://epsagon.com/?utm_source=adobe.io&utm_medium=referral&utm_campaign=adobe_io_docs). Epsagon built an integration for OpenWhisk based systems (I/O Runtime is built on top of the open source project OpenWhisk) that makes super easy to see your activations, errors, latency information and logs in their system. Check this [guide](https://docs.epsagon.com/docs/openwhisk-setup/?utm_source=adobe.io&utm_medium=referral&utm_campaign=adobe_io_docs) if you want to give it a try. 
+
+## Debugging Locally
+
+Check this [page](debugging.md) if you want to learn how to debug your actions locally.

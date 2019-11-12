@@ -1,6 +1,6 @@
 # Resources and support
 
-Adobe I/O Runtime is built on top of Apache OpenWhisk. This is why many of the resources written for Apache OpenWhisk apply to Adobe I/O Runtime, too: blogs, documentation and references, and so forth. 
+Adobe I/O Runtime is built on top of Apache OpenWhisk. This is why many of the resources written for Apache OpenWhisk apply to Adobe I/O Runtime, too: blogs, documentation and references, and so forth.
 
 For a starter, a good resource to check is the [Apache OpenWhisk repository](https://github.com/apache/incubator-openwhisk/tree/master/docs).
 
@@ -10,7 +10,7 @@ You can follow up our team on [Twitter](https://twitter.com/adobeio), [Medium](h
 
 ## Support
 
-If you have issues with Adobe I/O Runtime, you can use our [Zendesk channel](https://adobeio.zendesk.com).
+If you have issues with Adobe I/O Runtime, you can use our [Adobe I/O Runtime Forum](https://forums.adobe.com/community/adobe-io/adobe-io-runtime).
 
 If you have issues with the documentation, you can always submit a pull request.
 

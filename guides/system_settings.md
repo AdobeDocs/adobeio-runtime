@@ -4,7 +4,7 @@ When creating actions or debugging issues, it is important to know the system se
 
 | Limit | Description | Configurable | Default |  Range  | 
 |---|---| --- | --- | --- |
-| timeout | A container is not allowed to run longer than N milliseconds | per action | 60000 milliseconds | 100ms - 60000ms |
+| timeout | A container is not allowed to run longer than N milliseconds | per action | 60000 milliseconds | 100ms - 3000000ms  |
 | memory | A container is not allowed to allocate more than N MB of memory | per action | 256MB | 128MB - 4096MB |
 | minuteRate (ations)| no more than N actions may be invoked per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
 | logs | A container is not allowed to write more than N MB to stdout | per action | 10MB | 0MB - 10MB |
@@ -17,3 +17,17 @@ When creating actions or debugging issues, it is important to know the system se
 | minuteRate (triggers) | No more than N triggers may be fired per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
     
     
+## Timeout
+
+This is how you increase the timeout to 5 minutes:
+`wsk action create action-name source.js -t 300000`
+
+When you plan on increasing the timeout to more than one minute, you should be aware of:
+1. Blocking calls (web actions for example) will timeout in one minute regardless of the timeout set and return an error to the caller. However, the action execution continues until it finishes or the timeout value is exceeded (at this point you get a developer error as the result). You will retrieve the result by polling for activationId and use the right activationId to get the result
+2. Async calls respond immediately with an activationId. The execution continues, until the work is done or the timeout value is reached
+
+## Activations TTL
+
+The activation TTL (Time To Live) is seven days. This is a system setting, not a user setting (it can't be changed by developers).
+
+Thus, if you don't see any activations or not seeing an activation you know that has happened, it could be that they happend more than 7 days ago.
