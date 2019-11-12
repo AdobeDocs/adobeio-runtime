@@ -22,9 +22,9 @@ and:
 
 `aio -h`
 
-### Configuring the CLI with a .wskprops file
+### Configuring the wsk CLI with a .wskprops file
 
-If you have a `.wskprops` file, then you can use it to configure the CLI, so you'll be creating actions in the namespace that is defined in that file.
+If you have a `.wskprops` file, then you can use it to configure the `wsk` CLI, so you'll be creating actions in the namespace that is defined in that file.
 
 For Mac, you just need to copy the `.wskprops` in the user home folder.
 
