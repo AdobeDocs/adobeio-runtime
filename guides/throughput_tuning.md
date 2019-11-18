@@ -23,4 +23,15 @@ Some considerations to keep in mind:
 
 The second instrument you have to maximize throughput is caching the action response. When you cache an action response, for the time the cache is valid, you can invoke the action without increasing the counter used by minuteRate or concurrent action invocations per namespace. In this situations, your action is not actually executed, instead the system serves the result from cache.
 
-You use the Cache-Control dirrective in order to configure the cache.
+You use the Cache-Control dirrective in order to configure the cache. Below is an example of an action that sets the cache with a TTL of `30 minutes`. In the response object you'll find an entry with `X-Cache: HIT` or `X-Cache: MISS` (depending on the answer being returned from cache or not). 
+```
+function main(args) {
+   return {
+       body: "OK",
+       statusCode: 200,
+       headers: {
+           "Cache-Control": "max-age=1800"
+       }
+   }
+}
+```
