@@ -29,7 +29,7 @@ This documentation provides an overview of Adobe I/O Runtime as well as guides, 
 * [Securing Web Actions](guides/securing_web_actions.md): learn how to control the access to web actions
 * [Creating REST APIs](guides/creating_rest_apis.md): learn to create REST APIs from web actions
 * [Using Packages](guides/using_packages.md): Working with packages
-* [Logging and Monitoring](guides/logging_monitoring.md): learn how to troubleshoot your actions
+* [Logging & Monitoring](guides/logging_monitoring.md): learn how to troubleshoot your actions
 * [Debugging](guides/debugging.md): advanced debugging for Node.js actions
 * [System Settings](guides/system_settings.md): see the system settings and constraints 
 * [CI/CD Pipeline](guides/ci-cd_pipeline.md): understand the tools you have to create a CI/CD Pipeline
@@ -49,9 +49,9 @@ This documentation provides an overview of Adobe I/O Runtime as well as guides, 
 
 [Tools](tools.md)
 
-* [`aio` CLI](./tools/cli_install.md) - this tool helps you manage your namespaces and the authentication for the `wsk` CLI
-* [`wsk` CLI](./tools/wsk_install.md) - this tool is the main interface for managing your actions/packages/rules/triggers and getting access to activation results/errors/logs
-* [`wskdeploy` CLI](./tools/wskdeploy_install.md) - this tool helps you deploy multiple actions and packages
+* [aio CLI](./tools/cli_install.md) - this tool helps you manage your namespaces and the authentication for the wsk CLI
+* [wsk CLI](./tools/wsk_install.md) - this tool is the main interface for managing your actions/packages/rules/triggers and getting access to activation results/errors/logs
+* [wskdeploy CLI](./tools/wskdeploy_install.md) - this tool helps you deploy multiple actions and packages
 
 [Resources and Support](resources.md)
 
