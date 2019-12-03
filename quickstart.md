@@ -5,12 +5,12 @@ Serverless platforms can solve a wide range of business requirements while great
 This quickstart guide explores the most critical of these considerations as they apply to I/O Runtime and includes information on the following topics:
 
 * [I/O Runtime Programming Model](#programming-model)
-* [The Big Picture – Understanding I/O Runtime components](#the-big-picture--understanding-io-runtime-components)
-* [Zoom In – What's Happening When Actions Are Invoked](#zoom-in--whats-happening-when-actions-are-invoked)
-* [Let’s Talk Numbers – Understanding the System Settings](#lets-talk-numbers--understanding-the-system-settings)
+* [The Big Picture – Understanding I/O Runtime components](#the-big-picture-–-understanding-io-runtime-components)
+* [Zoom In – What's Happening When Actions Are Invoked](#zoom-in---whats-happening-when-actions-are-invoked)
+* [Let’s Talk Numbers – Understanding the System Settings](#lets-talk-numbers---understanding-the-system-settings)
 * [I/O Events Integration](#io-events-integration)
 * [Strategies for High Availability Applications](#strategies-for-high-availability-applications)
-* [CI/CD Pipeline – What Is Available](#cicd-pipeline--what-is-available)
+* [CI/CD Pipeline – What Is Available](#cicd-pipeline---what-is-available)
 * [Security Considerations](#security-considerations)
 * [The Future is Bright - Cloud Native Applications](#the-future-is-bright---cloud-native-applications)
  
