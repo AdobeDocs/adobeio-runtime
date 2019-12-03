@@ -1,6 +1,6 @@
 # Setting up Your Environment
 
-> Note: these instructions assume that you have already aquired a namespace and have a valid namespace/authorization stored at ~/.wskprops
+> Note: these instructions assume that you have already acquired a namespace and have a valid namespace/authorization stored at ~/.wskprops
 > If you have not already, please [Request a Trial](../overview/request_a_trial.md)
 
 Before you can create and run actions, you have to install and configure a couple of tools on your machine. 

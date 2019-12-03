@@ -17,19 +17,19 @@
       "title": "Adobe I/O Runtime Developer Guide"
     },
     {
+      "importedFileName": "quickstart",
+      "pages": [],
+      "path": "adobedocs/adobeio-runtime/master/quickstart.md",
+      "title": "Quickstart Guide"
+    },
+    {
       "importedFileName": "overview",
       "pages": [
         {
-          "importedFileName": "entities",
+          "importedFileName": "what_is_runtime",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/entities.md",
-          "title": "Adobe I/O Runtime Entities"
-        },
-        {
-          "importedFileName": "howitworks",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/howitworks.md",
-          "title": "How Adobe I/O Runtime Works"
+          "path": "adobedocs/adobeio-runtime/master/overview/what_is_runtime.md",
+          "title": "What is Adobe I/O Runtime"
         },
         {
           "importedFileName": "usecases",
@@ -38,49 +38,49 @@
           "title": "Use cases"
         },
         {
-          "importedFileName": "what_is_runtime",
+          "importedFileName": "howitworks",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/what_is_runtime.md",
-          "title": "What is Adobe I/O Runtime"
+          "path": "adobedocs/adobeio-runtime/master/overview/howitworks.md",
+          "title": "How Adobe I/O Runtime Works"
+        },
+        {
+          "importedFileName": "entities",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/overview/entities.md",
+          "title": "Adobe I/O Runtime Entities"
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/overview.md",
       "title": "Overview"
     },
     {
-      "importedFileName": "quickstarts",
+      "importedFileName": "getting-started",
       "pages": [
         {
-          "importedFileName": "debug",
+          "importedFileName": "setup",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts/debug.md",
-          "title": "Debug Your Actions"
+          "path": "adobedocs/adobeio-runtime/master/getting-started/setup.md",
+          "title": "Setting up Your Environment"
         },
         {
           "importedFileName": "deploy",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts/deploy.md",
+          "path": "adobedocs/adobeio-runtime/master/getting-started/deploy.md",
           "title": "Deploying your First Adobe I/O Runtime Function"
         },
         {
-          "importedFileName": "setup",
+          "importedFileName": "debug",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/quickstarts/setup.md",
-          "title": "Setting up Your Environment"
+          "path": "adobedocs/adobeio-runtime/master/getting-started/debug.md",
+          "title": "Debug Your Actions"
         }
       ],
-      "path": "adobedocs/adobeio-runtime/master/quickstarts.md",
+      "path": "adobedocs/adobeio-runtime/master/getting-started.md",
       "title": "Getting Started with Adobe I/O Runtime"
     },
     {
       "importedFileName": "guides",
       "pages": [
-        {
-          "importedFileName": "ci-cd_pipeline",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/ci-cd_pipeline.md",
-          "title": "CI/CD Pipeline"
-        },
         {
           "importedFileName": "creating_actions",
           "pages": [],
@@ -88,16 +88,16 @@
           "title": "Creating Actions"
         },
         {
-          "importedFileName": "creating_rest_apis",
+          "importedFileName": "asynchronous_calls",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/creating_rest_apis.md",
-          "title": "Creating REST APIs"
+          "path": "adobedocs/adobeio-runtime/master/guides/asynchronous_calls.md",
+          "title": "Asynchronous Calls"
         },
         {
-          "importedFileName": "logging_monitoring.md",
+          "importedFileName": "throughput_tuning",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/logging_monitoring.md",
-          "title": "Logging and Monitoring"
+          "path": "adobedocs/adobeio-runtime/master/guides/throughput_tuning.md",
+          "title": "Throughput Tuning"
         },
         {
           "importedFileName": "security_general",
@@ -112,22 +112,40 @@
           "title": "Securing Web Actions"
         },
         {
+          "importedFileName": "creating_rest_apis",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/guides/creating_rest_apis.md",
+          "title": "Creating REST APIs"
+        },
+        {
+          "importedFileName": "using_packages",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/guides/using_packages.md",
+          "title": "Using Packages"
+        },
+        {
+          "importedFileName": "logging_monitoring",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/guides/logging_monitoring.md",
+          "title": "Logging & Monitoring"
+        },
+        {
+          "importedFileName": "debugging",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/guides/debugging.md",
+          "title": "Debugging"
+        },
+        {
           "importedFileName": "system_settings",
           "pages": [],
           "path": "adobedocs/adobeio-runtime/master/guides/system_settings.md",
           "title": "System Settings"
         },
         {
-          "importedFileName": "throughput_tuning",
+          "importedFileName": "ci-cd_pipeline",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/throughput_tuning.md",
-          "title": "Throughput Tuning"
-        },
-        {
-          "importedFileName": "using_packages",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/guides/using_packages.md",
-          "title": "Using Packages with Adobe I/O Runtime"
+          "path": "adobedocs/adobeio-runtime/master/guides/ci-cd_pipeline.md",
+          "title": "CI/CD Pipeline"
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/guides.md",
@@ -136,12 +154,6 @@
     {
       "importedFileName": "reference",
       "pages": [
-        {
-          "importedFileName": "api_ref",
-          "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/api_ref.md",
-          "title": "Adobe I/O Runtime API Reference"
-        },
         {
           "importedFileName": "cli_use",
           "pages": [],
@@ -155,10 +167,10 @@
           "title": "Using the wsk CLI"
         },
         {
-          "importedFileName": "feeds",
+          "importedFileName": "multiple-regions",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/feeds.md",
-          "title": "Using Feeds"
+          "path": "adobedocs/adobeio-runtime/master/reference/multiple-regions.md",
+          "title": "Multiple Regions"
         },
         {
           "importedFileName": "prepackages",
@@ -173,16 +185,34 @@
           "title": "Runtimes"
         },
         {
+          "importedFileName": "api_ref",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/reference/api_ref.md",
+          "title": "API Reference"
+        },
+        {
           "importedFileName": "triggersrules",
           "pages": [],
           "path": "adobedocs/adobeio-runtime/master/reference/triggersrules.md",
-          "title": "Using Triggers and Rules"
+          "title": "Triggers & Rules"
         },
         {
-          "importedFileName": "multiple-regions",
+          "importedFileName": "sequences_compositions",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/multiple-regions.md",
-          "title": "Multiple Regions"
+          "path": "adobedocs/adobeio-runtime/master/reference/sequences_compositions.md",
+          "title": "Sequences & Compositions"
+        },
+        {
+          "importedFileName": "packages",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/reference/packages.md",
+          "title": "Packages"
+        },
+        {
+          "importedFileName": "feeds",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/reference/feeds.md",
+          "title": "Feeds"
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/reference.md",
@@ -211,7 +241,7 @@
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/tools.md",
-      "title": "Overview"
+      "title": "Tools"
     },
     {
       "importedFileName": "resources",
@@ -225,7 +255,7 @@
       ],
 
       "path": "adobedocs/adobeio-runtime/master/resources.md",
-      "title": "Resources and support"
+      "title": "Resources & support"
     }
   ]
 }
