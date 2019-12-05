@@ -19,7 +19,7 @@ For now, Adobe I/O Runtime only supports Node.js version 10. We might add suppor
 
 ## Price 
 **What does it cost to use Adobe I/O Runtime?**  
-Presently, Adobe I/O Runtime is free to use for Adobe enterprise customers and partners through the free program. You can find [here](overview/request_a_trial.md) information about how to get access.
+Presently, Adobe I/O Runtime is free to use for Adobe enterprise customers and partners through the free program. You can find [here](overview/request_a_trial.md) information about how to get access. We will be introducing a commercial offering soon.
 
 ## Usage Quotas 
 **What usage quotas are in place for Adobe I/O Runtime?**  
@@ -27,7 +27,7 @@ There are presently no usage quotas on Adobe I/O Runtime.
 
 ## Multiple Region Support
 **Where we execute your actions**
-I/O Runtime runs in AWS US-East and Europe-West. We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing). We have plans to add a cluster in APAC before the end of the year.
+I/O Runtime runs in AWS US-East, Europe-West and Australia. We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing). We have plans to add a cluster in APAC before the end of the year.
 
 ## System Limits
 **Which limits are imposed onto actions?**  
