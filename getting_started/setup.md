@@ -1,9 +1,6 @@
 # Setting up Your Environment
 
-> Note: these instructions assume that you have already acquired a namespace and have a valid namespace/authorization stored at ~/.wskprops
-> If you have not already, please [Request a Trial](../overview/request_a_trial.md)
-
-Before you can create and run actions, you have to install and configure a couple of tools on your machine. 
+Before you can create and run actions, you have to install and configure a couple of tools on your machine. Please note that for some of the steps (creating integrations in I/O Console) you need to have System Administrator or Developer Role permissions. If you don&rsquo;t have those, you need either to be provisioned with these permissions or someone from your team has to share the credentials.
 
 ## Step 1: Install aio CLI and wsk CLI
 
@@ -25,30 +22,87 @@ and:
 
 `aio -h`
 
-## Step 2: Test aio CLI and/or wsk CLI
+### Configuring the wsk CLI with a .wskprops file
 
-Once you&rsquo;ve configured the CLI, you should test it:
+If you have a `.wskprops` file, then you can use it to configure the `wsk` CLI, so you'll be creating actions in the namespace that is defined in that file.
 
-`aio runtime list` 
+For Mac, you just need to copy the `.wskprops` in the user home folder.
 
-> `aio` also provides an alias `rt` for runtime, so you can use `aio rt list` or even `aio rt ls`
+For Windows, you'll place the `.wskprops` in `C:\Users\<user>`.
 
-and:
+### Configuring aio CLI to use your .wskprops file
+
+The `aio` CLI will pickup credentials from the exact same path as the wsk CLI ( above )
+
+Additionally, the `aio` CLI allows the use .env files, so if you have multiple namespaces you can have a different set of credentials associated with each project/directory.  `aio` CLI always looks for a .env file in the current working directory before looking to the default location of .wskprops
+
+Here are the keys you need to add to the .env file:
+```
+AIO_RUNTIME_APIHOST=https://adobeioruntime.net
+AIO_RUNTIME_AUTH=<auth-string-value>
+AIO_RUNTIME_NAMESPACE=<namespace-value>
+```
+
+> Note: .env files are hidden by default, so you may not see them. Also, you should add them to .gitignore and never commit them to source control.
+
+## Step 2: Testing the CLI is setup correctly
+
+Once you've configured the CLI, you should test it:
 
 `wsk list`
 
+`aio runtime list`
+
 If successful, you should see a list of the entities defined in your namespace.
 
-To see a list of all the available commands, both CLIs provide --help flags
+You&rsquo;re ready to [deploy your first function](deploy.md).
 
-`aio runtime --help`
+## Optional Step: Generating your .wskprops file from I/O Console
 
-`aio runtime action --help`
+It is possible to use the `aio` CLI to generate your .wskprops file. This only applies if you have been onboarded on Runtime through Console. In other words, Runtime must have been enabled for your integration in I/O Console directly.
 
-and:
+### Enabling Runtime from I/O Console
 
-`wsk --help`
+- Create or Edit the integration that you want to use in Runtime
+- Add the I/O Management API to this integration
+- Make sure that you enable Runtime for that integration in I/O Console directly
 
-`wsk action --help`
+Once this is done, you will need to configure the `aio` CLI according to this integration.
+
+### Configuring aio CLI
+
+Create a `config.json` file on your computer and navigate to the integration Overview page. From this page, copy the `client_id` and `client_secret` values to the config file; if you navigate to the JWT tab in Console, you'll get the value for the `jwt_payload`.
+
+```
+//config.json 
+{
+  "client_id": "value from your CLI integration (String)",
+  "client_secret": "value from your CLI integration (String)",
+  "jwt_payload": { value from your CLI integration (JSON Object Literal) },
+  "token_exchange_url": "https://ims-na1.adobelogin.com/ims/exchange/jwt",
+  "console_get_orgs_url":"https://api.adobe.io/console/organizations",
+  "console_get_namespaces_url":"https://api.adobe.io/runtime/admin/namespaces/"
+}
+```
+
+The last bit you need to have at hand is the private certificate you've used to create the integration; you need the private key, not the public one. Now, you are ready to configure the `aio` CLI.
+
+First, configure the credentials:
+
+`aio config set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --json`
+
+Then, configure the private certificate:
+
+`aio config set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE`
+
+Note that this just stores the path to your private key in the CLI configuration.
+
+### Testing your AIO CLI configuration
+
+To test that `aio` CLI can actually authenticate against Adobe I/O, run this command to list all the integrations that your organization has:
+
+`aio runtime list`
+
+If successful, you should see a list of the entities defined in your namespace.
 
 Great! You&rsquo;re ready to [deploy your first function](deploy.md).
