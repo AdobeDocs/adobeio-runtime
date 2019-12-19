@@ -3,9 +3,7 @@
 These are the packages that are pre-installed and available to any I/O Runtime user:
 
 ```
-/whisk.system/alarms
-/adobe/oauth-1.0.0                                                     
-/adobe/cache-1.0.0                                                    
+/whisk.system/alarms                                                  
 ```
 
 You can get details about the content of a package by running this command:
