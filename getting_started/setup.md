@@ -101,8 +101,36 @@ Note that this just stores the path to your private key in the CLI configuration
 
 To test that `aio` CLI can actually authenticate against Adobe I/O, run this command to list all the integrations that your organization has:
 
-`aio runtime list`
+`aio console list-integrations`
 
-If successful, you should see a list of the entities defined in your namespace.
+This command will list all available integrations in your org. Pipe the command to [`less`](https://en.wikipedia.org/wiki/Less_(Unix)) or [`more`](https://en.wikipedia.org/wiki/More_(command)) to page the results.
 
-Great! You&rsquo;re ready to [deploy your first function](deploy.md).
+You can also use [`grep`](https://en.wikipedia.org/wiki/Grep) to filter the results.
+
+Sample output:
+
+```
+Namespace      Name                      API Key        Status
+NUMBER_NUMBER  Integration Name 1        HEX_KEY        ENABLED
+NUMBER_NUMBER  Integration Name 2        HEX_KEY        DISABLED
+NUMBER_NUMBER  Integration Name 3        HEX_KEY        ENABLED (currently selected)
+NUMBER_NUMBER  Integration Name 4        HEX_KEY        ENABLED
+```
+
+Note that the status of an integration can be `ENABLED` or `DISABLED` and one integration in the list will be flagged as being `currently selected`.
+
+### Selecting Console integration & Runtime namespace
+
+Now you can use the `aio` CLI to select the namespace that you enabled from Console and use it for deploying actions. There is a 1:1 relationship between an integration and a namespace, so if you select your integration from the list above, you will also select the corresponding namespace. 
+
+You can't manage multiple namespaces at the same time. You can only have just one namespace active always, and all the actions you perform are against the active namespace.
+
+To list the available integrations, run:
+
+`aio console list-integrations`
+
+Identify your integration in the list and run the command below and pass as the argument the <NUMBER_NUMBER> you see listed when running `aio console list-integrations`:
+
+`aio console select-integration <NUMBER_NUMBER>`
+
+This command will generate the `.wskprops` file in your user directory (or overwrite the file if it already exists) for accessing that given namespace. Now, you can use `aio` CLI or `wsk` CLI to manage this namespace: create/invoke actions and so forth.
