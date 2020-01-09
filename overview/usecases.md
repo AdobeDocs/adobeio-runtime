@@ -2,14 +2,25 @@
 
 There are many possible uses for Adobe I/O Runtime&rsquo;s serverless, event-driven, on-demand computing model. In addition to the typical serverless use cases, there are a few that are ideal for Runtime:
 
-* Microservices
-* Extending Adobe's Cloud Platform
-* Internet of Things (IoT)
-* API back end
-* Mobile back end
-* Data processing
-* Adobe Sensei
-* Event processing with Adobe I/O Events
+* [Introducing Adobe I/O Runtime: How Serverless at Adobe Will Shape the Future of Digital Marketing and Creativity](https://medium.com/adobetech/introducing-adobe-i-o-runtime-how-serverless-at-adobe-will-shape-the-future-of-digital-marketing-56ad60852477)
+* [Microservices](#microservices)
+* [Extending Adobe Cloud Platform](#extending-adobe-cloud-platform)
+* [Internet of Things](#internet-of-things)
+* [API backend](#api-backend)
+* [Mobile backend](#mobile-backend)
+* [Data processing](#data-processing)
+* [Event processing with Adobe I/O Events](#event-processing-with-adobe-i-o-events)
+
+If you want to see more real-world examples, some of the apps built on top of I/O Runtime check this list:
+* [How Belgian Broadcaster VRT Turned to Adobe I/O Runtime to Dynamically Create Newsletter Content](https://medium.com/adobetech/how-belgian-broadcaster-vrt-turned-to-adobe-i-o-runtime-to-dynamically-create-newsletter-content-5cafe224a2a5)
+* [How Bank of America Is Using Adobe I/O Runtime to Boost the Efficiency of Its Personalized Offers in Adobe Target](https://medium.com/adobetech/how-bank-of-america-is-using-adobe-i-o-runtime-to-boost-the-efficiency-of-its-personalized-offers-699de38cf751)
+* [How Adobe.com Uses I/O Runtime to Optimize On-Site B2B Personalization](https://medium.com/adobetech/how-adobe-com-uses-i-o-runtime-to-optimize-on-site-b2b-personalization-6c10b9888981)
+* [Bots 💙 Adobe I/O Runtime](https://medium.com/adobetech/bots-adobe-i-o-runtime-c89083e1067c)
+* [Adobe I/O Runtime: Polishing the Rough Edges of SaaS Solutions](https://medium.com/adobetech/adobe-i-o-runtime-polishing-the-rough-edges-of-saas-solutions-238f82b58765)
+* [Serverless GraphQL on Adobe I/O Runtime](https://medium.com/adobetech/serverless-graphql-on-adobe-i-o-runtime-e221d2a8e215)
+* [Adobe Campaign Content Recommendations in Email](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f)
+* [Data-Driven Marketing Campaigns using Adobe Experience Platform’s Unified Profile in Adobe Campaign](https://medium.com/adobetech/data-driven-marketing-campaigns-using-adobe-experience-platforms-unified-profile-in-adobe-campaign-9d9a97e183c4)
+* [Adobe Campaign Standard and Web Push Notifications](https://medium.com/adobetech/adobe-campaign-standard-and-web-push-notifications-5c12c0f4ada2)
 
 ## Microservices
 Microservices offer many benefits, but provisioning server-side support for them can be daunting, whether you&rsquo;re using a traditional server approach or a cloud-based solution. Development teams often find they spend as much or more time configuring the server or cloud solution for fault tolerance, load balancing, logging, and auto-scaling. This expertise is often outside the bounds of the development team, which implies the need for a server admin or admin team to do this work, thus adding to the resource demands of the microservice.
@@ -19,13 +30,13 @@ Adobe I/O Runtime is a perfect solution for this problem. By abstracting the ser
 ## Extending Adobe's Cloud Platform
 Adobe I/O Runtime lets you extend Adobe&rsquo;s Cloud Platform by deploying your own microservices on top of Adobe's infrastructure. With those microservices, you can interact directly with your content and data and build out services that modify, transform, or automate processes based on your specific business needs. Those services can be invoked with events from Adobe I/O Events or via REST APIs.
 
-## Internet of Things (IoT)
-Connecting intelligent devices to the Internet has enabled incredibly useful innovations in home automation, navigation, and many other areas. Adobe I/O Runtime is an excellent choice for hosting functions to support IoT applications:
+## Internet of Things
+Connecting intelligent devices to the Internet (IoT) has enabled incredibly useful innovations in home automation, navigation, and many other areas. Adobe I/O Runtime is an excellent choice for hosting functions to support IoT applications:
 
 * IoT applications are often sensor-driven: devices are programmed to respond to external stimuli, such as a change in location or orientation. Under the right circumstances, sensor-driven events can spike from the low level of normal conditions to a flood of sensor events under extreme conditions. This makes designing and maintaining a scalable back end with traditional approaches particularly challenging and costly: either you build a system to handle normal use, which can&rsquo;t scale for peak use, or you build a system to handle peak use, most of the capacity of which sits idle the vast majority of the time.  The auto-scaling capabilities of Adobe I/O Runtime solve this problem, not only enabling your IoT application to continue to function in response to peak sensor events, but eliminating the need for you to design and provision that back end yourself.
 * Given the lack of standardization with respect to data formats used in IoT devices, and their need to connect and report to myriad back-end services and related applications, data transformation can be a major challenge: to provide functionality in real time, a device may need to transform data in both directions and depend on transformations among collaborating applications and platforms on the back end. The on-demand, scalable computing resources offered by Adobe I/O Runtime make it much easier to develop and deploy data transformation functions that operate in real time to and from your IoT device.
 
-## API back end
+## API backend
 Imagine creating an API for your application without having a server to run it! Adobe I/O Runtime enables just that. Your functions hosted in Runtime&rsquo;s cloud can expose REST APIs to other applications. This makes it possible for you to offer customers a way to program against your Runtime application; it&rsquo;s also a great way to implement a back end for microservices or to customize Adobe's existing APIs to meet your needs. You can also connect your Runtime functions to any API management tool you choose.
 
 ## Mobile back end
@@ -33,9 +44,6 @@ Mobile back end is an optimal use for Adobe I/O Runtime. Mobile applications oft
 
 ## Data processing
 Adobe I/O Runtime functions can access any data stored in the Adobe Cloud Platform and can be designed to transform and process data in response to events or conditions, send and receive messages, invoke other functions, and access ACP or other data stores. You can build complete data processing pipelines in Runtime, and even make changes through simple configurations without having to reprogram. Combined with the scalability and flexibility of Runtime, this enables Runtime data processing solutions to be highly agile and responsive to changing requirements.
-
-## Adobe Sensei
-Adobe I/O Runtime functions can connect to Adobe Sensei intelligent services through the Adobe API Gateway or as native Runtime functions. This offers you incredible potential to apply machine learning and artificial intelligence algorithms to solutions you build on Adobe Runtime and to orchestrate custom workflows that bring together Sensei services. Imagine building your own custom digital asset processing and management functionality by leveraging Adobe Sensei functions and combining them with your own algorithms to create new applications. 
 
 ## Event processing with Adobe I/O Events
 As you might imagine, Adobe I/O Runtime is ideally situated to work with Adobe I/O Events. When you combine a platform for hosting event-driven code with a service that fires events you can consume, the implications are obvious: build and deploy your event-driven logic on Adobe I/O Runtime to consume events from Adobe I/O Events. The possibilities are endless.
