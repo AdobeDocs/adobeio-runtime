@@ -3,9 +3,9 @@
 On this page
 - [Actions](#actions)
 - [Namespaces](#namespaces)
-- [Triggers and Rules](#triggersandrules)
+- [Triggers and Rules](#triggers-and-rules)
 - [Packages](#packages)
-- [Sequences/Compositions](#sequencescompositions)
+- [Sequences and Compositions](#sequences-and-compositions)
 - [Feeds](#feeds)
 
 Adobe I/O Runtime&rsquo;s computing model depends on a number of elements, called _entities_, that encapsulate aspects of Runtime functionality. The following is a quick rundown of these entities, pointing you to further resources in these docs.
