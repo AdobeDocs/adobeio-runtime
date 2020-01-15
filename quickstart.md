@@ -89,7 +89,7 @@ In I/O Console a developer can choose the events and then send them to a webhook
 Another option would be an action that reads the events using the Journaling API.
 
 ## Strategies for High Availability Applications
-While I/O Runtime is highly available (99.99% uptime and multiple regions) and scalable compute platform, there are some application design considerations that any developer using I/O Runtime should take into consideration.
+While I/O Runtime is highly available and scalable compute platform, there are some application design considerations that any developer using I/O Runtime should take into consideration.
 
 *	Favor async calls. If your application can do with an async design, you should go for it. This gives a higher chance to execute the code instead of running in timeouts
 *	Responding to 429 status code. When your application is hitting the upper limit for throttling, you will get 429s. If you don’t scale back, you’d keep getting this answer
