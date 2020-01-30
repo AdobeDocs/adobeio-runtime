@@ -37,6 +37,9 @@ You can quickly see the API you&rsquo;ve defined, including the fully qualified 
 ```
 wsk api list /pet-store
 ```
+
+Please note, that at this time `wsk api list` is not implemented. Instead, you have to use `wsk api list /enter-base-path`.
+
 Here is an example of calling one of the endpoints:
 ```
 curl https://adobeioruntime.net:443/apis/<YOUR-NAMESPACE>/pet-store/pet/2345 -X get
