@@ -33,7 +33,7 @@ package /<yourNamespace>/hellopackage
 
 The package you created is empty; you haven&rsquo;t added any actions yet. To add an action to the package, use the source code from the `hello` action created in [Deploying your first Adobe I/O Runtime function](../gettingstarted/deploy.md 'Deploying your first function'). Here is the code for that action:
 
-```js
+```
 function main(params) {
   return { payload: 'Hello ' + params.name };
 }
@@ -78,13 +78,21 @@ You should get this output:
 
 ## Adding parameters to a package
 
-Notice in the package summary the statements `(parameters: none defined)`. You can add parameters to a package, and all entities in the package will inherit them:
+Notice in the package summary the statements `(parameters: none defined)`. You can add default parameters to a package, and all entities in the package will inherit them:
 
 `wsk package update hellopackage --param name Patricia`
 
 ```
 ok: updated package hellopackage
 ```
+
+### Default params and encryption
+
+Before we dive deeper in how to set and use default params, let’s discuss the security aspect first. Many developers use the default params as a mechanism to provision actions with the secrets/passwords needed to authenticate against some other systems (databases, services, APIs).
+
+In order to support this use case, all default params are automatically encrypted. They are decrypted just before the action code is executed. Thus, the only time you have access to the decrypted value is while executing the action code.
+
+If you run the CLI command for getting an action or package, you’d get a listing for the names of the default params while the values will be listed as a hash instead of the actual value.
 
 You can see what parameters have been added to a package (note the `summary` flag is left out; you&rsquo;ll get a complete report):
 
@@ -98,7 +106,7 @@ ok: got package hellopackage
 "parameters": [
     {
         "key": "name",
-        "value": "Patricia"
+        "value": some_hash
     }
 ]
 ...
@@ -116,7 +124,7 @@ ok: got action hello
 "parameters": [
     {
         "key": "name",
-        "value": "Patricia"
+        "value": some_hash
     }
 ]
 ...

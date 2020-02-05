@@ -25,7 +25,7 @@ Many things on the web rely on cookies. You can set cookies in two ways in Runti
 The use of cookies directly from web actions on Runtime is discouraged. For further reading, please see [Securing Web Actions](securing_web_actions.md).
 
 ## Secrets
-Secrets fall into two different categories and must be handled in specific ways based on those categories. Runtime is not responsible for securing secrets beyond keeping our copy of your namespace secure. 
+Secrets fall into two different categories and must be handled in specific ways based on those categories. 
 
 ### Runtime Namespace Details
 Namespace credentials should be treated with the utmost care. These credentials allow full access to the namespace: _do not share this information with customers using the action._ If the design of the system requires these credentials to be stored inside the action or passed in as parameters to your action, _consider some other design._ Leaking of these credentials will allow an attacker full access to the namespace, and _the owner of the namespace is responsible for any costs accrued_ during that time.
@@ -35,7 +35,9 @@ If you need to pass namespace credentials, use the `-a provide-api-key true` ann
 ### A Function's Secrets
 If the action must communicate with some external service in an authenticated way, consider making use of a [HMAC](https://en.wikipedia.org/wiki/HMAC) that is passed into the service to authorize it for a time to retrieve those credentials. If passing a short-lived token to the action to retrieve the credentials is not possible, any long-lived credentials should be passed as part of a Header or a document POST-ed to the action. This will ensure that the credentials are always passed over a secure channel and not leaked to any internal or external routing mechanisms.
 
-If you need to store secrets your functions use, it's best to place them in some other trusted storage system.
+If you need to store secrets your functions use, it's best to place them in some other trusted storage system or use the default params mechanism that is supported by packages and actions. In order to support this use case, all default params are automatically encrypted. They are decrypted just before the action code is executed. Thus, the only time you have access to the decrypted value is while executing the action code.
+
+If you run the CLI command for getting an action or package, you’d get a listing for the names of the default params while the values will be listed as a hash instead of the actual value.
 
 ## Authorization and Authentication
 

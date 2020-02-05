@@ -74,7 +74,15 @@ wsk action invoke test --param name "John Doe" --result
 
 ## Setting default parameters
 
-Sometimes you want to bind the same parameter values for all invocations or you just want to set default values. In either case, you have two different options.
+Sometimes you want to bind the same parameter values for all invocations or you just want to set default values. In either case, you have two different options: setting params at the package level (so all actions in that package can inherit them) or at action level.
+
+### Default params and encryption
+
+Before we dive deeper in how to set and use default params, let’s discuss the security aspect first. Many developers use the default params as a mechanism to provision actions with the secrets/passwords needed to authenticate against some other systems (databases, services, APIs).
+
+In order to support this use case, all default params are automatically encrypted. They are decrypted just before the action code is executed. Thus, the only time you have access to the decrypted value is while executing the action code.
+
+If you run the CLI command for getting an action or package, you’d get a listing for the names of the default params while the values will be listed as a hash instead of the actual value.
 
 ### Default paramenters set on action
 
