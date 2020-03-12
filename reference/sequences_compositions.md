@@ -52,7 +52,7 @@ compose myComp.js > myComp.json
 
 Time to deploy:
 ```
-deploy myComp.json compositionA 
+deploy compositionA myComp.json
 ```
 
 This creates a composition called `compositionA`. You can invoke this, as any other action - `wsk action invoke compositionA`. When you do this, first action `a` is invoked. Then, if `a` was successful, then action `b` is invoked; if not, action `c` is invoked.
