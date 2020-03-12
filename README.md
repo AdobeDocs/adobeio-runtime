@@ -14,7 +14,7 @@ This documentation provides an overview of Adobe I/O Runtime as well as guides, 
 * [Adobe I/O Runtime Entities](overview/entities.md)
 * [Request a Trial](overview/request_a_trial.md)
 
-[Getting Started](getting-started.md)
+[Getting Started](getting_started.md)
 
 * [Setting up Your Environment](getting_started/setup.md)
 * [Deploying your First Adobe I/O Runtime Function](getting_started/deploy.md)
