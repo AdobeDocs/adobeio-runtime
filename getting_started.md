@@ -7,6 +7,6 @@ Runtime is currently in beta, and if you're an existing Adobe Enterprise custome
 Once you have an authorization key and an integration with a namespace created, you&rsquo;ll need to install the OpenWhisk CLI. Then, you can get started building applications on the system:
 
 
-* [Setting up your environment](getting_started/setup.md)
-* [Deploy and invoke your first action](getting_started/deploy.md)
-* [Retrieve Action Invocation Results](getting_started/activations.md)
+* [Setting up your environment](getting-started/setup.md)
+* [Deploy and invoke your first action](getting-started/deploy.md)
+* [Retrieve Action Invocation Results](getting-started/activations.md)

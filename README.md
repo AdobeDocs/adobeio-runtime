@@ -16,9 +16,9 @@ This documentation provides an overview of Adobe I/O Runtime as well as guides, 
 
 [Getting Started](getting_started.md)
 
-* [Setting up Your Environment](getting_started/setup.md)
-* [Deploying your First Adobe I/O Runtime Function](getting_started/deploy.md)
-* [Retrieve Action Invocation Results](getting_started/activations.md)
+* [Setting up Your Environment](getting-started/setup.md)
+* [Deploying your First Adobe I/O Runtime Function](getting-started/deploy.md)
+* [Retrieve Action Invocation Results](getting-started/activations.md)
 
 [Guides](guides.md)
 
