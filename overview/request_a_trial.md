@@ -2,7 +2,7 @@
 
 Adobe Customers & Partners wishing to try Adobe I/O Runtime may request a trial license. The trial license offers a fully functional version. See below for terms and conditions.
  
-A fully licensed version backed by a 99.99 SLA along with unlimited namespace creation is available now. Talk with your Adobe sales team for more details. Enterprise customers may want to validate their useage with a trial before purchasing.
+A fully licensed version backed by a SLA along with unlimited namespace creation is available now. Talk with your Adobe sales team for more details. Enterprise customers may want to validate their useage with a trial before purchasing.
 
 To request an Adobe I/O Runtime Trial please submit our typeform. 
 
