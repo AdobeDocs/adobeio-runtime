@@ -48,6 +48,12 @@
           "pages": [],
           "path": "adobedocs/adobeio-runtime/master/overview/entities.md",
           "title": "Adobe I/O Runtime Entities"
+        },
+        {
+          "importedFileName": "request_a_trial",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/overview/request_a_trial.md",
+          "title": "Request a Trial"
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/overview.md",
