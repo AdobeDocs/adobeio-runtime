@@ -180,6 +180,8 @@ function main(params) {
         }
     }
 }
+
+exports.main = main;
 ```
 
 You can also set cookies or cache control headers, perform a HTTP redirect, and so forth.
@@ -234,7 +236,7 @@ This is the folder structure:
 ```
 --/actions
 --/actions/node_modules/
---/actions/first-function.js
+--/actions/index.js
 --/actions/package.json
 --manifest.yaml
 ```
@@ -250,8 +252,12 @@ packages:
             test-zip:
                 # source for the action; in this case it is a folder
                 function: actions
-                runtime: nodejs:8
+                runtime: nodejs:10
+                # publish the action as a web action
+                web:  yes
 ```
+
+>**Note:** If your action require dependencies (such as other node modules or JavaScript files), you need to place the action code in a `inde.js` file and in the `manifest.yaml` file, the `function` value should point to the folder where the action is stored instead of the action file. You can see this in action in the example above.
 
 Now you are ready to deploy by running the `wskdeploy` command from the same folder where `manifest.yaml` is:
 
@@ -269,6 +275,8 @@ If you want to remove this action, you run `wskdeploy` with the *undeploy* flag:
 ```
 wskdeploy undeploy
 ```
+
+There are other useful flows `wskdeploy` supports. Please check the [official documentation](https://github.com/apache/openwhisk-wskdeploy) if you want to find more.
 
 >**Note:** There is another way of deploying a ZIP action using the wsk command. You miss the manifest.yaml file flexibility with this mode; you can&rsquo;t define multiple actions/packages at the same time. The ZIP file has to have in the root the package.json file.  
 `wsk action create my-action --kind nodejs:10 zip-file.zip`
