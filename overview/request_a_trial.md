@@ -1,15 +1,17 @@
 # Request a Trial
 
-Customers & Adobe Partners wishing to try Adobe I/O Runtime may request a trial license. The trial license offers a fully functional version. See below for terms and conditions.
+Adobe Customers & Partners wishing to try Adobe I/O Runtime may request a trial license. The trial license offers a fully functional version. See below for terms and conditions.
  
-A licensed version backed by a 99.99 SLA will be available in Q1 2020.
- 
-To request an Adobe I/O Runtime Trial follow this [link](https://www.adobeprerelease.com/beta/082F841B-0EF2-42B0-E02C-6FB0C37C7114/apply).
- 
-After requesting a trial you will receive an agreement via email. Once you accept that agreement we will create a namespace based on the name of your company/website.
- 
-Expect to receive an email with the namespace within 24-48 hours after completing the agreement.
- 
+A fully licensed version backed by a 99.99 SLA along with unlimited namespace creation is available now. Talk with your Adobe sales team for more details. Enterprise customers may want to validate their useage with a trial before purchasing.
+
+To request an Adobe I/O Runtime Trial please submit our typeform. 
+
+https://adobeio.typeform.com/to/RWhT8Y
+
+It's a short form. We'll ask you your name, company, corporate email address and how you want to use Runtime. 
+
+After requesting a trial you will receive an email with a link to accept our trial agreement. Once you have accepted that agreement you will receive an email with a namespace within 24-48 hours.
+  
 We look forward to seeing what you will build with Adobe I/O Runtime! 
  
 Terms:
