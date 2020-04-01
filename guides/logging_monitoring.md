@@ -6,7 +6,7 @@ You can retrieve the latest activations in a namespace by running:
 ```
 wsk activation list
 ```
-Having an activation ID, you can retrieve the actication result running:
+Having an activation ID, you can retrieve the activation result running:
 ```
 wsk activation get <activation ID>
 ```
@@ -16,6 +16,16 @@ wsk activation logs <activation ID>
 //output sample
 2018-11-14T22:23:00.002Z       stdout: 1542234180001: param = John Doe
 ```
+
+## Understanding The Error Codes
+
+When you have action invocations that fail, sometimes the best way to understand the reason behind the failing is to take a look at the error object part of the activation record - running `wsk activation get <activationId>` you will get the activation record.
+
+The following are the possible values and the meaning for `error` in `response.status`:
+* `success`: everything is okay (status is true)
+* `action developer error`: A container or action code error occurred, e.g. failed to start action (status is false). This is usually the case if the nodejs action code has a syntax error or missing dependencies
+* `application error`: Action ran, but there was an error thrown in the action code (deliberatly or not) that was handled by I/O Runtime (status is false).
+* `whisk internal error`: Action did not run, an internal I/O Runtime system error occurred while starting the action, more info in `response.status.result.error`
 
 ## 3rd-Party Tools
 
