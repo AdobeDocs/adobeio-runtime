@@ -75,10 +75,10 @@
           "title": "Deploying your First Adobe I/O Runtime Function"
         },
         {
-          "importedFileName": "debug",
+          "importedFileName": "activations",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/getting-started/debug.md",
-          "title": "Debug Your Actions"
+          "path": "adobedocs/adobeio-runtime/master/getting-started/activations.md",
+          "title": "Retrieve Action Invocation Results"
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/getting_started.md",
