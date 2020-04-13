@@ -257,7 +257,7 @@ packages:
                 web:  yes
 ```
 
->**Note:** If your action require dependencies (such as other node modules or JavaScript files), you need to place the action code in a `inde.js` file and in the `manifest.yaml` file, the `function` value should point to the folder where the action is stored instead of the action file. You can see this in action in the example above.
+>**Note:** If your action require dependencies (such as other node modules or JavaScript files), you need to place the action code in a `index.js` file and in the `manifest.yaml` file, the `function` value should point to the folder where the action is stored instead of the action file. You can see this in action in the example above.
 
 Now you are ready to deploy by running the `wskdeploy` command from the same folder where `manifest.yaml` is:
 
