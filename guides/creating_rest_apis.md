@@ -68,6 +68,43 @@ wsk api create --config-file pet-store-swagger.json
 ```
 This will work as long as the actions are already created in that namespace.
 
+### CORS
+[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) headers can be controlled in two ways.
+
+#### Statically
+If the returned CORS headers can be static, no code is necesary. The REST APIs can be configured in Swagger by defining the `options` method. The following Swagger snippet illustrates how to configure CORS headers:
+
+```json
+"paths": {
+    "/test": {
+      "options": {
+        "responses": {
+          "204": {
+            "description": "Default CORS response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "type": "string",
+                "description": "Which origin can invoke the /test API\n",
+                "default": "https://xyz.example.com"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "description": "Which methods are allowed\n",
+                "default": "GET, POST, PUT"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "description": "Which headers are allowed\n",
+                "default": "Content-Type, Accept"
+              }
+            }
+          }
+        }
+      }
+```
+
+#### Dynamically
+
 ## Securing the API edpoints
 
 You secure an API the same way you&rsquo;d do it for web actions. You can read more about this on the [Securing Web Actions](securing_web_actions.md) page.
