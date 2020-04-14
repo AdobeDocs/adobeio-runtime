@@ -97,6 +97,8 @@ If the returned CORS headers can be static, no code is necesary. The REST APIs c
           }
         }
       }
+    }
+}
 ```
 
 Once the `options` block is added to any HTTP resources, the system will respond with the configured headers, and include the `default` value for each header. In this case the response will be:
