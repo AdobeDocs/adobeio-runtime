@@ -103,6 +103,9 @@ You can still make blocking successful web activations retrievable at a later ti
 X-OW-EXTRA-LOGGING: on
 ``` 
 
+> It's not recommended to use the extra logging headers in the production environment as invocation performance can be impacted. 
+
+
 ## Retrieving Activations for Non-blocking Calls
 
 When you execute a non-blocking action (async action), the action returns immediately the activation ID. If you query for the result or logs before the action finished the execution you get an error:
