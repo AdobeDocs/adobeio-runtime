@@ -90,9 +90,22 @@ wsk activation result <activation ID>
 wsk activation logs <activation ID>
 ```
 
+## Blocking successful activations
+
+Status of the blocking successful activations can't be retrieved at a later time. 
+As a consequence, the following wsk commands will partially work as expected: 
+- `wsk activation logs <activation ID>` will still display the logs for the activations.
+- `wsk activation list` won't display the blocking successful activations. 
+- `wsk activation get <activation ID>` won't return the activation result. 
+
+You can still make blocking successful web activations retrievable at a later time, by setting in the request the extra logging header to `on`: 
+```
+X-OW-EXTRA-LOGGING: on
+``` 
+
 ## Retrieving Activations for Non-blocking Calls
 
-When you execute a non-blocking action (async action), the action returns imediately the activation ID. If you query for the result or logs before the action finished the execution you get an error:
+When you execute a non-blocking action (async action), the action returns immediately the activation ID. If you query for the result or logs before the action finished the execution you get an error:
 ```
 wsk activation get 1d24121f91384740a4121f91389740f0
 error: Unable to get activation '1d24121f91384740a4121f91389740f0': The requested resource does not exist. (code myM2aaCufgIcnjnrbNIHztNmhL2HvFia)
