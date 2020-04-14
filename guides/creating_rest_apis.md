@@ -72,7 +72,7 @@ This will work as long as the actions are already created in that namespace.
 
 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) headers can be controlled in two ways: statically, or dynamically.
 
-### Static CORS Response via Swagger
+### Static CORS Response with OpenAPI
 If the returned CORS headers can be static, no code is necesary. The REST APIs can be configured in OpenAPI 2.0 format, by defining the `options` method. The following snippet illustrates how to configure CORS headers:
 
 ```json
@@ -101,7 +101,7 @@ If the returned CORS headers can be static, no code is necesary. The REST APIs c
 }
 ```
 
-Once the `options` block is added to any HTTP resources, the system will respond with the configured headers, and include the `default` value for each header. In this case the response will be:
+Once the `options` block is added to any HTTP resource, the system will respond with the configured headers, and their corresponding `default` values. In this example the response will be:
 
 ```
  HTTP/1.1 204 No Content
@@ -110,11 +110,10 @@ Once the `options` block is added to any HTTP resources, the system will respond
 
 ```
 
-#### Dynamic CORS Response via custom actions
-For cases when the returned headers have to be dynamic, a dedicated function must be configured to handle the `OPTIONS` Request. It works in the same fashion as the other HTTP Methods such as `GET`, `POST`.
+#### Dynamic CORS Response with Custom Actions
+The CORS headers can also be returned by a dedicated function, which must be configured to handle the `options` HTTP Method. It works in the same fashion as the other HTTP Methods like `GET`, or `POST`.
 
-
-The function bellow demonstates how to return these headers:
+The code bellow demonstrates an action that returns a CORS response:
 
 ```javascript
 // save it as cors-action.js
@@ -129,7 +128,7 @@ function main(params) {
 }
 ```
 
-Then create the web action, and configure it for the CORS request:
+The web action must be created and configured for the CORS request:
 
 ```bash
 wsk action create handleCorsRequest ./cors-action.js --web true -a web-custom-options true
@@ -137,12 +136,12 @@ wsk action create handleCorsRequest ./cors-action.js --web true -a web-custom-op
 wsk api create /pet-store /pet options handleCorsRequest --response-type http
 ```
 
-Then make the CORS request:
+To test the CORS request get the URL of the action, and invoke it:
 ```bash
 wsk api list /pet-store
 # get the URL for the options action and invoke it
 curl -i -X OPTIONS https://adobeioruntime.net/...
-
+# it should return
  HTTP/1.1 204 No Content
  Access-Control-Allow-Methods: GET, POST, PUT
  Access-Control-Allow-Origin: https://xyz.example.com
