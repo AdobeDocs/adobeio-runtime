@@ -69,6 +69,7 @@ wsk api create --config-file pet-store-swagger.json
 This will work as long as the actions are already created in that namespace.
 
 ## Enable CORS on an HTTP Resource
+
 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) headers can be controlled in two ways: statically, or dynamically.
 
 ### Static CORS Response via Swagger
@@ -91,11 +92,6 @@ If the returned CORS headers can be static, no code is necesary. The REST APIs c
                 "type": "string",
                 "description": "Which methods are allowed\n",
                 "default": "GET, POST, PUT"
-              },
-              "Access-Control-Allow-Headers": {
-                "type": "string",
-                "description": "Which headers are allowed\n",
-                "default": "Content-Type, Accept"
               }
             }
           }
@@ -103,6 +99,14 @@ If the returned CORS headers can be static, no code is necesary. The REST APIs c
       }
 ```
 
+Once the `options` block is added to any HTTP resources, the system will respond with the configured headers, and include the `default` value for each header. In this case the response will be:
+
+```
+ HTTP/1.1 204 No Content
+ Access-Control-Allow-Methods: GET, POST, PUT
+ Access-Control-Allow-Origin: https://xyz.example.com
+
+```
 
 #### Dynamic CORS Response via custom actions
 For cases when the returned headers have to be dynamic, a dedicated function must be configured to handle the `OPTIONS` Request. It works in the same fashion as the other HTTP Methods such as `GET`, `POST`.
@@ -123,7 +127,7 @@ function main(params) {
 }
 ```
 
-Then create the web action, and configure it for the CORS Request:
+Then create the web action, and configure it for the CORS request:
 
 ```bash
 wsk action create handleCorsRequest ./cors-action.js --web true -a web-custom-options true
