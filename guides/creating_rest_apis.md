@@ -101,7 +101,7 @@ If the returned CORS headers can be static, no code is necesary. The REST APIs c
 }
 ```
 
-Once the `options` block is added to any HTTP resource, the system will respond with the configured headers, and their corresponding `default` value. In this example the response will be:
+Once the `options` block is added to any HTTP resource, the system will respond with the configured headers, and their corresponding `default` values. In this example the response will be:
 
 ```
  HTTP/1.1 204 No Content
@@ -136,12 +136,12 @@ wsk action create handleCorsRequest ./cors-action.js --web true -a web-custom-op
 wsk api create /pet-store /pet options handleCorsRequest --response-type http
 ```
 
-To test the CORS request get the URL to the action, and invoke it:
+To test the CORS request get the URL of the action, and invoke it:
 ```bash
 wsk api list /pet-store
 # get the URL for the options action and invoke it
 curl -i -X OPTIONS https://adobeioruntime.net/...
-
+# it should return
  HTTP/1.1 204 No Content
  Access-Control-Allow-Methods: GET, POST, PUT
  Access-Control-Allow-Origin: https://xyz.example.com
