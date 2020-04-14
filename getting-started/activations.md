@@ -90,15 +90,17 @@ wsk activation result <activation ID>
 wsk activation logs <activation ID>
 ```
 
-## Blocking successful activations
+## Retrieving Activations for Blocking Successful Calls
 
-Status of the blocking successful activations can't be retrieved at a later time. 
-As a consequence, the following wsk commands will partially work as expected: 
-- `wsk activation logs <activation ID>` will still display the logs for the activations.
-- `wsk activation list` won't display the blocking successful activations. 
-- `wsk activation get <activation ID>` won't return the activation result. 
+At scale, when you run millions of activations in a day, it may be difficult to extract the activations that failed in order 
+to debug them. To help with this task, the system skips persisting the activation that succeeded. 
 
-You can still make blocking successful web activations retrievable at a later time, by setting in the request the extra logging header to `on`: 
+The exceptions are asynchronous actions that are invoked in a non-blocking fashion. Their results are persisted regardless 
+so that you can extract the response of the action at a later time. 
+
+You can still view the number of executions, please see the [Logging and Monitoring](https://github.com/AdobeDocs/adobeio-runtime/blob/master/guides/logging_monitoring.md) section. 
+
+However, during development it is important to have access to all activation results. You can enable this by setting in the request the extra logging header to `on`: 
 ```
 X-OW-EXTRA-LOGGING: on
 ``` 
