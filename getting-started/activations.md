@@ -90,9 +90,27 @@ wsk activation result <activation ID>
 wsk activation logs <activation ID>
 ```
 
+## Retrieving Activations for Blocking Successful Calls
+
+At scale, when you run millions of activations in a day, it may be difficult to extract the activations that failed in order 
+to debug them. To help with this task, the system skips persisting the activation that succeeded. 
+
+The exceptions are asynchronous actions that are invoked in a non-blocking fashion. Their results are persisted regardless 
+so that you can extract the response of the action at a later time. 
+
+You can still view the number of executions, please see the [Logging and Monitoring](https://github.com/AdobeDocs/adobeio-runtime/blob/master/guides/logging_monitoring.md) section. 
+
+However, during development it is important to have access to all activation results. You can enable this by setting in the request the extra logging header to `on`: 
+```
+X-OW-EXTRA-LOGGING: on
+``` 
+
+> It's not recommended to use the extra logging headers in the production environment as invocation performance can be impacted. 
+
+
 ## Retrieving Activations for Non-blocking Calls
 
-When you execute a non-blocking action (async action), the action returns imediately the activation ID. If you query for the result or logs before the action finished the execution you get an error:
+When you execute a non-blocking action (async action), the action returns immediately the activation ID. If you query for the result or logs before the action finished the execution you get an error:
 ```
 wsk activation get 1d24121f91384740a4121f91389740f0
 error: Unable to get activation '1d24121f91384740a4121f91389740f0': The requested resource does not exist. (code myM2aaCufgIcnjnrbNIHztNmhL2HvFia)
