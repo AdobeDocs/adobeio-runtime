@@ -22,7 +22,8 @@ If you want to see more real-world examples, some of the apps built on top of I/
 * [Data-Driven Marketing Campaigns using Adobe Experience Platform’s Unified Profile in Adobe Campaign](https://medium.com/adobetech/data-driven-marketing-campaigns-using-adobe-experience-platforms-unified-profile-in-adobe-campaign-9d9a97e183c4)
 * [Adobe Campaign Standard and Web Push Notifications](https://medium.com/adobetech/adobe-campaign-standard-and-web-push-notifications-5c12c0f4ada2)
 * [Easily Coordinate External Deployments with Cloud Manager and Adobe I/O Events: A Step-by-Step Guide](https://medium.com/adobetech/easily-coordinate-external-deployments-with-cloud-manager-and-adobe-i-o-events-a-step-by-step-bb2f651a18ae)
-* [The use case for an Adobe Campaign integration with Microsoft Dynamics](https://medium.com/adobetech/adobe-campaign-microsoft-dynamics-api-based-crm-integration-36807d329fd5)
+* [The use case for an Adobe Campaign integration with Microsoft Dynamics](https://medium.com/adobetech/*adobe-campaign-microsoft-dynamics-api-based-crm-integration-36807d329fd5)
+* [Getting to Know the Adobe I/O Architecture: Experience Cloud Use Cases](https://medium.com/adobetech/getting-to-know-the-adobe-i-o-architecture-experience-cloud-use-cases-4c63a409ec8c)
 
 ## Microservices
 Microservices offer many benefits, but provisioning server-side support for them can be daunting, whether you&rsquo;re using a traditional server approach or a cloud-based solution. Development teams often find they spend as much or more time configuring the server or cloud solution for fault tolerance, load balancing, logging, and auto-scaling. This expertise is often outside the bounds of the development team, which implies the need for a server admin or admin team to do this work, thus adding to the resource demands of the microservice.
