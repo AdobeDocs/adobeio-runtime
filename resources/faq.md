@@ -11,7 +11,7 @@ On this page:
 
 ## Getting Access 
 **How can I get access to I/O Runtime?**  
-I/O Runtime is offering production service level since June 2019. You can find [here](overview/request_a_trial.md) information about how to get access.
+I/O Runtime is offering production service level since June 2019. You can find [here](../overview/request_a_trial.md) information about how to get access.
 
 ## Supported Programming Languages 
 **Which languages are supported in I/O Runtime?**  
@@ -19,7 +19,7 @@ For now, Adobe I/O Runtime only supports Node.js version 10. We might add suppor
 
 ## Price 
 **What does it cost to use Adobe I/O Runtime?**  
-Presently, Adobe I/O Runtime is free to use for Adobe enterprise customers and partners through the free program. You can find [here](overview/request_a_trial.md) information about how to get access. We will be introducing a commercial offering soon.
+Presently, Adobe I/O Runtime is free to use for Adobe enterprise customers and partners through the free program. You can find [here](../overview/request_a_trial.md) information about how to get access. We will be introducing a commercial offering soon.
 
 ## Usage Quotas 
 **What usage quotas are in place for Adobe I/O Runtime?**  
