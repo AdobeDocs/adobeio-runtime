@@ -134,6 +134,16 @@ wsk action update test first-function.js --param-file my-params.json
 wsk action invoke test --param-file my-params.json
 ```
 
+### Final Parameters
+
+Sometimes, an application needs to ensure that the default parameters are final (or immutable), and a calling client can&rsquo;t override them. You can achieve this by adding the `final` annotation - `-a final true`:
+
+```
+wsk action update test first-function.js --web true --param name "Runtime" -a final true
+```
+
+This mechanism works for all type of actions including web actions.
+
 ## Invoking web actions
 
 So far, we&rsquo;ve been invoking actions only from the CLI. While this might be good for trying out your actions, as you design actions for production systems, you might need to be able to invoke actions via HTTP REST calls. This would enable you to invoke the actions from your web application. 
@@ -185,17 +195,6 @@ exports.main = main;
 ```
 
 You can also set cookies or cache control headers, perform a HTTP redirect, and so forth.
-
-### Parameters
-
-If a web action has default parameters defined, then those parameter values are final. They can&rsquo;t be overwritten at execution time.
-
-Suppose that a web action has a default parameter called *name* with the value *Runtime*: 
-```
-wsk action update test first-function.js --web true --param name "Runtime"
-```
-
-When you invoke this web action, the value of *param.name* will always be *Runtime*. You can&rsquo;t overwrite by using a body or query parameter. 
 
 ### HTTP context
 
