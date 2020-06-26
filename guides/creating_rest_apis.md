@@ -22,6 +22,10 @@ You can map these actions to a REST API for managing `pet` resources:
 
 Let&rsquo;s see how you can create this API, assuming you have the web actions are already deployed/created.
 
+# How long does it take to create/update an API
+
+When creating or updating a REST API, it can take up to 60 seconds to see the changes. 
+
 ## Using wsk CLI
 
 Using the `wsk api create` command, you create each API endpoint one-by-one. This command allows you to set a base path, path, method, and response type. We will set:
