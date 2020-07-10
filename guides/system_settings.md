@@ -4,7 +4,7 @@ When creating actions or debugging issues, it is important to know the system se
 
 | Limit | Description | Configurable | Default |  Range  | 
 |---|---| --- | --- | --- |
-| timeout | A container is not allowed to run longer than N milliseconds | per action | 60000 milliseconds | 100ms - 3000000ms  |
+| timeout | A container is not allowed to run longer than N milliseconds. Blocking calls (like web actions) can't run longer than 60000 milliseconds. Non-blocking calls can run up to 3000000 milliseconds | per action | 60000 milliseconds | 100ms - 3000000ms  |
 | memory | A container is not allowed to allocate more than N MB of memory | per action | 256MB | 128MB - 4096MB |
 | minuteRate (ations)| no more than N actions may be invoked per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
 | logs | A container is not allowed to write more than N MB to stdout | per action | 10MB | 0MB - 10MB |

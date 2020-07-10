@@ -17,6 +17,20 @@ wsk activation logs <activation ID>
 2018-11-14T22:23:00.002Z       stdout: 1542234180001: param = John Doe
 ```
 
+# Retrieving Activations for Blocking Successful Calls
+
+At scale, when you run millions of activations in a day, it may be difficult to extract the activations that failed in order to debug them. To help with this task, the system skips persisting the activation that succeeded. 
+
+The exceptions are asynchronous actions that are invoked in a non-blocking fashion. Their results are persisted regardless 
+so that you can extract the response of the action at a later time. 
+
+However, during development it is important to have access to all activation results. You can enable this by setting in the request the extra logging header to `on`: 
+```
+X-OW-EXTRA-LOGGING: on
+``` 
+
+> It's not recommended to use the extra logging headers in the production environment as invocation performance can be impacted. 
+
 ## Understanding The Error Codes
 
 When you have action invocations that fail, sometimes the best way to understand the reason behind the failing is to take a look at the error object part of the activation record - running `wsk activation get <activationId>` you will get the activation record.

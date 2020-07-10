@@ -92,8 +92,7 @@ wsk activation logs <activation ID>
 
 ## Retrieving Activations for Blocking Successful Calls
 
-At scale, when you run millions of activations in a day, it may be difficult to extract the activations that failed in order 
-to debug them. To help with this task, the system skips persisting the activation that succeeded. 
+At scale, when you run millions of activations in a day, it may be difficult to extract the activations that failed in order to debug them. To help with this task, the system skips persisting the activation that succeeded. 
 
 The exceptions are asynchronous actions that are invoked in a non-blocking fashion. Their results are persisted regardless 
 so that you can extract the response of the action at a later time. 
