@@ -19,7 +19,7 @@ For now, Adobe I/O Runtime only supports Node.js version 10. We might add suppor
 
 ## Price 
 **What does it cost to use Adobe I/O Runtime?**  
-Presently, Adobe I/O Runtime is free to use for Adobe enterprise customers and partners through the free program. You can find [here](../overview/request_a_trial.md) information about how to get access. We will be introducing a commercial offering soon.
+There are two ways you can get access to I/O Runtime: commercial offering and free trial. If you want to buy, please work with your Adobe account manager. If you are interested in the trial, check this [page](../overview/request_a_trial.md). 
 
 ## Usage Quotas 
 **What usage quotas are in place for Adobe I/O Runtime?**  
