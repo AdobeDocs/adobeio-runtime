@@ -182,11 +182,11 @@ curl https://[your namespace].adobeioruntime.net/api/v1/web/default/test -x GET
 When creating actions to be used as web actions, you might want to send the response that follows the HTTP response structure (status code, headers, body). For example, our sample function could be rewritten:
 ```javascript
 function main(params) {
-    var n = params.name || 'stranger';
+    var nm = params.name || 'stranger';
     return {
         statusCode: 200,
         body: {
-            payload: 'Hello ' + params.name
+            payload: 'Hello ' + nm
         }
     }
 }
