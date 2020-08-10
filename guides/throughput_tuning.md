@@ -35,3 +35,8 @@ function main(args) {
    }
 }
 ```
+
+One way to verify if a response is returned from the cache or not is by checking for the following header:
+```
+X-GW-Cache: HIT
+```
