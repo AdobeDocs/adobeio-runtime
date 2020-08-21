@@ -173,9 +173,15 @@
           "title": "Using the wsk CLI"
         },
         {
+          "importedFileName": "environment_variables",
+          "pages": [],
+          "path": "adobedocs/adobeio-runtime/master/reference/environment_variables.md",
+          "title": "Environment Variables"
+        },
+        {
           "importedFileName": "multiple-regions",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/reference/multiple-regions.md",
+          "path": "adobedocs/adobeio-runtime/master/reference/multiple_regions.md",
           "title": "Multiple Regions"
         },
         {
