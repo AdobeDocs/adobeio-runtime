@@ -38,7 +38,7 @@ This documentation provides an overview of Adobe I/O Runtime as well as guides, 
 
 * [aio CLI](reference/cli_use.md): how to use aio CLI
 * [wsk CLI](reference/wsk_use.md): how to use wsk CLI
-* [Environment Variables](reference/environment_variables.md): What environment variables do you have access to at run time
+* [Environment Variables](reference/environment_variables.md): what environment variables do you have access to
 * [Multiple Regions](reference/multiple_regions.md): where we run your actions
 * [Pre-installed Packages](reference/prepackages.md): what packages are pre-installed 
 * [Runtimes](reference/runtimes.md): details about the available runtimes

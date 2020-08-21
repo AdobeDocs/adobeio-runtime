@@ -4,7 +4,7 @@ In this section you&rsquo;ll find references for APIs, command line tools, and e
 
 * [aio CLI](reference/cli_use.md): how to use the `aio` CLI
 * [wsk CLI](reference/wsk_use.md): how to use the `wsk` CLI
-* [Environment Variables](reference/environment_variables.md): What environment variables do you have access to at run time 
+* [Environment Variables](reference/environment_variables.md): what environment variables do you have access to
 * [Multiple Regions](reference/multiple_regions.md): Multi-region deployment of actions
 * [API Reference](reference/api_ref.md): I/O Management API
 * [Pre-installed Packages](reference/prepackages.md): what are the pre-installed packages
