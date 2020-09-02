@@ -26,3 +26,10 @@ If you want to use a shared package, you need first to bind it. In the following
 ```
 $ wsk package bind /namespace-where-package-is-defined/my-fancy-package my-package
 ```
+
+## Shared Packages and Permissions
+
+Shared packages enforce `execute-only` permission for any operation that is initiated from outside the namespace owning the package. Assuming there is a package `my-package` in namespace `a`, this package is shared, and there is a namespace `b` who uses the shared package, then:
+* Invoking `my-package` actions from namespace `b` or `a` will work
+* Trying to get `my-package` code or edit it (update/delete) from namespace `b` will fail
+* Manage `my-package` (create/read/update/delete) will only work from namespace `a`
