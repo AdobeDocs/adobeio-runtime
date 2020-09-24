@@ -63,7 +63,7 @@ wsk trigger create my-interval \
   --feed /whisk.system/alarms/alarm \
   --param cron "0 * * * *" \
   --param trigger_payload "{\"name\":\"Vlad\",\"place\":\"Transylvania\"}" \
-  --param startData "2018-10-17" \
+  --param startDate "2018-10-17" \
   --param stopDate "2019-10-31T23:59:00.000Z"
 ```
 
