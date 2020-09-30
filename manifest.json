@@ -50,10 +50,10 @@
           "title": "Adobe I/O Runtime Entities"
         },
         {
-          "importedFileName": "request_a_trial",
+          "importedFileName": "getting_access",
           "pages": [],
-          "path": "adobedocs/adobeio-runtime/master/overview/request_a_trial.md",
-          "title": "Request a Trial"
+          "path": "adobedocs/adobeio-runtime/master/overview/getting_access.md",
+          "title": "Getting Access"
         }
       ],
       "path": "adobedocs/adobeio-runtime/master/overview.md",
