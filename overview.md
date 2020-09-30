@@ -7,4 +7,4 @@ Discover Adobe I/O Runtime with these resources:
 * [Use Cases for Adobe I/O Runtime](overview/usecases.md)
 * [How Adobe I/O Runtime Works](overview/howitworks.md) 
 * [Adobe I/O Runtime Entities](overview/entities.md)
-* [Request a Trial](overview/request_a_trial.md)
+* [Getting Access](overview/getting_access.md)
