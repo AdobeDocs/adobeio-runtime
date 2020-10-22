@@ -12,7 +12,7 @@ This documentation provides an overview of Adobe I/O Runtime as well as guides, 
 * [Use Cases for Adobe I/O Runtime](overview/usecases.md)
 * [How Adobe I/O Runtime Works](overview/howitworks.md)
 * [Adobe I/O Runtime Entities](overview/entities.md)
-* [Request a Trial](overview/request_a_trial.md)
+* [Getting Access](overview/getting_access.md)
 
 [Getting Started](getting_started.md)
 
