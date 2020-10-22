@@ -13,7 +13,7 @@ When each action is complete, the instantiation is disposed, so there&rsquo;s no
 
 ## The process in detail
 
-Here we&rsquo;ll trace the entire process, beginning with an event and finishing with the complete action executed in response. OpenWhisk (and therefore Runtime) is built on well-established open-source tools such as Nginx, Docker, Kafka, and CouchDB. These are assembled together into a seamless pipeline to provide serverless event-based processing.
+Here we&rsquo;ll trace the entire process, beginning with an event and finishing with the complete action executed in response. OpenWhisk (and therefore Runtime) is built on well-established open-source tools such as Nginx, Docker, Kafka, and CosmosDB. These are assembled together into a seamless pipeline to provide serverless event-based processing.
 
 ### Start with an action
 
@@ -63,10 +63,10 @@ The Controller is the core component of Runtime (OpenWhisk). It serves as the in
 
 The Controller receives your HTTP request from nginx and interprets it. The result may be a [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) request, or a direct invocation of an action. In this example, the Controller reads your HTTP POST request to an existing action as an invocation of that action. It then moves to the next step.
 
-#### Permitting: CouchDB
+#### Permitting: CosmosDB
 
-Now the Controller has to verify that you are who you are (authentication), and you have permission to do what you&rsquo;re asking (authorization). It does this by checking your credentials, which are stored in a [CouchDB](http://couchdb.apache.org/ 'CouchDB') database called **subjects.** If you have an account and you have the permissions required to invoke the action you&rsquo;re requesting, which also depends on the action being in a namespace you own, then the Controller proceeds to the next step: retrieving the action itself.
+Now the Controller has to verify that you are who you are (authentication), and you have permission to do what you&rsquo;re asking (authorization). It does this by checking your credentials, which are stored in a CosmosDB database called **subjects.** If you have an account and you have the permissions required to invoke the action you&rsquo;re requesting, which also depends on the action being in a namespace you own, then the Controller proceeds to the next step: retrieving the action itself.
 
-#### Retrieving: CouchDB
+#### Retrieving: CosmosDB
 
-CouchDB is not only used to store users&rsquo; credentials, it&rsquo;s also used to store the code for the actions themselves. So, once the Controller has determined your permissions by the first call to CouchDB, it calls CouchDB again, this time to a database called **whisks.** CouchDB returns the code for the action, so the Controller can take the next step: queueing the action for processing.
+CosmosDB is not only used to store users&rsquo; credentials, it&rsquo;s also used to store the code for the actions themselves. So, once the Controller has determined your permissions by the first call to CosmosDB, it calls CosmosDB again, this time to a database called **whisks.** CosmosDB returns the code for the action, so the Controller can take the next step: queueing the action for processing.
