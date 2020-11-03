@@ -12,7 +12,7 @@ On this page:
 
 ## Getting Access 
 **How can I get access to I/O Runtime?**  
-I/O Runtime is offering production service level since June 2019. You can find [here](../overview/request_a_trial.md) information about how to get access.
+I/O Runtime is offering production service level since June 2019. You can find [here](../overview/getting_access.md) information about how to get access.
 
 ## Supported Programming Languages 
 **Which languages are supported in I/O Runtime?**  
