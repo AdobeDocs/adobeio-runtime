@@ -2,7 +2,7 @@
 
 Individual actions (functions) can be effective, but often you&rsquo;ll need to create a set of actions that interact with each other; and you may wish to make those available to other developers as well. The means to do this in Runtime are called _packages._
 
-Packages bundle related actions together. More than that, packages can contain both actions and _feeds:_ streams of events. Feeds are created by _feed actions_ that specify the trigger to fire for a given event source; each time the event is received, the selected trigger is fired and the associated action is executed. For more information, see [Using Feeds](feeds.md 'Using Feeds').
+Packages bundle related actions together. More than that, packages can contain both actions and _feeds:_ streams of events. Feeds are created by _feed actions_ that specify the trigger to fire for a given event source; each time the event is received, the selected trigger is fired and the associated action is executed. For more information, see [Using Feeds](../reference/feeds.md 'Using Feeds').
 
 Everything you access in Runtime exists within a namespace. Your namespace is given to you when you sign up for Runtime access (see [Getting Started with Adobe I/O Runtime](../gettingstarted.md 'Getting started')). So, actions you create in Runtime, and packages as well, are stored in your namespace. Other users of Runtime get their own namespaces, and **Runtime includes a system namespace in which certain packages are stored available to all users.**
 
