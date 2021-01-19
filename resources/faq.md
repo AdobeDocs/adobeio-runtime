@@ -35,7 +35,7 @@ There are presently no usage quotas on Adobe I/O Runtime.
 
 ## Multiple Region Support
 **Where we execute your actions**
-I/O Runtime runs in AWS US-East, Europe-West and Australia. We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing). We have plans to add a cluster in APAC before the end of the year.
+I/O Runtime runs in Azure in four different regions: US East VA7 (`eastus2`), West Europe Netherlands / `NLD2` (`westeurope`), South East Asia Singapore / `SGP5` (`southeastasia`), and Australia `AUS5` (`australiaeast`). We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing).
 
 ## System Limits
 **Which limits are imposed onto actions?**  
