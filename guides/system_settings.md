@@ -17,9 +17,15 @@ When creating actions or debugging issues, it is important to know the system se
 | minuteRate (triggers) | No more than N triggers may be fired per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
 | actionsSequenceMaxlength | No more than N actions can be chained in a sequence | not configurable, per namespace | 50 | 50 |
     
+## Using pre-warm containers or optimizing against cold-starts
+
+You can maximize your chances of having the best low latency possible by creating actions that use the default Node version and a memory setting that is `256MB`, `512MB`, or `1024MB` - this way you avoid cold-starts in most cases. 
+
+The system has a pool of containers with these settings waiting to be used for any incoming call that can't be sent to an existing running container and the action matches the container settings (Node version and memory setting). In this scenario, time will only be spent for injecting your action code as opposed to wait for both creating a container and then get the code injected.
+
 ## Timeout
 
-This is how you increase the timeout to 5 minutes:
+If you want to change the default timeout setting, you need to do it explicitly. This is how you increase the timeout to 5 minutes:
 `wsk action create action-name source.js -t 300000`
 
 When you plan on increasing the timeout to more than one minute, you should be aware of:

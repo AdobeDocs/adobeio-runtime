@@ -65,7 +65,7 @@ Container lifecycle:
 * When an action is invoked for the first time, a new container is created and the action code is injected in it. This is called a warm container
 * A warm container is reused only for the same user and action version
 *	A warm container sits idle for 10 minutes. If no requests are received, it will be recycled
-*	The System maintains a pool of prewarm containers – these are containers created with the default memory setting and can be used by any user and action. Once they are initialized for an action, they become warm containers
+*	The System maintains a pool of prewarm containers – these are containers created with the default Node version and a memory value of `256MB`, `512MB`, or `1024MB` and can be used by any user and action. Once they are initialized for an action, they become warm containers
 *	A cold start refers to a situation when the system is under load and has no prewarm or warm containers to use for the invocation. The request is buffered and the system will create a new container by either recycling an idle container or creating a new container
 
 ## Let’s Talk Numbers – Understanding the System Settings

@@ -19,6 +19,13 @@ Some considerations to keep in mind:
 5. It is not guarantee that all invocations will use the same container. In case of errors, the existing container is destroyed and a new container will be used
 6. In cases where your action code is memory hungry, you might need to tweak this setting to a lower value 
 
+
+## Using pre-warm containers or optimizing against cold-starts
+
+A second way for maximizing your chances of having the best low latency possible is creating actions that use the default Node version and a memory setting that is `256MB`, `512MB`, or `1024MB` - this way you avoid cold-starts in most cases. 
+
+The system has a pool of containers with these settings waiting to be used for any incoming call that can't be sent to an existing running container and the action matches the container settings (Node version and memory setting). In this scenario, time will only be spent for injecting your action code as opposed to wait for creating a container first and then get the code injected.
+
 ## Caching Responses
 
 The second instrument you have to maximize throughput is caching the action response. When you cache an action response, for the time the cache is valid, you can invoke the action without increasing the counter used by minuteRate or concurrent action invocations per namespace. In this situations, your action is not actually executed, instead the system serves the result from cache.
