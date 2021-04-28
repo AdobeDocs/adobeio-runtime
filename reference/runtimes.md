@@ -20,6 +20,7 @@ Adobe I/O Runtime supports Node.js versions 14, 12 and 10. The following npm mod
     "cls-hooked": "4.2.2",
     "redis": "3.0.2",
     "node-fetch": "2.6.0"
+    "dnscache": "1.0.2"
 
 ### Node.js v10
 
@@ -30,6 +31,7 @@ Adobe I/O Runtime supports Node.js versions 14, 12 and 10. The following npm mod
     "redis": "2.8.0",
     "request": "2.88.0",
     "request-promise": "4.2.2"
+    "dnscache": "1.0.2"
 
 This is how you can specify explicitly this kind:
 ```
