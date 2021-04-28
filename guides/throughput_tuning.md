@@ -47,3 +47,5 @@ One way to verify if a response is returned from the cache or not is by checking
 ```
 X-GW-Cache: HIT
 ```
+
+> Note: Encoded responses can't be cached, this means that `Content-Encoding` response header needs to be always empty in order for the response to be cached. 
