@@ -1,6 +1,6 @@
 # Multiple Regions
 
-Today, we execute your actions in two Amazon regions: US-East, Europe-West, and Australia. We have plans to add aditional regions in Amazon and add Azure support too.
+I/O Runtime runs in Azure in four different regions: US East VA7 (`eastus2`), West Europe Netherlands / `NLD2` (`westeurope`), South East Asia Singapore / `SGP5` (`southeastasia`), and Australia `AUS5` (`australiaeast`). 
 
 ## How do we execute your action
 
