@@ -22,6 +22,7 @@ The following npm modules are pre-installed (if your action uses any of these mo
     "cls-hooked": "4.2.2",
     "redis": "3.0.2",
     "node-fetch": "2.6.0"
+    "dnscache": "1.0.2"
 
 ### Node.js v10
 
@@ -32,6 +33,7 @@ The following npm modules are pre-installed (if your action uses any of these mo
     "redis": "2.8.0",
     "request": "2.88.0",
     "request-promise": "4.2.2"
+    "dnscache": "1.0.2"
 
 This is how you can specify explicitly this kind:
 ```

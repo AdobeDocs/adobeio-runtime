@@ -18,12 +18,12 @@ I/O Runtime is offering production service level since June 2019. You can find [
 For now, Adobe I/O Runtime only supports Node.js. We might add support for other languages in the future.
 
 ### Node version 14 - Default Image
-The NPM modules available with this image cand be found [here](../reference/runtimes.md#nodejs-v14).
+The NPM modules available with this image can be found [here](../reference/runtimes.md#nodejs-v14).
 
 We encourage you to always update your actions to the latest version in order to take advantage of pre-warm containters feature.
 
 ### Older Versions
-When a new Node version is added to the system, the [old versions](../reference/runtimes.md) are still available. This means that your actions will still work. We encourage you to always update your actions to the latest version in order to take advantage of pre-warm containters feature.
+When a new Node version is added to the system, the [old versions](../reference/runtimes.md) are still available. This means that your actions will still work. We encourage you to always update your actions to the latest version in order to take advantage of pre-warm containers feature.
 
 ## What ports are open
 **Are there any restrictions when it comes to ports and outbound connections?**
