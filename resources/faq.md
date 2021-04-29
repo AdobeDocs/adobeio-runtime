@@ -20,6 +20,8 @@ For now, Adobe I/O Runtime only supports Node.js. We might add support for other
 ### Node version 14 - Default Image
 The NPM modules available with this image can be found [here](../reference/runtimes.md#nodejs-v14).
 
+We encourage you to always update your actions to the latest version in order to take advantage of pre-warm containters feature.
+
 ### Older Versions
 When a new Node version is added to the system, the [old versions](../reference/runtimes.md) are still available. This means that your actions will still work. We encourage you to always update your actions to the latest version in order to take advantage of pre-warm containers feature.
 
@@ -42,7 +44,9 @@ There are presently no usage quotas on Adobe I/O Runtime.
 
 ## Multiple Region Support
 **Where we execute your actions**
-I/O Runtime runs in Azure in four different regions: US East VA7 (`eastus2`), West Europe Netherlands / `NLD2` (`westeurope`), South East Asia Singapore / `SGP5` (`southeastasia`), and Australia `AUS5` (`australiaeast`). We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing). You can't restrict the execution to a specific region only, other then leveraging the latency-based routing described above.
+I/O Runtime runs in Azure in multiple regions. We deploy your code in all regions and execute it in the closest region to the caller (latency-based routing). You can't restrict the execution to a specific region only.
+
+You can find more information about the regions and how you can check where your actions are being executed here - [Multiple Regions](../reference/multiple_regions.md).
 
 ## System Limits
 **Which limits are imposed onto actions?**  
