@@ -17,10 +17,11 @@ No action is required by the client in order to execute an action on the fastest
 
 ## How do I know in what region my actions are executed?
 
-The cloud and region in which an action is invoked is available at execution time via environemnt variables; `__OW_CLOUD` for the cloud, and `__OW_REGION` for the region as seen here:
+The cloud and region in which an action is invoked is available at execution time via environment variables; `__OW_CLOUD` for the cloud, and `__OW_REGION` for the region as seen here:
 
 ```javascript
 process.env['__OW_CLOUD'] // example output: azure
 process.env['__OW_REGION'] // example output: East US 2
 ```
-Please note, that regions can change (failover or permanent changes). Your application should not work against a hard-coded set of regions and should handle the case when the region you are looking for is not the region where your action is being executed.
+
+Please note, that regions can change as part of a failover or due to a permanent platform change. Your application should not work against a hard-coded set of regions and should handle the case when the region you are looking for is not the region where your action is being executed.
