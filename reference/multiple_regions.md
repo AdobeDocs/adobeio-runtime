@@ -1,6 +1,6 @@
 # Multiple Regions
 
-Actions are executed in one of four Azure regions:
+Actions are executed in one of four regions on Azure:
 
 * Australia East (australiaeast)
 * East US 2 (eastus2)
