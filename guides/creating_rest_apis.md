@@ -24,7 +24,7 @@ Let&rsquo;s see how you can create this API, assuming you have the web actions a
 
 # How long does it take to create/update an API
 
-When creating or updating a REST API, it can take up to 60 seconds to see the changes. 
+When creating or updating a REST API, it can take up to 5 minutes to see the changes. 
 
 ## Using wsk CLI
 
