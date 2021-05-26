@@ -22,9 +22,9 @@ You can invoke this as any other action. For example:
 
 ### Sequences and Timeout
 
-Sequences have a hard limit for timeout and this limit can't be changed: each action that is part of the sequence has to complete the work within 60 seconds or the whole sequence will timeout. Essentially, a sequence is a chain of actions that are invoked in a blocking manner and for blocking actions the timeout limit is 60 seconds.
+When invoking a sequence in a blocking manner, there is a hard limit for timeout and this limit can't be changed: 60 seconds. It means when you add up the execution time of each action that is part of a sequence, the total has to be 60 seconds or less. 
 
-If we apply this limitation to the example above, then `actionA` and `actionB` have a budget of 60 seconds each. Although the system lets you set a higher timeout on the sequnce `mySequence`, this value is ignored and the 60 seconds limit per action is enforced.
+If we apply this limitation to the example above, then `actionA` and `actionB` have a total budget of 60 seconds. Although the system lets you set a higher timeout on the sequnce `mySequence`, this value is ignored and the 60 seconds limit is enforced.
 
 If one of your actions needs more than 60 seconds, then the only solution is to invoke a non-blocking action using the OpenWhisk npm module. So, using the same example, you could have `actionA` calling another action in a non-blocking manner. You can see an example of how to do this [here](../guides/asynchronous_calls.md).
 

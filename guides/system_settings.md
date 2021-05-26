@@ -19,11 +19,12 @@ When creating actions or debugging issues, it is important to know the system se
     
 ## Sequences and Timeout
 
-Sequences have a hard limit for timeout and this limit can't be changed: each action that is part of the sequence has to complete the work within 60 seconds or the whole sequence will timeout. Essentially, a sequence is a chain of actions that are invoked in a blocking manner and for blocking actions the timeout limit is 60 seconds.
+Sequences that are invoked in a blocking manner (for example as a weba action have a hard limit for timeout and this limit can't be changed 60 seconds. Essentially, adding up the execution time taken by each action has to be 60 seconds or less.
 
 Although the system lets you set a higher timeout on the sequnce, this value is ignored and the 60 seconds limit per action is enforced.
 
 If one of your actions needs more than 60 seconds, then the only solution is to invoke a non-blocking action using the OpenWhisk npm module. So, using the same example, you could have `actionA` calling another action in a non-blocking manner. You can see an example of how to do this [here](asynchronous_calls.md).
+
 
 ## Using pre-warm containers or optimizing against cold-starts
 
