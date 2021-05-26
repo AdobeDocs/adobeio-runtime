@@ -23,7 +23,7 @@ Sequences have a hard limit for timeout and this limit can't be changed: each ac
 
 Although the system lets you set a higher timeout on the sequnce, this value is ignored and the 60 seconds limit per action is enforced.
 
-If one of your actions needs more than 60 seconds, then the only solution is to invoke a non-blocking action using the OpenWhisk npm module. So, using the same example, you could have `actionA` calling another action in a non-blocking manner. You can see an example of how to do this [here](guides/asynchronous_calls.md).
+If one of your actions needs more than 60 seconds, then the only solution is to invoke a non-blocking action using the OpenWhisk npm module. So, using the same example, you could have `actionA` calling another action in a non-blocking manner. You can see an example of how to do this [here](asynchronous_calls.md).
 
 ## Using pre-warm containers or optimizing against cold-starts
 
