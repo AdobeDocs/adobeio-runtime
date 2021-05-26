@@ -20,6 +20,14 @@ You can create a sequence using the `--sequence` flag in addition to the usual c
 You can invoke this as any other action. For example:
 `wsk action invoke --result mySequence`
 
+### Sequences and Timeout
+
+Sequences have a hard limit for timeout and this limit can't be changed: each action that is part of the sequence has to complete the work within 60 seconds or the whole sequence will timeout. Essentially, a sequence is a chain of actions that are invoked in a blocking manner and for blocking actions the timeout limit is 60 seconds.
+
+If we apply this limitation to the example above, then `actionA` and `actionB` have a budget of 60 seconds each. Although the system lets you set a higher timeout on the sequnce `mySequence`, this value is ignored and the 60 seconds limit per action is enforced.
+
+If one of your actions needs more than 60 seconds, then the only solution is to invoke a non-blocking action using the OpenWhisk npm module. So, using the same example, you could have `actionA` calling another action in a non-blocking manner. You can see an example of how to do this [here](../guides/asynchronous_calls.md).
+
 You can read more about sequences on the [OpenWhisk documentation page](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#creating-action-sequences).
 
 ## Compositions
