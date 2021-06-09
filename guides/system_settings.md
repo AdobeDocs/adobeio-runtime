@@ -16,7 +16,8 @@ When creating actions or debugging issues, it is important to know the system se
 | result | The maximum size of the action result | not configurable, per action | 1MB |  |
 | minuteRate (triggers) | No more than N triggers may be fired per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
 | actionsSequenceMaxlength | No more than N actions can be chained in a sequence | not configurable, per namespace | 50 | 50 |
-    
+| list | The maximum number of entities that can be listed | per list request | 30 | 1 - 50 |
+
 ## Sequences and Timeout
 
 Sequences that are invoked in a blocking manner (for example as a weba action have a hard limit for timeout and this limit can't be changed 60 seconds. Essentially, adding up the execution time taken by each action has to be 60 seconds or less.
