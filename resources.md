@@ -6,7 +6,7 @@ For a starter, a good resource to check is the [Apache OpenWhisk repository](htt
 
 ## Social media
 
-You can follow up our team on [Twitter](https://twitter.com/adobeio), [Medium](https://medium.com/@AdobeIO), and [Youtube](https://www.youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ).
+You can follow up our team on [Twitter](https://twitter.com/adobeio), [Medium](https://medium.com/adobetech/tagged/platform), and [Youtube](https://www.youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ).
 
 ## Support
 

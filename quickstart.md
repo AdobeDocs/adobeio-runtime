@@ -139,7 +139,7 @@ At the same time, this is just the beginning for Adobe I/O Runtime and you are e
 
 ### Social media
 
-You can follow the Adobe I/O team on [Twitter](https://twitter.com/adobeio), [Medium](https://medium.com/@AdobeIO), and [Youtube](https://www.youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ).
+You can follow the Adobe I/O team on [Twitter](https://twitter.com/adobeio), [Medium](https://medium.com/adobetech/tagged/platform), and [Youtube](https://www.youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ).
 
 ### Support
 
