@@ -30,7 +30,7 @@ The system has a pool of containers with these settings waiting to be used for a
 
 The second instrument you have to maximize throughput is caching the action response. When you cache an action response, for the time the cache is valid, you can invoke the action without increasing the counter used by minuteRate or concurrent action invocations per namespace. In this situations, your action is not actually executed, instead the system serves the result from cache.
 
-You use the Cache-Control dirrective in order to configure the cache. Below is an example of an action that sets the cache with a TTL of `30 minutes`. In the response object you'll find an entry with `X-Cache: HIT` or `X-Cache: MISS` (depending on the answer being returned from cache or not). 
+You use the Cache-Control directive in order to configure the cache. Below is an example of an action that sets the cache with a TTL of `30 minutes`. In the response object you'll find an entry with `X-Cache: HIT` or `X-Cache: MISS` (depending on the answer being returned from cache or not). 
 ```
 function main(args) {
    return {
@@ -49,3 +49,22 @@ X-GW-Cache: HIT
 ```
 
 > Note: Encoded responses can't be cached, this means that `Content-Encoding` response header needs to be always empty in order for the response to be cached. 
+### Vary Header
+The caching layer supports the use of [Vary header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary) to enable caching based not only on URL and query parameters but on header fields.
+
+For example you here is some action that responds to certain header fields when doing some complex calculation:
+
+`curl -H "storeId: 1234" https://runtime-namespace-1.adobeioruntime.net/api/v1/web/store?query={products(pageSize: 10,filter:{ id:{ eq:"abcedefg"}}){items{name}}}`
+
+Could produce a response:
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: storeId
+Cache-Control: max-age=120
+X-GW-Cache: MISS
+
+{"someBigData" : ["array"]}
+```
+
+That would add the `storeId` to the cache key such that subsequent requests with the same `storeId` in the headers will create a `HIT` up till the cahe control header settings and anytime the value varies, it will be a `MISS` and be stored under a new key with new cache control directives.
