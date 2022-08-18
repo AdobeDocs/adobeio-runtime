@@ -14,9 +14,9 @@ After this, you can run help to see all the commands and verify that you are all
 aio -h
 ```
 
-If you want to update to the latest version, run:
+If you want to update to the latest versions of any updated plugins, please reinstall the cli:
 ```
-aio plugins:update
+npm install -g @adobe/aio-cli
 ```
 
 For more information about the `aio` CLI check the [package home page](https://www.npmjs.com/package/@adobe/aio-cli).
