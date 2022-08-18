@@ -6,15 +6,16 @@ When creating actions or debugging issues, it is important to know the system se
 |---|---| --- | --- | --- |
 | timeout | A container is not allowed to run longer than N milliseconds. Blocking calls (like web actions) can't run longer than 60,000 milliseconds (1 minute). Non-blocking calls can run up to 1,800,000 milliseconds | per action | 60,000 milliseconds | 100ms - 1,800,000ms  |
 | memory | A container is not allowed to allocate more than N MB of memory | per action | 256MB | 128MB - 4096MB |
-| minuteRate (ations)| no more than N actions may be invoked per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
+| minuteRate (actions)| no more than N actions may be invoked per namespace per minute. If exceeded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
+| minuteRate (web actions with extra logging)| no more than N web actions may be invoked with the header `X-OW_EXTRA-LOGGING: on` per namespace per minute. If exceeded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 30/minute | 30/minute |
 | logs | A container is not allowed to write more than N MB to stdout | per action | 10MB | 0MB - 10MB |
-| concurrent | No more than N activations may be submitted per namespace either executing or queued for execution. If exceded, the error is `429: TOO MANY REQUESTS` | Not configurable, per namespace | 100 | 100 |
+| concurrent | No more than N activations may be submitted per namespace either executing or queued for execution. If exceeded, the error is `429: TOO MANY REQUESTS` | Not configurable, per namespace | 100 | 100 |
 | action/container concurrency  | The number of action invocations send to the same container in parallel | per action | 200 |1 - 500 |
 | codeSize | The maximum size of the action including dependencies, archived | not configurable, per action | 22MB | 0MB - 22MB |
 | parameters | The maximum size of the parameters that can be attached | not configurable, per action/package/trigger | 1MB | 0 - 1MB |
 | payload | The maximum POST content size plus any carried parameters for an action invocation or trigger firing | not configurable, per action/trigger | 1MB | 0 - 1MB |
 | result | The maximum size of the action result | not configurable, per action | 1MB |  |
-| minuteRate (triggers) | No more than N triggers may be fired per namespace per minute. If exceded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
+| minuteRate (triggers) | No more than N triggers may be fired per namespace per minute. If exceeded, the error is `429: TOO MANY REQUESTS` | not configurable, per namespace | 600/minute | 600/minute |
 | actionsSequenceMaxlength | No more than N actions can be chained in a sequence | not configurable, per namespace | 50 | 50 |
 | list | The maximum number of entities that can be listed | per list request | 30 | 1 - 50 |
 
