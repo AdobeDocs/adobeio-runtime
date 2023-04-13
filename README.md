@@ -1,5 +1,7 @@
 # Adobe I/O Runtime Developer Guide
 
+:warning: **Deprecated: This repository has been deprecated in favor of [adobe-io-runtime](https://github.com/AdobeDocs/adobe-io-runtime). New documentation should be added there.** 
+
 This documentation provides an overview of Adobe I/O Runtime as well as guides, reference documentation, and tools to help you begin developing your own integrations. 
 
 ## Contents
