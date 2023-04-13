@@ -244,6 +244,34 @@ packages
 
 Others can now use your package just as you can, so long as you give them the fully qualified name of the package, including your namespace.
 
+### Unsharing packages 
+
+If you wish to make your package private again, you can update the package at any time. To un-share a package: 
+
+`aio runtime package update hellopackage --shared no` 
+
+```
+ok: updated package hellopackage
+```
+
+You can easily verify your package is private:
+
+`aio runtime package get hellopackage`
+
+```
+...
+"publish": false
+...
+```
+
+If you list your packages again, the package you made private will be listed as such:
+
+```
+packages
+/<yourNamespace>/hellopackage                                            private
+/<yourNamespace>/helloMyName                                             private
+```
+
 ## Shared Packages and Permissions
 
 Shared packages enforce `execute-only` permission for any operation that is initiated from outside the namespace owning the package. Assuming there is a package `my-package` in namespace `a`, this package is shared, and there is a namespace `b` who uses the shared package, then:
